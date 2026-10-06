@@ -164,7 +164,7 @@ def buscar_bcb():
         ("cdi_anual", 4389, (AGORA - dt.timedelta(days=45)).strftime("%d/%m/%Y")),       # CDI anualizado base 252 (% a.a.), diário
         ("cdi_mensal", 4391, "01/01/2010"),      # CDI acumulado no mês (% a.m.)
         ("ipca_mensal", 433, "01/01/2010"),      # IPCA (% a.m.)
-        ("poupanca_mensal", 25, "01/01/2010"),   # rentabilidade da poupança (% no período)
+        ("poupanca_mensal", 195, "04/05/2012"),  # poupança a partir de 04/05/2012, rentabilidade no período (% a.m.)
         ("ptax", 1, "01/01/2025"),               # dólar oficial (PTAX)
     ]
     for chave, cod, ini in pedidos:
