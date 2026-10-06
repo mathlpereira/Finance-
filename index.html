@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Primeiro Passo · Comece a investir com números de verdade</title>
+<meta name="description" content="Para quem está começando a investir: reserva de emergência, onde o dinheiro rende mais hoje (já com imposto), quanto guardar por mês e o que esperar da bolsa. Com as taxas oficiais do dia.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light dark;--bg:#f6f4ef;--card:#fffdf9;--ink:#16191d;--ink2:#3a3f46;--muted:#666d76;--line:rgba(22,25,29,.11);--line2:rgba(22,25,29,.2);--accent:#1f6f5c;--accent2:#e6f0ec;--up:#14855a;--dn:#c23b3b;--warn:#fbf1e1;
+ box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1214;--card:#161a1d;--ink:#e8eae8;--ink2:#c3c8c6;--muted:#8d9592;--line:rgba(232,234,232,.1);--line2:rgba(232,234,232,.2);--accent:#5cc3a3;--accent2:rgba(92,195,163,.12);--up:#3ccf8e;--dn:#ff6b6b;--warn:rgba(230,163,61,.1)}}
+:root[data-theme="dark"]{--bg:#0f1214;--card:#161a1d;--ink:#e8eae8;--ink2:#c3c8c6;--muted:#8d9592;--line:rgba(232,234,232,.1);--line2:rgba(232,234,232,.2);--accent:#5cc3a3;--accent2:rgba(92,195,163,.12);--up:#3ccf8e;--dn:#ff6b6b;--warn:rgba(230,163,61,.1)}
+*,*::before,*::after{box-sizing:inherit}[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:calc(70px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'IBM Plex Sans',system-ui,-apple-system,'Segoe UI',sans-serif;font-size:15.5px;line-height:1.6;-webkit-font-smoothing:antialiased}
+button,input,select{font:inherit;color:inherit}button{background:none;border:0;cursor:pointer;padding:0}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+svg.lucide{width:16px;height:16px;stroke-width:2;flex:none;vertical-align:-3px}
+.num,b.num{font-family:'IBM Plex Mono',monospace;font-variant-numeric:tabular-nums}.up{color:var(--up)}.dn{color:var(--dn)}.muted{color:var(--muted)}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:500;letter-spacing:-.015em;line-height:1.15}
+nav.top{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:18px;padding:12px max(20px,calc((100% - 1100px)/2));padding-top:calc(12px + env(safe-area-inset-top,0px));background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.logo{font-family:'Fraunces',serif;font-size:21px;font-weight:600;margin-right:auto;display:flex;align-items:center;gap:8px}.logo i{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:8px;background:var(--accent);color:#fff;font-style:normal;font-size:14px}
+nav.top a{color:var(--ink2);text-decoration:none;font-size:14px}nav.top a:hover{color:var(--accent)}
+.nb{display:flex;align-items:center;gap:6px;padding:7px 12px;border-radius:9px;border:1px solid var(--line2);font-size:13.5px}
+main{max-width:1100px;margin:0 auto;padding:0 20px 60px}
+.hero{padding:56px 0 26px;display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:end}
+.hero h1{font-size:clamp(34px,5vw,54px);margin:0 0 14px}.hero p{font-size:17.5px;color:var(--ink2);margin:0;max-width:560px}
+.steps{display:grid;gap:8px}.steps a{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:12px;background:var(--card);border:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.steps a:hover{border-color:var(--accent)}.steps em{font-style:normal;font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--accent);width:22px}.steps b{font-weight:600;font-size:14.5px}.steps small{display:block;color:var(--muted);font-size:12.5px}
+.strip{display:grid;grid-template-columns:repeat(6,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin:10px 0 6px}
+.sx{background:var(--card);padding:12px 14px}.sx small{display:block;font-size:12px;color:var(--muted)}.sx b{display:block;font-family:'IBM Plex Mono',monospace;font-size:20px;font-weight:500}.sx span{font-size:12px;color:var(--muted)}
+.updline{display:flex;justify-content:space-between;gap:10px;font-size:12.5px;color:var(--muted);margin-bottom:24px}
+section.blk{margin-top:30px;padding:30px;border-radius:18px;background:var(--card);border:1px solid var(--line)}
+.kicker{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--accent);letter-spacing:.04em;text-transform:uppercase}
+section.blk h2{font-size:clamp(26px,3.4vw,34px);margin:6px 0 6px}.lead{color:var(--ink2);margin:0 0 6px;max-width:720px}
+label{display:block;font-size:12.5px;color:var(--muted)}input,select{display:block;width:100%;margin-top:5px;padding:10px 12px;border-radius:10px;border:1px solid var(--line2);background:var(--bg);font-family:'IBM Plex Mono',monospace;font-size:14.5px}
+.form3,.form4{display:grid;gap:12px;margin:18px 0}.form3{grid-template-columns:repeat(3,1fr)}.form4{grid-template-columns:repeat(4,1fr)}.form4.two{grid-template-columns:repeat(2,minmax(0,240px))}
+.hero2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:6px 0 14px}.hero2>div{padding:16px 18px;border-radius:14px;background:var(--accent2)}
+.hero2 small{display:block;font-size:12.5px;color:var(--ink2)}.hero2 b{display:block;font-family:'IBM Plex Mono',monospace;font-size:28px;font-weight:500;color:var(--accent)}.hero2 span{font-size:13px;color:var(--ink2)}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0}.cols>div{padding:14px 16px;border-radius:12px;border:1px solid var(--line)}.cols h4{margin:0 0 4px;font-size:14px;display:flex;gap:6px;align-items:center}.cols p{margin:0;font-size:14.5px}
+.cols .ok h4{color:var(--up)}.cols .no h4{color:var(--dn)}
+.note{font-size:13px;color:var(--muted);line-height:1.55}
+.gl{color:inherit;text-decoration:underline dotted;text-decoration-color:var(--accent);text-underline-offset:3px;font:inherit}
+.bars{display:grid;gap:10px;margin:8px 0 14px}.bar{padding:14px 16px;border-radius:13px;border:1px solid var(--line)}.bar.best{border-color:var(--accent);box-shadow:inset 3px 0 0 var(--accent)}.bar.off{opacity:.7;border-style:dashed}
+.tag{display:inline-block;font-family:'IBM Plex Sans',sans-serif;font-size:11px;font-weight:600;padding:1px 8px;border-radius:999px;background:var(--accent);color:#fff;margin-left:8px;vertical-align:2px}
+.bh{display:flex;justify-content:space-between;gap:10px;align-items:baseline}.bh b{font-size:15.5px}.bh .num{font-size:18px;font-weight:500}
+.track{height:8px;border-radius:8px;background:var(--line);margin:9px 0 8px;overflow:hidden}.track i{display:block;height:100%;border-radius:8px;background:var(--accent)}.bar:not(.best) .track i{background:var(--muted)}
+.bd{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:13px;color:var(--ink2)}.bd.sub{margin-top:5px;color:var(--muted);font-size:12.5px}.bd.sub span{display:flex;gap:5px;align-items:center}
+.why{padding:16px 18px;border-radius:13px;background:var(--warn)}.why h4{margin:0 0 6px;font-size:14px}.why ul{margin:0;padding-left:18px}.why li{margin:4px 0;font-size:14.5px}
+.chart{display:block;width:100%;margin:12px 0 4px;cursor:crosshair}
+.drops{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:8px 0}.drops div{padding:12px 14px;border-radius:12px;border:1px solid var(--line)}.drops b{display:block;font-size:22px}.drops span{display:block;font-size:13.5px}.drops small{font-size:12.5px;color:var(--muted)}
+.res{display:grid;margin-top:8px}.rr{display:grid;grid-template-columns:12px 1fr auto 84px 110px;gap:10px;align-items:center;padding:8px 2px;border-bottom:1px solid var(--line);font-size:14px}.rr i{width:12px;height:12px;border-radius:3px}.rr small{text-align:right;font-size:12.5px}
+.world{display:grid;grid-template-columns:1.3fr 1fr;gap:18px;margin-top:14px}#globe{position:relative;height:440px;border-radius:14px;overflow:hidden;background:radial-gradient(circle at 50% 45%,#0e1a2a,#05070b 70%)}#gCanvas{width:100%;height:100%;display:block;cursor:grab}
+#gLabels{position:absolute;inset:0;pointer-events:none}.glbl{position:absolute;left:0;top:0;font-size:11px;color:#dfe6ee;background:rgba(5,8,12,.55);padding:2px 6px;border-radius:6px;white-space:nowrap;transition:opacity .2s}
+#mList{max-height:440px;overflow:auto}.mk{display:flex;align-items:center;gap:10px;width:100%;padding:9px 8px;border-radius:10px;text-align:left;border-bottom:1px solid var(--line)}.mk:hover{background:var(--accent2)}
+.mk .st{width:8px;height:8px;border-radius:50%;background:var(--line2)}.mk .st.on{background:var(--up)}.mk .nm{flex:1}.mk b{display:block;font-size:14px}.mk small{color:var(--muted);font-size:12px}.mk .vl{font-size:13.5px}
+#pending{margin:14px 0 0;padding:12px 16px;border-radius:12px;background:var(--warn);font-size:14px}
+#pop{position:absolute;z-index:30;width:320px;padding:12px 14px;border-radius:12px;background:var(--card);border:1px solid var(--line2);box-shadow:0 18px 40px -20px rgba(0,0,0,.35);font-size:14px}#pop p{margin:4px 0 0;color:var(--ink2)}
+#gloss{position:fixed;top:0;right:0;bottom:0;width:min(420px,100%);z-index:40;background:var(--card);border-left:1px solid var(--line);transform:translateX(100%);transition:transform .25s;overflow:auto;padding:24px;padding-top:calc(24px + env(safe-area-inset-top,0px))}#gloss.open{transform:none}
+#gloss h2{margin:0 0 10px}.gi{padding:10px 0;border-bottom:1px solid var(--line)}.gi p{margin:2px 0 0;font-size:14px;color:var(--ink2)}
+.x{position:absolute;right:16px;top:calc(16px + env(safe-area-inset-top,0px));width:32px;height:32px;border-radius:9px;display:grid;place-items:center;color:var(--muted)}
+footer{max-width:1100px;margin:0 auto;padding:0 20px 40px;font-size:13px;color:var(--muted)}footer button{text-decoration:underline;text-underline-offset:3px}
+#aboutDlg{position:fixed;inset:0;z-index:50;display:none;place-items:center;background:rgba(0,0,0,.45)}#aboutDlg.open{display:grid}#aboutDlg>div{position:relative;width:min(600px,92vw);max-height:85vh;overflow:auto;background:var(--card);border-radius:16px;padding:26px}#aboutDlg p{font-size:14px;color:var(--ink2)}
+@media (max-width:900px){.hero{grid-template-columns:1fr;padding-top:34px}.strip{grid-template-columns:repeat(3,1fr)}.form4{grid-template-columns:1fr 1fr}.form3,.cols,.world,.hero2{grid-template-columns:1fr}nav.top a.hide{display:none}section.blk{padding:20px}.rr{grid-template-columns:12px 1fr auto 70px}.rr small:last-child{display:none}#globe{height:340px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition-duration:.01s!important}}
+</style>
+</head>
+<body>
+<nav class="top"><div class="logo"><i>1º</i>Primeiro Passo</div><a class="hide" href="#reserva" data-go="reserva">Reserva</a><a class="hide" href="#comparar" data-go="comparar">Onde rende mais</a><a class="hide" href="#objetivo" data-go="objetivo">Objetivos</a><a class="hide" href="#bolsa" data-go="bolsa">Bolsa</a><button class="nb" id="glossBtn" type="button"><i data-lucide="book-open"></i>Glossário</button></nav>
+<main>
+ <header class="hero"><div><h1>Comece a investir com números de verdade.</h1><p>Sem jargão e sem promessa milagrosa: o que fazer primeiro, onde o dinheiro rende mais hoje já com o imposto descontado, e o que esperar de cada caminho. Tudo calculado com as taxas oficiais do dia.</p></div>
+  <div class="steps"><a href="#reserva" data-go="reserva"><em>01</em><span><b>Monte a reserva de emergência</b><small>Quanto guardar e onde</small></span></a><a href="#comparar" data-go="comparar"><em>02</em><span><b>Veja onde rende mais hoje</b><small>Poupança, Tesouro, CDB, LCI/LCA</small></span></a><a href="#objetivo" data-go="objetivo"><em>03</em><span><b>Planeje um objetivo</b><small>Quanto guardar por mês</small></span></a><a href="#bolsa" data-go="bolsa"><em>04</em><span><b>Entenda a bolsa antes de entrar</b><small>Com as quedas reais do Ibovespa</small></span></a></div></header>
+ <div class="strip" id="strip"></div><div class="updline"><span id="upd">Carregando…</span><span>Fontes: Banco Central e Yahoo Finance</span></div>
+ <div id="pending" hidden>Os dados ainda não chegaram: o robô de atualização ainda não rodou. As calculadoras aparecem assim que as taxas do dia forem carregadas.</div>
+ <section class="blk" id="reserva"><div class="kicker">Passo 1</div><h2>Antes de investir, a reserva de emergência</h2><p class="lead">É o dinheiro que segura as pontas num imprevisto. Sem ela, qualquer emergência obriga você a resgatar investimentos na pior hora.</p><div id="resBody"></div></section>
+ <section class="blk" id="comparar"><div class="kicker">Passo 2</div><h2>Onde seu dinheiro rende mais hoje</h2><p class="lead">Comparação lado a lado, com imposto, IOF e taxas já descontados. Mude o valor e o prazo e veja como o resultado muda.</p><div id="cmpBody"></div></section>
+ <section class="blk" id="objetivo"><div class="kicker">Passo 3</div><h2>Quanto guardar por mês para um objetivo</h2><p class="lead">Viagem, carro, entrada de um imóvel: transforme o objetivo num valor mensal, já contando a inflação e os juros a seu favor.</p><div id="metaBody"></div></section>
+ <section class="blk" id="bolsa"><div class="kicker">Passo 4</div><h2>E a bolsa de valores?</h2><div id="bolsaBody"></div></section>
+ <section class="blk" id="historico"><div class="kicker">Para comparar</div><h2>Quanto teria rendido no passado</h2><p class="lead">Escolha um ano e veja o que aconteceu com o mesmo dinheiro em cada caminho, inclusive contra a inflação.</p><div id="simBody"></div></section>
+ <section class="blk" id="mundo"><div class="kicker">Contexto</div><h2>O mundo hoje</h2><p class="lead">A bolsa brasileira também reage ao que acontece lá fora. Os pontos mostram como fecharam (ou estão) as principais bolsas, com o dia e a noite de agora.</p>
+  <div class="world"><div id="globe"><canvas id="gCanvas" aria-label="Globo com as bolsas do mundo"></canvas><div id="gLabels"></div></div><div id="mList"></div></div></section>
+</main>
+<footer><p>Conteúdo educativo. Não é recomendação de investimento e não substitui a orientação de um profissional certificado. Simulações supõem taxas constantes; rentabilidade passada não garante rentabilidade futura.</p><button type="button" id="about">Fontes, regras e créditos</button></footer>
+<div id="pop" hidden></div>
+<aside id="gloss" aria-label="Glossário"><button class="x" id="glossClose" type="button" aria-label="Fechar"><i data-lucide="x"></i></button><h2>Glossário</h2><div id="glossList"></div></aside>
+<div id="aboutDlg" role="dialog" aria-modal="true"><div><button class="x" id="aboutClose" type="button" aria-label="Fechar" style="top:16px"><i data-lucide="x"></i></button><h2>Fontes, regras e créditos</h2>
+ <p><b>Taxas:</b> Banco Central do Brasil (SGS): meta Selic, CDI, IPCA, poupança e dólar PTAX. Bolsas e câmbio comercial: Yahoo Finance, com atraso de cerca de 15 minutos. Um robô atualiza os dados a cada 30 minutos nos dias úteis.</p>
+ <p><b>Regras usadas nos cálculos (2026):</b> Imposto de Renda regressivo na renda fixa (22,5% até 180 dias, 20% até 360, 17,5% até 720 e 15% acima). IOF regressivo para resgates com menos de 30 dias. LCI e LCA isentas de IR para pessoa física, com prazo mínimo de 6 meses. Taxa de custódia de 0,20% ao ano no Tesouro Direto, isenta até R$ 10 mil no Tesouro Selic. Garantia do FGC de até R$ 250 mil por CPF e instituição.</p>
+ <p><b>Simplificações:</b> o Tesouro Selic é calculado pela Selic menos 0,10 ponto; os prazos usam 365 dias por ano; as taxas são supostas constantes. Bancos e corretoras podem ter condições diferentes.</p>
+ <p><b>Imagens da Terra:</b> NASA (Blue Marble e Black Marble), via o projeto three-globe.</p></div></div>
+<script src="https://cdn.jsdelivr.net/npm/three@0.147.0/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.147.0/examples/js/controls/OrbitControls.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lucide@0.454.0/dist/umd/lucide.min.js"></script>
+<script>
+/* ====== Regras de cálculo (renda fixa para pessoa física, regras vigentes em 2026) ======
+   IR regressivo: 22,5% até 180 dias; 20% de 181 a 360; 17,5% de 361 a 720; 15% acima de 720.
+   IOF regressivo sobre o rendimento em resgates com menos de 30 dias (tabela do Decreto 6.306/2007).
+   LCI/LCA: isentas de IR para pessoa física; prazo mínimo de 6 meses (Res. CMN 5.215/2025).
+   Tesouro Selic: custódia B3 de 0,20% a.a. sobre o que passar de R$ 10 mil.
+   Poupança: isenta; com Selic acima de 8,5% a.a., rende 0,5% ao mês + TR. */
+const CALC=(function(){
+ const IOF=[96,93,90,86,83,80,76,73,70,66,63,60,56,53,50,46,43,40,36,33,30,26,23,20,16,13,10,6,3,0];
+ function aliqIR(dias){return dias<=180?22.5:dias<=360?20:dias<=720?17.5:15;}
+ function aliqIOF(dias){return dias>=30?0:IOF[Math.max(1,dias)-1];}
+ function taxas(D){
+  const bc=(D&&D.bcb)||{};
+  const selic=bc.selic?bc.selic.valor:null;
+  let cdi=bc.cdi_anual?bc.cdi_anual.valor:null;
+  if(cdi==null&&bc.cdi_mensal){const v=Object.values(bc.cdi_mensal);cdi=(Math.pow(1+v[v.length-1]/100,12)-1)*100;}
+  if(cdi==null&&selic!=null)cdi=selic-0.1;
+  let poup=null,poupFonte='';
+  if(bc.poupanca_mensal){const v=Object.values(bc.poupanca_mensal);poup=v[v.length-1];poupFonte='última rentabilidade mensal publicada pelo Banco Central';}
+  else if(selic!=null){poup=selic>8.5?0.5:(Math.pow(1+selic*0.7/100,1/12)-1)*100;poupFonte=selic>8.5?'regra: 0,5% ao mês + TR (TR não incluída)':'regra: 70% da Selic + TR (TR não incluída)';}
+  return {selic,cdi,ipca12:bc.ipca_12m!=null?bc.ipca_12m:null,poup,poupFonte};}
+ /* resultado de cada produto para valor V e prazo em meses */
+ function comparar(V,meses,T,opt){opt=opt||{};const dias=Math.round(meses*365/12),anos=dias/365;const out=[];
+  const cdbPct=opt.cdbPct||100,lciPct=opt.lciPct||90;
+  if(T.poup!=null){const bruto=V*Math.pow(1+T.poup/100,Math.floor(meses));out.push({id:'poupanca',nome:'Poupança',bruto,ir:0,iof:0,custodia:0,liquido:bruto,garantia:'FGC até R$ 250 mil',liquidez:'Diária, mas só rende no aniversário mensal',nota:'Isenta de IR. '+T.poupFonte+'.'});}
+  if(T.selic!=null){const taxa=T.selic-0.1;const bruto=V*Math.pow(1+taxa/100,anos);const rend=bruto-V;
+   const iof=rend*aliqIOF(dias)/100;const ir=(rend-iof)*aliqIR(dias)/100;const cust=Math.max(0,V-10000)*0.002*anos;
+   out.push({id:'tesouro',nome:'Tesouro Selic',bruto,ir,iof,custodia:cust,liquido:bruto-ir-iof-cust,garantia:'Tesouro Nacional',liquidez:'Diária',nota:'Rende perto da Selic ('+nf(taxa)+'% a.a.). Custódia de 0,20% a.a. só sobre o que passar de R$ 10 mil.'});}
+  if(T.cdi!=null){const taxa=T.cdi*cdbPct/100;const bruto=V*Math.pow(1+taxa/100,anos);const rend=bruto-V;
+   const iof=rend*aliqIOF(dias)/100;const ir=(rend-iof)*aliqIR(dias)/100;
+   out.push({id:'cdb',nome:'CDB '+cdbPct+'% do CDI',bruto,ir,iof,custodia:0,liquido:bruto-ir-iof,garantia:'FGC até R$ 250 mil',liquidez:'Depende do título (muitos têm liquidez diária)',nota:'IR de '+nf(aliqIR(dias),1)+'% sobre o rendimento neste prazo.'});
+   const lt=T.cdi*lciPct/100;const lb=V*Math.pow(1+lt/100,anos);
+   out.push({id:'lci',nome:'LCI/LCA '+lciPct+'% do CDI',bruto:lb,ir:0,iof:0,custodia:0,liquido:lb,garantia:'FGC até R$ 250 mil',liquidez:'Só após a carência (mínimo de 6 meses)',nota:'Isenta de IR para pessoa física.',bloqueado:meses<6?'Não existe para prazos menores que 6 meses: a carência mínima é de 6 meses.':null});}
+  out.forEach(o=>{o.ganho=o.liquido-V;o.pct=(o.liquido/V-1)*100;o.pctAno=(Math.pow(o.liquido/V,1/anos)-1)*100;});
+  return {dias,anos,itens:out.sort((a,b)=>(a.bloqueado?1:0)-(b.bloqueado?1:0)||b.liquido-a.liquido)};}
+ /* explicações automáticas em linguagem simples */
+ function explicar(r,V,meses,T,opt){const it=r.itens.filter(i=>!i.bloqueado),by=id=>r.itens.find(i=>i.id===id);const msgs=[];const best=it[0];
+  if(best)msgs.push('Neste prazo, quem rende mais é <b>'+best.nome+'</b>: '+brl(best.liquido)+' no fim, '+brl(best.ganho)+' a mais que hoje.');
+  const lci=by('lci'),cdb=by('cdb');
+  if(lci&&cdb&&!lci.bloqueado){const eq=(opt.lciPct||90)/(1-aliqIR(r.dias)/100);
+   msgs.push(lci.liquido>cdb.liquido?'A LCI/LCA rende mais que o CDB mesmo pagando uma porcentagem menor do CDI, porque não tem Imposto de Renda. Para empatar com ela neste prazo, um CDB precisaria pagar cerca de <b>'+nf(eq,0)+'% do CDI</b>.':'Aqui o CDB vence a LCI/LCA: a porcentagem dele compensa o imposto. Uma LCI precisaria pagar mais de '+nf((opt.cdbPct||100)*(1-aliqIR(r.dias)/100),0)+'% do CDI para empatar.');}
+  if(lci&&lci.bloqueado)msgs.push('LCI e LCA ficam de fora em prazos menores que 6 meses, por causa da carência mínima.');
+  const p=by('poupanca'),t=by('tesouro');
+  if(p&&t&&t.liquido>p.liquido)msgs.push('A poupança deixaria <b>'+brl(t.liquido-p.liquido)+'</b> na mesa em comparação ao Tesouro Selic, que também tem liquidez diária.');
+  if(r.dias<=180&&cdb)msgs.push('Em aplicações de até 180 dias o IR é o mais alto (22,5%). Quanto mais tempo o dinheiro fica, menor o imposto: cai até 15% depois de 2 anos.');
+  if(V>250000)msgs.push('Acima de R$ 250 mil por banco, o FGC não cobre tudo. Vale dividir entre instituições diferentes.');
+  if(T.ipca12!=null&&best){const real=(Math.pow(1+best.pctAno/100,1)/(1+T.ipca12/100)-1)*100;msgs.push('Descontando a inflação dos últimos 12 meses ('+nf(T.ipca12)+'%), o ganho real de '+best.nome+' fica perto de <b>'+nf(real)+'% ao ano</b>.');}
+  return msgs;}
+ function reserva(gastos,perfil){const meses={clt:6,servidor:3,autonomo:12}[perfil]||6;return {meses,alvo:gastos*meses};}
+ /* aporte mensal para chegar a um objetivo (valores corrigidos pela inflação) */
+ function meta(objetivo,jaTenho,meses,T){const anos=meses/12;const dias=Math.round(meses*365/12);const cdi=T.cdi!=null?T.cdi:10;const ipca=T.ipca12!=null?T.ipca12:4;
+  const liqAno=cdi*(1-aliqIR(dias)/100);const i=Math.pow(1+liqAno/100,1/12)-1;const alvo=objetivo*Math.pow(1+ipca/100,anos);
+  const fvPV=jaTenho*Math.pow(1+i,meses);const falta=Math.max(0,alvo-fvPV);const pmt=falta>0?falta*i/(Math.pow(1+i,meses)-1):0;
+  return {alvo,pmt,i:i*100,liqAno,ipca,semJuros:Math.max(0,alvo-jaTenho)/meses};}
+ /* maiores quedas do índice (série mensal) e quanto tempo levou para voltar */
+ function quedas(serie){const ks=Object.keys(serie).sort(),vs=ks.map(k=>serie[k]);const out=[];let pico=0,i=1;
+  while(i<vs.length){if(vs[i]>=vs[pico]){pico=i;i++;continue;}
+   let fundo=i,j=i;while(j<vs.length&&vs[j]<vs[pico]){if(vs[j]<vs[fundo])fundo=j;j++;}
+   const dd=(vs[fundo]/vs[pico]-1)*100;if(dd<=-15)out.push({pico:ks[pico],fundo:ks[fundo],queda:dd,volta:j<vs.length?ks[j]:null,meses:j<vs.length?j-pico:null});
+   pico=j<vs.length?j:pico;i=j+1;}
+  return out.sort((a,b)=>a.queda-b.queda).slice(0,4).sort((a,b)=>a.pico<b.pico?-1:1);}
+ function nf(v,d=2){return v==null||isNaN(v)?'–':v.toLocaleString('pt-BR',{minimumFractionDigits:d,maximumFractionDigits:d});}
+ function brl(v){return v==null||isNaN(v)?'–':v.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});}
+ return {aliqIR,aliqIOF,taxas,comparar,explicar,reserva,meta,quedas,nf,brl};})();
+if(typeof module!=='undefined')module.exports=CALC;
+
+(async function(){
+'use strict';
+const $=id=>document.getElementById(id);
+const icons=()=>{try{if(window.lucide)lucide.createIcons();}catch(e){}};
+const {nf,brl}=CALC;const pct=v=>v==null?'–':(v>0?'+':'')+nf(v)+'%';const cls=v=>v==null?'':v>0?'up':v<0?'dn':'';
+const REDUCED=matchMedia('(prefers-reduced-motion: reduce)').matches;
+let D=null,T={};
+
+/* ---------- glossário ---------- */
+const GLOSS={
+ selic:['Selic','A taxa básica de juros do Brasil, definida pelo Banco Central a cada 45 dias. Ela puxa para cima ou para baixo quase todos os rendimentos da renda fixa.'],
+ cdi:['CDI','Taxa que os bancos usam para emprestar dinheiro entre si, sempre muito próxima da Selic. Quando um investimento paga "100% do CDI", ele rende essa taxa.'],
+ ipca:['IPCA','A inflação oficial do Brasil, medida pelo IBGE. Se seu dinheiro rende menos que o IPCA, ele perde poder de compra.'],
+ fgc:['FGC','Fundo Garantidor de Créditos. Se um banco quebrar, ele devolve até R$ 250 mil por CPF e por instituição em produtos como poupança, CDB, LCI e LCA (com teto total de R$ 1 milhão a cada 4 anos).'],
+ liquidez:['Liquidez','A rapidez com que você consegue tirar o dinheiro. Liquidez diária significa que dá para resgatar em qualquer dia útil.'],
+ carencia:['Carência','Período em que o dinheiro fica travado e não pode ser resgatado. LCI e LCA têm carência mínima de 6 meses.'],
+ ir:['IR regressivo','O imposto sobre o rendimento da renda fixa diminui com o tempo: 22,5% até 180 dias, 20% até 360 dias, 17,5% até 720 dias e 15% depois disso. É descontado automaticamente no resgate.'],
+ iof:['IOF','Imposto cobrado sobre o rendimento se você resgatar antes de 30 dias. Começa em 96% do rendimento no 1º dia e zera no 30º.'],
+ custodia:['Taxa de custódia','Taxa da B3 para guardar seus títulos do Tesouro Direto: 0,20% ao ano. No Tesouro Selic, só é cobrada sobre o que passar de R$ 10 mil.'],
+ tesouro:['Tesouro Selic','Título público em que você empresta dinheiro para o governo e recebe a Selic. É considerado o investimento mais seguro do país e tem liquidez diária.'],
+ cdb:['CDB','Certificado de Depósito Bancário: você empresta dinheiro para um banco e recebe juros, geralmente uma porcentagem do CDI. Tem garantia do FGC.'],
+ lci:['LCI e LCA','Letras de crédito que financiam o setor imobiliário (LCI) e o agronegócio (LCA). São isentas de Imposto de Renda para pessoa física e têm garantia do FGC.'],
+ poupanca:['Poupança','A aplicação mais conhecida do Brasil. É isenta de IR e tem FGC, mas só rende no "aniversário" mensal e costuma render menos que as alternativas.'],
+ ibov:['Ibovespa','O principal índice da bolsa brasileira: uma média das ações mais negociadas. Quando dizem que "a bolsa subiu", geralmente é ele.'],
+ real:['Ganho real','O quanto seu dinheiro cresceu acima da inflação. É o que realmente aumenta o seu poder de compra.'],
+ reserva:['Reserva de emergência','Dinheiro guardado para imprevistos (perda de renda, saúde, conserto). Deve estar em algo seguro e com liquidez diária.']};
+function g(k,t){return '<button type="button" class="gl" data-g="'+k+'">'+(t||GLOSS[k][0])+'</button>';}
+function bindGloss(root){(root||document).querySelectorAll('[data-g]').forEach(b=>b.onclick=e=>{e.stopPropagation();const [n,d]=GLOSS[b.dataset.g];const p=$('pop');p.innerHTML='<b>'+n+'</b><p>'+d+'</p>';p.hidden=false;
+ const r=b.getBoundingClientRect();p.style.left=Math.max(12,Math.min(innerWidth-332,r.left))+'px';p.style.top=(r.bottom+8+scrollY)+'px';});}
+document.addEventListener('click',()=>{$('pop').hidden=true;});
+$('glossBtn').onclick=()=>{$('glossList').innerHTML=Object.entries(GLOSS).map(([k,[n,d]])=>'<div class="gi"><b>'+n+'</b><p>'+d+'</p></div>').join('');$('gloss').classList.add('open');};
+$('glossClose').onclick=()=>$('gloss').classList.remove('open');
+
+/* ---------- dados ---------- */
+async function load(){try{const r=await fetch('data/mercado.json?t='+Date.now(),{cache:'no-store'});D=await r.json();}catch(e){D=null;}T=CALC.taxas(D&&D.status==='ok'?D:null);render();}
+function render(){const ok=D&&D.status==='ok';
+ $('upd').textContent=ok?'Taxas de '+new Date(D.gerado_em).toLocaleString('pt-BR',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'}):'Aguardando a primeira atualização dos dados';
+ $('pending').hidden=ok;
+ const usd=ok&&D.moedas.find(m=>m.codigo==='USD');
+ $('strip').innerHTML=[[g('selic'),T.selic!=null?nf(T.selic)+'%':'–','ao ano'],[g('cdi'),T.cdi!=null?nf(T.cdi)+'%':'–','ao ano'],[g('ipca'),T.ipca12!=null?nf(T.ipca12)+'%':'–','em 12 meses'],
+  [g('poupanca'),T.poup!=null?nf(T.poup,2)+'%':'–','ao mês'],[g('ibov'),ok&&D.bolsas.b3?nf(D.bolsas.b3.ultimo,0):'–',ok&&D.bolsas.b3?'<span class="'+cls(D.bolsas.b3.var_dia)+'">'+pct(D.bolsas.b3.var_dia)+' hoje</span>':''],
+  ['Dólar',usd?'R$ '+nf(usd.ultimo,2):'–',usd?'<span class="'+cls(usd.var_dia)+'">'+pct(usd.var_dia)+' hoje</span>':'']].map(([a,b,c])=>'<div class="sx"><small>'+a+'</small><b>'+b+'</b><span>'+c+'</span></div>').join('');
+ reserva();comparador();meta();bolsa();sim();mundo();bindGloss();icons();}
+
+/* ---------- formulários: montados uma vez, resultados atualizam ao digitar ---------- */
+function form(box,key,html,bind){if(box.dataset.f!==key){box.innerHTML=html+'<div class="out"></div>';box.dataset.f=key;bind();}return box.querySelector('.out');}
+function live(id,fn){const el=$(id);let t=null;const go=()=>{clearTimeout(t);t=setTimeout(fn,180);};el.addEventListener('input',go);el.addEventListener('change',go);}
+const num=(id,def,min)=>{const v=parseFloat($(id).value);return isNaN(v)?def:Math.max(min||0,v);};
+
+/* ---------- 1. reserva de emergência ---------- */
+const R={gastos:3000,perfil:'clt',tenho:0};
+function reserva(){const box=$('resBody');
+ const out=form(box,'r','<div class="form3"><label>Gastos do mês (R$)<input type="number" inputmode="decimal" id="rg" min="0" step="100" value="'+R.gastos+'"></label><label>Como é sua renda<select id="rp"><option value="clt">Carteira assinada (CLT)</option><option value="servidor">Servidor público</option><option value="autonomo">Autônomo ou empresário</option></select></label><label>Já tenho guardado (R$)<input type="number" inputmode="decimal" id="rt" min="0" step="100" value="'+R.tenho+'"></label></div>',
+  ()=>{const up=()=>{R.gastos=num('rg',0);R.perfil=$('rp').value;R.tenho=num('rt',0);reserva();};live('rg',up);live('rp',up);live('rt',up);});
+ const r=CALC.reserva(R.gastos,R.perfil);const falta=Math.max(0,r.alvo-R.tenho);
+ const t=CALC.comparar(Math.max(1000,r.alvo),12,T,{});const ts=t.itens.find(i=>i.id==='tesouro'),pp=t.itens.find(i=>i.id==='poupanca');
+ out.innerHTML='<div class="hero2"><div><small>Sua reserva ideal</small><b>'+brl(r.alvo)+'</b><span>'+r.meses+' meses dos seus gastos</span></div><div><small>Falta juntar</small><b>'+brl(falta)+'</b><span>'+(falta?'guardando '+brl(falta/12)+' por mês, chega lá em 1 ano':'reserva completa')+'</span></div></div>'+
+  '<div class="cols"><div class="ok"><h4><i data-lucide="check"></i>Onde deixar</h4><p>'+g('tesouro')+' ou um '+g('cdb')+' de '+g('liquidez','liquidez diária')+' que pague pelo menos 100% do CDI, num banco sólido. Seguro, rende perto da Selic e você saca quando precisar.</p></div>'+
+  '<div class="no"><h4><i data-lucide="x"></i>Onde não deixar</h4><p>Bolsa (pode estar em queda justo quando você precisar), '+g('lci','LCI/LCA')+' (têm '+g('carencia')+') e conta corrente parada (não rende).</p></div></div>'+
+  (ts&&pp&&R.gastos>0?'<p class="note">Com a reserva completa no Tesouro Selic, em 1 ano você teria cerca de '+brl(ts.liquido-pp.liquido)+' a mais do que na poupança, já descontado o imposto.</p>':'')+
+  '<p class="note">Por que '+r.meses+' meses? Quem tem carteira assinada costuma contar com FGTS e seguro-desemprego; servidor tem estabilidade; autônomo tem renda variável e precisa de mais fôlego. É uma referência comum: ajuste à sua realidade.</p>';
+ bindGloss(out);icons();}
+
+/* ---------- 2. onde rende mais hoje ---------- */
+const C={valor:5000,meses:12,cdbPct:100,lciPct:90};
+function comparador(){const box=$('cmpBody');if(T.cdi==null){box.dataset.f='';box.innerHTML='<p class="note">O comparador usa as taxas do dia e aparece assim que os dados forem atualizados.</p>';return;}
+ const out=form(box,'c','<div class="form4"><label>Quanto vai investir (R$)<input type="number" inputmode="decimal" id="cv" min="100" step="100" value="'+C.valor+'"></label><label>Por quanto tempo<select id="cm">'+[[1,'1 mês'],[3,'3 meses'],[6,'6 meses'],[12,'1 ano'],[24,'2 anos'],[36,'3 anos'],[60,'5 anos']].map(([v,t])=>'<option value="'+v+'"'+(v===C.meses?' selected':'')+'>'+t+'</option>').join('')+'</select></label>'+
+  '<label>CDB paga (% do CDI)<input type="number" inputmode="decimal" id="cc" min="50" max="150" step="1" value="'+C.cdbPct+'"></label><label>LCI/LCA paga (% do CDI)<input type="number" inputmode="decimal" id="cl" min="50" max="130" step="1" value="'+C.lciPct+'"></label></div>',
+  ()=>{const up=()=>{C.valor=num('cv',5000,1);C.meses=+$('cm').value;C.cdbPct=Math.min(150,num('cc',100,50));C.lciPct=Math.min(130,num('cl',90,50));comparador();};['cv','cm','cc','cl'].forEach(id=>live(id,up));});
+ const r=CALC.comparar(C.valor,C.meses,T,C);const ok=r.itens.filter(i=>!i.bloqueado);const max=Math.max(...ok.map(i=>i.liquido));const min=Math.min(...ok.map(i=>i.liquido));
+ out.innerHTML='<div class="bars">'+r.itens.map((i,k)=>'<div class="bar'+(i.bloqueado?' off':'')+(k===0&&!i.bloqueado?' best':'')+'"><div class="bh"><b>'+i.nome+(k===0&&!i.bloqueado?' <span class="tag">rende mais</span>':'')+'</b>'+(i.bloqueado?'<span class="muted">indisponível neste prazo</span>':'<span class="num">'+brl(i.liquido)+'</span>')+'</div>'+
+   (i.bloqueado?'<p class="note">'+i.bloqueado+'</p>':'<div class="track"><i style="width:'+(max>min?20+(i.liquido-min)/(max-min)*80:100)+'%"></i></div><div class="bd"><span>Ganho líquido <b class="num">'+brl(i.ganho)+'</b> ('+nf(i.pct)+'% no período)</span>'+(i.ir?'<span>'+g('ir','IR')+' <b class="num">'+brl(i.ir)+'</b></span>':'<span>sem IR</span>')+(i.iof?'<span>'+g('iof')+' <b class="num">'+brl(i.iof)+'</b></span>':'')+(i.custodia?'<span>'+g('custodia','custódia')+' <b class="num">'+brl(i.custodia)+'</b></span>':'')+'</div><div class="bd sub"><span><i data-lucide="shield-check"></i>'+i.garantia+'</span><span><i data-lucide="clock-3"></i>'+i.liquidez+'</span></div>')+'</div>').join('')+'</div>'+
+  '<div class="why"><h4>O que esses números dizem</h4><ul>'+CALC.explicar(r,C.valor,C.meses,T,C).map(m=>'<li>'+m+'</li>').join('')+'</ul></div>'+
+  '<p class="note">Cálculo com o '+g('cdi')+' de hoje ('+nf(T.cdi)+'% a.a.) e a '+g('selic')+' ('+nf(T.selic)+'% a.a.), supondo que as taxas fiquem iguais no período ('+r.dias+' dias). As porcentagens de CDB e LCI/LCA variam por banco: digite as que você encontrou. '+g('ir','Imposto de Renda')+' e '+g('iof')+' pelas regras vigentes; LCI e LCA isentas para pessoa física.</p>';
+ bindGloss(out);icons();}
+
+/* ---------- 3. objetivo ---------- */
+const M={obj:15000,tenho:1000,meses:24,nome:'Viagem'};
+function meta(){const box=$('metaBody');if(T.cdi==null){box.dataset.f='';box.innerHTML='<p class="note">Disponível assim que as taxas forem atualizadas.</p>';return;}
+ const out=form(box,'m','<div class="form4"><label>Objetivo<input type="text" id="mn" value="'+M.nome+'" maxlength="30"></label><label>Quanto custa hoje (R$)<input type="number" inputmode="decimal" id="mo" min="100" step="100" value="'+M.obj+'"></label><label>Já tenho (R$)<input type="number" inputmode="decimal" id="mt" min="0" step="100" value="'+M.tenho+'"></label><label>Em quanto tempo<select id="mm">'+[6,12,18,24,36,48,60,120].map(v=>'<option value="'+v+'"'+(v===M.meses?' selected':'')+'>'+(v<24?v+' meses':(v/12)+' anos')+'</option>').join('')+'</select></label></div>',
+  ()=>{const up=()=>{M.nome=($('mn').value||'Objetivo').trim();M.obj=num('mo',0);M.tenho=num('mt',0);M.meses=+$('mm').value;meta();};['mn','mo','mt','mm'].forEach(id=>live(id,up));});
+ const m=CALC.meta(M.obj,M.tenho,M.meses,T);const total=m.pmt*M.meses+M.tenho;const juros=Math.max(0,m.alvo-total);const nome=M.nome.replace(/[<>&"]/g,'');
+ out.innerHTML=(m.pmt<=0?'<div class="hero2"><div><small>Boa notícia</small><b>R$ 0,00</b><span>o que você já tem, investido, deve bastar</span></div><div><small>Valor estimado no prazo</small><b>'+brl(m.alvo)+'</b><span>com a inflação</span></div></div>':
+  '<div class="hero2"><div><small>Guarde por mês</small><b>'+brl(m.pmt)+'</b><span>investindo a 100% do CDI</span></div><div><small>Sem investir, seria</small><b>'+brl(m.semJuros)+'</b><span>por mês, só guardando na conta</span></div></div>')+
+  '<p>Para "'+nome+'" daqui a '+(M.meses<24?M.meses+' meses':M.meses/12+' anos')+', você vai precisar de cerca de <b>'+brl(m.alvo)+'</b>, porque os preços sobem com a inflação. '+(m.pmt>0?'Desse total, aproximadamente <b>'+brl(juros)+'</b> vêm dos juros: é o dinheiro trabalhando para você.':'')+'</p>'+
+  '<p class="note">Considera o rendimento líquido de um CDB a 100% do CDI ('+nf(m.liqAno)+'% a.a. depois do IR neste prazo) e a inflação dos últimos 12 meses ('+nf(m.ipca)+'% a.a.) para corrigir o preço do objetivo. São estimativas: juros e inflação mudam com o tempo.</p>';}
+
+/* ---------- 4. e a bolsa? ---------- */
+function bolsa(){const box=$('bolsaBody');const ok=D&&D.status==='ok'&&D.mensal&&D.mensal.ibovespa;if(!ok){box.innerHTML='<p class="note">Os dados do '+g('ibov')+' aparecem após a primeira atualização.</p>';return;}
+ const s=D.mensal.ibovespa,ks=Object.keys(s).sort();const q=CALC.quedas(s);const ini=s[ks[0]],fim=s[ks[ks.length-1]];const anos=ks.length/12;
+ const cdiAc=D.bcb&&D.bcb.cdi_mensal?ks.slice(1).reduce((v,k)=>v*(1+(D.bcb.cdi_mensal[k]||0)/100),1):null;
+ box.innerHTML='<p>Ações podem render mais no longo prazo, mas o caminho tem quedas fortes. Veja as maiores do '+g('ibov')+' desde '+ks[0].slice(0,4)+':</p>'+
+  '<canvas class="chart" id="ibChart" height="230"></canvas><div class="drops">'+q.map(x=>'<div><b class="dn num">'+nf(x.queda,0)+'%</b><span>de '+mes(x.pico)+' a '+mes(x.fundo)+'</span><small>'+(x.meses?'levou '+x.meses+' meses para voltar ao topo':'ainda não tinha voltado ao topo no fim da série')+'</small></div>').join('')+'</div>'+
+  '<div class="cols"><div class="ok"><h4><i data-lucide="check"></i>A bolsa faz sentido quando</h4><p>Você já tem reserva de emergência, o dinheiro pode ficar 5 anos ou mais e você aguenta ver o saldo cair sem vender no desespero. Para começar, fundos de índice (ETFs) espalham o risco entre muitas empresas.</p></div>'+
+  '<div class="no"><h4><i data-lucide="x"></i>Evite quando</h4><p>O dinheiro tem data para ser usado nos próximos anos, ou se for a sua reserva. Também desconfie de promessas de ganho rápido e garantido.</p></div></div>'+
+  '<p class="note">No período do gráfico ('+nf(anos,0)+' anos), o Ibovespa variou '+pct((fim/ini-1)*100)+(cdiAc?' e o CDI acumulou '+pct((cdiAc-1)*100):'')+'. O índice aqui não inclui dividendos. Rentabilidade passada não garante rentabilidade futura.</p>';
+ lineChart($('ibChart'),[{name:'Ibovespa',dates:ks,vals:ks.map(k=>s[k]),color:getVar('--accent')}],{fmt:v=>nf(v,0),monthly:true,marks:q});}
+function mes(k){return new Date(k+'-15').toLocaleDateString('pt-BR',{month:'short',year:'numeric'});}
+
+/* ---------- 5. quanto teria rendido ---------- */
+const S={valor:10000,inicio:null};
+function months(from,to){const out=[];let [y,m]=from.split('-').map(Number);const [ty,tm]=to.split('-').map(Number);while(y<ty||(y===ty&&m<=tm)){out.push(y+'-'+String(m).padStart(2,'0'));m++;if(m>12){m=1;y++;}}return out;}
+function prevM(k){let [y,m]=k.split('-').map(Number);m--;if(m<1){m=12;y--;}return y+'-'+String(m).padStart(2,'0');}
+function sim(){const box=$('simBody');const ok=D&&D.status==='ok'&&D.bcb&&D.bcb.cdi_mensal;if(!ok){box.dataset.f='';box.innerHTML='<p class="note">O simulador usa as séries oficiais e aparece após a primeira atualização.</p>';return;}
+ const bc=D.bcb,mm=D.mensal||{};const ck=Object.keys(bc.cdi_mensal).sort();const lastOf=o=>{const k=Object.keys(o||{}).sort();return k[k.length-1];};const ultimo=[lastOf(bc.cdi_mensal),lastOf(bc.ipca_mensal)].filter(Boolean).sort()[0];
+ const opts=months(ck[0]<'2011-01'?'2011-01':ck[0],ultimo).filter(k=>k.endsWith('-01'));if(!S.inicio||!opts.includes(S.inicio))S.inicio=opts[Math.max(0,opts.length-6)];
+ const per=months(S.inicio,ultimo);
+ const acum=se=>{if(!se)return null;let v=S.valor;const o=[v];for(const k of per){if(se[k]==null)return null;v*=1+se[k]/100;o.push(v);}return o;};
+ const preco=se=>{if(!se)return null;const b=se[prevM(per[0])];if(!b)return null;const o=[S.valor];for(const k of per){if(se[k]==null)return null;o.push(S.valor*se[k]/b);}return o;};
+ const lines=[{n:'CDI',v:acum(bc.cdi_mensal),c:'#c98a2b'},{n:'Poupança',v:acum(bc.poupanca_mensal),c:'#5b8def'},{n:'Ibovespa',v:preco(mm.ibovespa),c:'#1e9e6a'},{n:'Dólar',v:preco(mm.dolar),c:'#9b6bd6'},{n:'Inflação (IPCA)',v:acum(bc.ipca_mensal),c:'#8a93a3',dash:true}].filter(l=>l.v);
+ const ip=lines.find(l=>l.dash);const inf=ip?ip.v[ip.v.length-1]/S.valor:1;const labels=[prevM(per[0])].concat(per);
+ const out=form(box,'s'+opts.length,'<div class="form4 two"><label>Valor investido (R$)<input type="number" inputmode="decimal" id="sv" min="100" step="100" value="'+S.valor+'"></label><label>A partir de<select id="si">'+opts.map(o=>'<option value="'+o+'"'+(o===S.inicio?' selected':'')+'>'+o.slice(0,4)+'</option>').join('')+'</select></label></div>',
+  ()=>{const up=()=>{S.valor=num('sv',10000,1);S.inicio=$('si').value;sim();};live('sv',up);live('si',up);});
+ out.innerHTML='<canvas class="chart" id="sChart" height="240"></canvas><div class="res">'+lines.slice().sort((a,b)=>b.v[b.v.length-1]-a.v[a.v.length-1]).map(l=>{const f=l.v[l.v.length-1];const real=(f/S.valor/inf-1)*100;
+   return '<div class="rr"><i style="background:'+l.c+'"></i><span>'+l.n+'</span><b class="num">'+brl(f)+'</b><small class="num '+cls((f/S.valor-1)*100)+'">'+pct((f/S.valor-1)*100)+'</small><small class="num muted">'+(l.dash?'referência':'real '+pct(real))+'</small></div>';}).join('')+'</div>'+
+  '<p class="note">Período até '+mes(ultimo)+'. "Real" desconta a inflação do período: é o quanto o poder de compra aumentou. CDI, poupança e IPCA: séries oficiais do Banco Central, sem imposto. Ibovespa e dólar: fechamentos mensais, sem dividendos nem custos.</p>';
+ lineChart($('sChart'),lines.map(l=>({name:l.n,dates:labels,vals:l.v,color:l.c,dash:l.dash})),{fmt:v=>brl(v).replace(',00',''),monthly:true});}
+
+/* ---------- 6. o mundo hoje (globo) ---------- */
+let globe=null;
+function mundo(){const ok=D&&D.status==='ok';const list=$('mList');
+ const B=GLOBE_MARKETS;list.innerHTML=B.map(b=>{const d=ok&&D.bolsas[b.id];const o=isOpen(b);return '<button type="button" class="mk" data-m="'+b.id+'"><span class="st'+(o?' on':'')+'"></span><span class="nm"><b>'+b.indice+'</b><small>'+b.cidade+' · '+localTime(b)+'</small></span><span class="vl num '+cls(d&&d.var_dia)+'">'+(d?pct(d.var_dia):'–')+'</span></button>';}).join('');
+ list.querySelectorAll('[data-m]').forEach(x=>x.onclick=()=>{if(globe)globe.focus(x.dataset.m);});
+ if(globe)globe.update(ok?D.bolsas:{});}
+const GLOBE_MARKETS=[['b3','Ibovespa','São Paulo',-23.55,-46.63,'America/Sao_Paulo','10:00','17:00'],['nyse','S&P 500','Nova York',40.71,-74.01,'America/New_York','09:30','16:00'],['nasdaq','Nasdaq','Nova York',40.76,-73.98,'America/New_York','09:30','16:00'],
+ ['lse','FTSE 100','Londres',51.51,-0.09,'Europe/London','08:00','16:30'],['xetra','DAX','Frankfurt',50.11,8.68,'Europe/Berlin','09:00','17:30'],['euronext','CAC 40','Paris',48.87,2.34,'Europe/Paris','09:00','17:30'],
+ ['tse','Nikkei 225','Tóquio',35.68,139.77,'Asia/Tokyo','09:00','15:30'],['sse','Shanghai Composite','Xangai',31.23,121.47,'Asia/Shanghai','09:30','15:00'],['hkex','Hang Seng','Hong Kong',22.28,114.16,'Asia/Hong_Kong','09:30','16:00'],
+ ['bse','Sensex','Mumbai',18.93,72.83,'Asia/Kolkata','09:15','15:30'],['tsx','S&P/TSX','Toronto',43.65,-79.38,'America/Toronto','09:30','16:00'],['merval','Merval','Buenos Aires',-34.6,-58.38,'America/Argentina/Buenos_Aires','11:00','17:00'],
+ ['asx','S&P/ASX 200','Sydney',-33.87,151.21,'Australia/Sydney','10:00','16:00']].map(b=>({id:b[0],indice:b[1],cidade:b[2],lat:b[3],lon:b[4],fuso:b[5],abre:b[6],fecha:b[7]}));
+function isOpen(b){try{const f=new Intl.DateTimeFormat('en-GB',{timeZone:b.fuso,weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date());const wd=f.find(x=>x.type==='weekday').value,h=+f.find(x=>x.type==='hour').value%24,m=+f.find(x=>x.type==='minute').value;
+ if(wd==='Sat'||wd==='Sun')return false;const t=h*60+m,[ah,am]=b.abre.split(':').map(Number),[fh,fm]=b.fecha.split(':').map(Number);return t>=ah*60+am&&t<fh*60+fm;}catch(e){return false;}}
+function localTime(b){try{return new Intl.DateTimeFormat('pt-BR',{timeZone:b.fuso,hour:'2-digit',minute:'2-digit'}).format(new Date());}catch(e){return '';}}
+function initGlobe(){if(!window.THREE||!THREE.OrbitControls)return null;const wrap=$('globe'),canvas=$('gCanvas');
+ const renderer=new THREE.WebGLRenderer({canvas,antialias:true,alpha:true});renderer.setPixelRatio(Math.min(2,devicePixelRatio||1));
+ const scene=new THREE.Scene();const camera=new THREE.PerspectiveCamera(32,1,0.05,100);camera.position.set(-1.2,0.2,3.0);
+ const controls=new THREE.OrbitControls(camera,canvas);controls.enableDamping=true;controls.enablePan=false;controls.enableZoom=false;controls.rotateSpeed=0.5;controls.autoRotate=!REDUCED;controls.autoRotateSpeed=0.4;controls.addEventListener('start',()=>controls.autoRotate=false);
+ const tl=new THREE.TextureLoader();const tx=f=>{const t=tl.load(f);t.anisotropy=8;return t;};const sun=new THREE.Vector3(1,0,0);
+ const mat=new THREE.ShaderMaterial({uniforms:{dayT:{value:tx('img/terra-dia.jpg')},nightT:{value:tx('img/terra-noite.jpg')},waterT:{value:tx('img/terra-agua.png')},topoT:{value:tx('img/terra-relevo.png')},sun:{value:sun}},
+  vertexShader:'varying vec2 vUv;varying vec3 vN;varying vec3 vW;void main(){vUv=uv;vN=normalize(mat3(modelMatrix)*normal);vec4 w=modelMatrix*vec4(position,1.);vW=w.xyz;gl_Position=projectionMatrix*viewMatrix*w;}',
+  fragmentShader:'uniform sampler2D dayT,nightT,waterT,topoT;uniform vec3 sun;varying vec2 vUv;varying vec3 vN;varying vec3 vW;vec3 L(vec3 c){return pow(c,vec3(2.2));}void main(){vec3 n=normalize(vN);vec2 e=vec2(1./2048.,0.);float h=texture2D(topoT,vUv).r;vec3 t=normalize(cross(vec3(0.,1.,0.),n));vec3 b=cross(n,t);vec3 nb=normalize(n-(t*(texture2D(topoT,vUv+e.xy).r-h)+b*(texture2D(topoT,vUv+e.yx).r-h))*1.6);float d=dot(nb,normalize(sun));float dn=dot(n,normalize(sun));vec3 dc=L(texture2D(dayT,vUv).rgb);vec3 nc=L(texture2D(nightT,vUv).rgb);float w=texture2D(waterT,vUv).r;vec3 v=normalize(cameraPosition-vW);float sp=pow(max(dot(n,normalize(normalize(sun)+v)),0.),200.)*w*0.2;float lit=smoothstep(-0.18,0.25,dn);vec3 col=dc*(max(d,0.)*1.15+0.035)+vec3(1.,.93,.8)*sp*lit+nc*vec3(1.,.82,.55)*1.6*(1.-lit);float rim=pow(1.-max(dot(n,v),0.),4.);col+=vec3(.25,.5,1.)*rim*0.3*(0.15+lit);gl_FragColor=vec4(pow(col,vec3(1./2.2)),1.);}'});
+ const earth=new THREE.Mesh(new THREE.SphereGeometry(1,128,96),mat);scene.add(earth);
+ scene.add(new THREE.Mesh(new THREE.SphereGeometry(1.035,64,48),new THREE.ShaderMaterial({uniforms:{sun:{value:sun}},transparent:true,side:THREE.BackSide,depthWrite:false,blending:THREE.AdditiveBlending,
+  vertexShader:'varying vec3 vN;varying vec3 vW;void main(){vN=normalize(mat3(modelMatrix)*normal);vec4 w=modelMatrix*vec4(position,1.);vW=w.xyz;gl_Position=projectionMatrix*viewMatrix*w;}',
+  fragmentShader:'uniform vec3 sun;varying vec3 vN;varying vec3 vW;void main(){vec3 v=normalize(cameraPosition-vW);float f=pow(1.-abs(dot(normalize(vN),v)),2.2);float l=smoothstep(-0.3,0.4,dot(normalize(vN),normalize(sun)));gl_FragColor=vec4(vec3(.3,.6,1.)*f*(0.25+0.9*l),f);}'})));
+ const ll=(lat,lon,r)=>{const p=(lon+180)*Math.PI/180,th=(90-lat)*Math.PI/180;return new THREE.Vector3(-Math.sin(th)*Math.cos(p)*r,Math.cos(th)*r,Math.sin(th)*Math.sin(p)*r);};
+ const upSun=()=>{const n=new Date(),doy=(n-Date.UTC(n.getUTCFullYear(),0,0))/864e5,dec=-23.44*Math.cos(2*Math.PI/365*(doy+10)),lon=-(n.getUTCHours()+n.getUTCMinutes()/60-12)*15;sun.copy(ll(dec,lon,1)).normalize();};upSun();setInterval(upSun,60000);
+ const mk={};GLOBE_MARKETS.forEach(b=>{const grp=new THREE.Group();const p=ll(b.lat,b.lon,1);grp.position.copy(p);grp.lookAt(p.clone().multiplyScalar(2));
+  const m=new THREE.MeshBasicMaterial({color:0x9aa3ad});const beam=new THREE.Mesh(new THREE.CylinderGeometry(0.004,0.004,1,8).rotateX(Math.PI/2).translate(0,0,0.5),m);beam.scale.z=0.05;grp.add(beam,new THREE.Mesh(new THREE.SphereGeometry(0.01,16,12),m));earth.add(grp);
+  const el=document.createElement('div');el.className='glbl';el.textContent=b.cidade;$('gLabels').appendChild(el);mk[b.id]={b,grp,beam,m,el};});
+ let tw=null;
+ function size(){const w=wrap.clientWidth,h=wrap.clientHeight;renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix();}size();addEventListener('resize',size);
+ const tmp=new THREE.Vector3();
+ function loop(now){requestAnimationFrame(loop);if(tw)tw(now);controls.update();const w=wrap.clientWidth,h=wrap.clientHeight;
+  Object.values(mk).forEach(o=>{o.grp.getWorldPosition(tmp);const f=tmp.clone().normalize().dot(camera.position.clone().normalize());const p=tmp.clone().project(camera);o.el.style.opacity=f>0.25?1:0;o.el.style.transform='translate('+((p.x+1)/2*w+8)+'px,'+((1-p.y)/2*h-10)+'px)';});
+  renderer.render(scene,camera);}requestAnimationFrame(loop);
+ return {update(bolsas){Object.values(mk).forEach(o=>{const d=bolsas[o.b.id];const v=d?d.var_dia:null;o.m.color.setHex(v==null?0x9aa3ad:v>=0?0x2fd18b:0xff5a5f);o.beam.scale.z=d?0.05+Math.min(0.25,Math.abs(v)*0.08):0.05;});},
+  focus(id){const b=mk[id].b;controls.autoRotate=false;const t=ll(b.lat,b.lon,1).normalize().multiplyScalar(3.0);const a0=new THREE.Spherical().setFromVector3(camera.position),a1=new THREE.Spherical().setFromVector3(t);let dt=a1.theta-a0.theta;if(dt>Math.PI)dt-=2*Math.PI;if(dt<-Math.PI)dt+=2*Math.PI;const st=performance.now();
+   tw=now=>{const k=Math.min(1,(now-st)/1200),e=k<.5?4*k*k*k:1-Math.pow(-2*k+2,3)/2;camera.position.setFromSpherical(new THREE.Spherical(a0.radius,a0.phi+(a1.phi-a0.phi)*e,a0.theta+dt*e));if(k>=1)tw=null;};}};}
+
+/* ---------- gráfico de linhas ---------- */
+function getVar(n){return getComputedStyle(document.documentElement).getPropertyValue(n).trim()||'#1f6f5c';}
+function lineChart(c,series,o){if(!c)return;const dpr=Math.min(2,devicePixelRatio||1);const W=c.clientWidth||600,H=+c.getAttribute('height');c.width=W*dpr;c.height=H*dpr;c.style.height=H+'px';const x=c.getContext('2d');if(!x)return;x.scale(dpr,dpr);
+ const ink=getVar('--ink'),mut=getVar('--muted'),line=getVar('--line');const L=66,R=10,T0=12,B=26;const all=series.flatMap(s=>s.vals);let mn=Math.min(...all),mx=Math.max(...all);const pad=(mx-mn)*0.08||1;mn-=pad;mx+=pad;
+ const n=series[0].vals.length;const X=i=>L+i/(n-1)*(W-L-R),Y=v=>T0+(1-(v-mn)/(mx-mn))*(H-T0-B);const ds=series[0].dates;
+ const draw=hi=>{x.clearRect(0,0,W,H);x.font='11px IBM Plex Mono, monospace';x.fillStyle=mut;x.strokeStyle=line;x.lineWidth=1;
+  for(let k=0;k<=4;k++){const v=mn+(mx-mn)*k/4,y=Y(v);x.beginPath();x.moveTo(L,y);x.lineTo(W-R,y);x.stroke();x.textAlign='right';x.fillText(o.fmt(v),L-6,y+4);}
+  x.textAlign='center';[0,Math.floor(n/2),n-1].forEach(i=>x.fillText(new Date(ds[i]+(o.monthly?'-15':'T12:00')).toLocaleDateString('pt-BR',{month:'short',year:'2-digit'}),Math.min(W-R-22,Math.max(L+22,X(i))),H-8));
+  if(o.marks)o.marks.forEach(q=>{const a=ds.indexOf(q.pico),b=ds.indexOf(q.fundo);if(a<0||b<0)return;x.fillStyle='rgba(210,59,64,.10)';x.fillRect(X(a),T0,X(b)-X(a)||2,H-T0-B);});
+  series.forEach(s=>{x.strokeStyle=s.color;x.lineWidth=2;x.setLineDash(s.dash?[5,4]:[]);x.beginPath();s.vals.forEach((v,i)=>{i?x.lineTo(X(i),Y(v)):x.moveTo(X(i),Y(v));});x.stroke();});x.setLineDash([]);
+  if(hi!=null){x.strokeStyle=mut;x.beginPath();x.moveTo(X(hi),T0);x.lineTo(X(hi),H-B);x.stroke();const tl=[new Date(ds[hi]+(o.monthly?'-15':'T12:00')).toLocaleDateString('pt-BR',o.monthly?{month:'long',year:'numeric'}:{})].concat(series.map(s=>s.name+': '+o.fmt(s.vals[hi])));
+   x.font='12px IBM Plex Sans, sans-serif';const w=Math.max(...tl.map(t=>x.measureText(t).width))+16,hh=tl.length*17+8;let bx=X(hi)+10;if(bx+w>W)bx=X(hi)-w-10;x.fillStyle=getVar('--card');x.strokeStyle=line;x.fillRect(bx,T0,w,hh);x.strokeRect(bx,T0,w,hh);x.fillStyle=ink;x.textAlign='left';tl.forEach((t,k)=>x.fillText(t,bx+8,T0+18+k*17));
+   series.forEach(s=>{x.fillStyle=s.color;x.beginPath();x.arc(X(hi),Y(s.vals[hi]),3.5,0,7);x.fill();});}};
+ draw(null);c.onpointermove=e=>{const r=c.getBoundingClientRect();const i=Math.round((e.clientX-r.left-L)/(W-L-R)*(n-1));draw(i>=0&&i<n?i:null);};c.onpointerleave=()=>draw(null);}
+
+/* ---------- navegação ---------- */
+document.querySelectorAll('[data-go]').forEach(a=>a.onclick=e=>{e.preventDefault();const t=$(a.dataset.go);if(t)t.scrollIntoView({behavior:REDUCED?'auto':'smooth'});});
+$('about').onclick=()=>$('aboutDlg').classList.add('open');$('aboutClose').onclick=()=>$('aboutDlg').classList.remove('open');
+let rz=null;addEventListener('resize',()=>{clearTimeout(rz);rz=setTimeout(()=>{bolsa();sim();bindGloss();icons();},250);});
+try{globe=initGlobe();}catch(e){globe=null;}
+await load();setInterval(load,15*60*1000);
+window.__app={load,get D(){return D;},get T(){return T;},C,R,M,S,comparador,reserva,meta,sim,bolsa};
+})().catch(e=>{console.error(e);const p=document.getElementById('pending');if(p){p.hidden=false;p.textContent='Erro ao montar a página: '+e.message;}});
+
+</script>
+</body>
+</html>
