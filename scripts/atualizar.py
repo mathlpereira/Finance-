@@ -128,26 +128,36 @@ def historico_mensal_yf():
 
 # ---------------- Banco Central (SGS) ----------------
 SGS = "https://api.bcb.gov.br/dados/serie/bcdata.sgs.{cod}/dados?formato=json&dataInicial={ini}&dataFinal={fim}"
-def sgs(cod, inicio):
-    """Busca uma série do SGS. Séries diárias só aceitam janelas de até 10 anos,
-    então o período é dividido em blocos de até 9 anos."""
+def sgs(cod, inicio, anos_bloco=9):
+    """Busca uma série do SGS em blocos de datas (séries diárias aceitam no máximo 10 anos por consulta)."""
     ini = dt.datetime.strptime(inicio, "%d/%m/%Y")
     fim_total = AGORA.replace(tzinfo=None)
-    dados = []
+    dados, erros = [], []
     while ini <= fim_total:
-        fim = min(fim_total, ini + dt.timedelta(days=9 * 365))
+        fim = min(fim_total, ini + dt.timedelta(days=int(anos_bloco * 365)))
         url = SGS.format(cod=cod, ini=ini.strftime("%d/%m/%Y"), fim=fim.strftime("%d/%m/%Y"))
-        r = requests.get(url, timeout=40, headers={"Accept": "application/json"})
-        if r.status_code == 404:          # bloco sem dados
-            pass
-        else:
-            r.raise_for_status()
-            bloco = r.json()
-            if isinstance(bloco, list):
-                dados.extend(bloco)
+        for tentativa in range(3):
+            try:
+                r = requests.get(url, timeout=40, headers={"Accept": "application/json", "User-Agent": "Mozilla/5.0 (robo-primeiro-passo)"})
+                if r.status_code == 404:
+                    break
+                r.raise_for_status()
+                bloco = r.json()
+                if isinstance(bloco, list):
+                    dados.extend(bloco)
+                break
+            except Exception as e:
+                trecho = ""
+                try:
+                    trecho = f" | HTTP {r.status_code} | resposta: {r.text[:120]!r}"
+                except Exception:
+                    pass
+                if tentativa == 2:
+                    erros.append(f"{ini:%d/%m/%Y}-{fim:%d/%m/%Y}: {e}{trecho}")
+                time.sleep(2)
         ini = fim + dt.timedelta(days=1)
     if not dados:
-        raise ValueError("resposta vazia")
+        raise ValueError("sem dados. " + " ; ".join(erros)[:400])
     vistos, saida = set(), []
     for x in dados:
         if x["data"] in vistos:
@@ -167,9 +177,10 @@ def buscar_bcb():
         ("poupanca_mensal", 195, "04/05/2012"),  # poupança a partir de 04/05/2012, rentabilidade no período (% a.m.)
         ("ptax", 1, "01/01/2025"),               # dólar oficial (PTAX)
     ]
+    pedidos.append(("selic_mensal", 4390, "01/01/2010"))   # Selic acumulada no mês (% a.m.), para calcular a poupança se preciso
     for chave, cod, ini in pedidos:
         try:
-            s = sgs(cod, ini)
+            s = sgs(cod, ini, anos_bloco=1 if cod == 195 else 9)
             bc[chave] = s
             log("Banco Central", f"{chave} (SGS {cod})", True, s[-1])
         except Exception as e:
@@ -180,11 +191,15 @@ def buscar_bcb():
         out["cdi_anual"] = {"valor": bc["cdi_anual"][-1][1], "data": bc["cdi_anual"][-1][0]}
     if "selic_meta" in bc:
         out["selic"] = {"valor": bc["selic_meta"][-1][1], "data": bc["selic_meta"][-1][0]}
-    def mensal(lista):
+    mes_atual = AGORA.strftime("%Y-%m")
+    def mensal(lista, incluir_atual=False):
         m = {}
         for data, v in lista:
             d, mm, a = data.split("/")
-            m[f"{a}-{mm}"] = v   # para séries com mais de um ponto no mês, fica o último
+            chave = f"{a}-{mm}"
+            if chave == mes_atual and not incluir_atual:
+                continue        # mês ainda em andamento: valor parcial
+            m[chave] = v        # para séries com mais de um ponto no mês, fica o último
         return m
     if "cdi_mensal" in bc:
         m = mensal(bc["cdi_mensal"]); out["cdi_mensal"] = m
@@ -196,7 +211,18 @@ def buscar_bcb():
         out["ipca_12m"] = round((math.prod(1 + v / 100 for v in ult) - 1) * 100, 2)
         out["ipca_ultimo"] = {"mes": list(m.keys())[-1], "valor": list(m.values())[-1]}
     if "poupanca_mensal" in bc:
-        out["poupanca_mensal"] = mensal(bc["poupanca_mensal"])
+        out["poupanca_mensal"] = mensal(bc["poupanca_mensal"], incluir_atual=True)
+        out["poupanca_fonte"] = "Banco Central (SGS 195)"
+    elif "selic_mensal" in bc and "selic_meta" in bc:
+        # regra oficial: Selic acima de 8,5% a.a. -> 0,5% ao mês + TR; senão 70% da Selic + TR (TR não incluída)
+        sm = mensal(bc["selic_mensal"])
+        calc = {}
+        for k, v in sm.items():
+            anual = ((1 + v / 100) ** 12 - 1) * 100
+            calc[k] = 0.5 if anual > 8.5 else round(v * 0.7, 4)
+        out["poupanca_mensal"] = calc
+        out["poupanca_fonte"] = "calculada pela regra oficial a partir da Selic (sem TR)"
+        log("Banco Central", "poupança calculada pela regra (alternativa)", True, len(calc))
     if "ptax" in bc:
         out["ptax"] = {"valor": bc["ptax"][-1][1], "data": bc["ptax"][-1][0]}
     return out
