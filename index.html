@@ -6,10 +6,10 @@
 <title>Primeiro Passo · O dinheiro do mundo, para quem está começando</title>
 <meta name="description" content="As bolsas do mundo num globo em tempo quase real e calculadoras para quem está começando a investir: reserva de emergência, onde rende mais hoje, objetivos e bolsa. Com as taxas oficiais do dia.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{color-scheme:light;--bg:#faf8f4;--surface:#ffffff;--raise:#f4f1ec;--card:#ffffff;--line:#e9e4dc;--line2:#d9d2c6;--ink:#22242a;--ink2:#4a4e57;--muted:#8a8d94;
- --accent:#4f7a64;--accent2:#edf3ef;--up:#3d8a62;--dn:#c0584f;--warn:#f7f2e8;--shadow:0 1px 2px rgba(40,35,25,.04),0 8px 28px -12px rgba(40,35,25,.12);
+:root{color-scheme:light;--bg:#ffffff;--surface:#ffffff;--raise:#f6f4f1;--card:#ffffff;--line:#e7e3dd;--line2:#d6d0c7;--ink:#141414;--ink2:#474747;--muted:#7d7d7d;
+ --accent:#8a6a46;--accent2:#f5efe7;--up:#3d8a62;--dn:#c0584f;--warn:#f7f2e8;--shadow:0 1px 2px rgba(40,35,25,.04),0 8px 28px -12px rgba(40,35,25,.12);
  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 *,*::before,*::after{box-sizing:inherit}[hidden]{display:none!important}
 html{scroll-behavior:smooth;scroll-padding-top:calc(80px + env(safe-area-inset-top,0px));background:var(--bg)}
@@ -18,10 +18,10 @@ button,input,select{font:inherit;color:inherit}button{background:none;border:0;c
 :focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 svg.lucide{width:17px;height:17px;stroke-width:1.6;flex:none;vertical-align:-3px}
 .num{font-variant-numeric:tabular-nums;letter-spacing:-.01em}.up{color:var(--up)}.dn{color:var(--dn)}.muted{color:var(--muted)}
-h1,h2,h3{font-family:'Instrument Serif',Georgia,serif;font-weight:400;letter-spacing:-.005em;line-height:1.08}
+h1,h2,h3{font-family:'Inter Tight',Inter,system-ui,sans-serif;font-weight:400;letter-spacing:-.005em;line-height:1.08}
 nav.top{position:fixed;inset:0 0 auto 0;z-index:30;display:flex;align-items:center;gap:28px;padding:20px clamp(20px,4vw,56px);padding-top:calc(20px + env(safe-area-inset-top,0px));transition:background .3s,box-shadow .3s}
 nav.top.solid{background:rgba(250,248,244,.9);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line)}
-.logo{font-family:'Instrument Serif',serif;font-size:24px;margin-right:auto;display:flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none}
+.logo{font-family:'Inter Tight',Inter,sans-serif;font-size:24px;margin-right:auto;display:flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none}
 .logo i{width:9px;height:9px;border-radius:50%;background:var(--accent);font-size:0}
 nav.top a.l{color:var(--ink2);text-decoration:none;font-size:14px}nav.top a.l:hover{color:var(--accent)}
 .nb{display:flex;align-items:center;gap:7px;font-size:14px;color:var(--ink2)}.nb:hover{color:var(--accent)}
@@ -50,7 +50,7 @@ nav.top a.l{color:var(--ink2);text-decoration:none;font-size:14px}nav.top a.l:ho
 #dossier .x{position:absolute;right:14px;top:14px;z-index:3;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.9);color:var(--ink)}
 .ph{position:relative;margin:0;aspect-ratio:4/3;background:var(--raise);overflow:hidden}
 .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .7s}.ph img.in{opacity:1}
-.phc{position:absolute;inset:0;display:grid;place-items:center;font-family:'Instrument Serif',serif;font-size:42px;color:var(--line2)}
+.phc{position:absolute;inset:0;display:grid;place-items:center;font-family:'Inter Tight',Inter,sans-serif;font-size:42px;color:var(--line2)}
 .ph figcaption{display:none}
 .dhead{padding:22px 24px 0}.dhead h3{font-size:34px;margin:6px 0 2px}.dhead p{margin:0;font-size:14px;color:var(--muted)}
 .pill{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;color:var(--muted)}.pill i{width:6px;height:6px;border-radius:50%;background:var(--line2)}.pill.on{color:var(--up)}.pill.on i{background:var(--up)}
@@ -108,7 +108,7 @@ body.reading #hero,body.reading main,body.reading #dossier{display:none}
 .rnav .num{font-size:12px;width:20px;font-variant-numeric:tabular-nums}.rnav a.ok svg{color:var(--up);margin-left:auto}.rnav span.soon{opacity:.45}.rnav .back{margin-bottom:16px}
 .rbody{max-width:700px}.rk{font-size:13px;color:var(--accent);font-weight:500}.rbody h1{font-size:clamp(46px,5.4vw,70px);margin:12px 0 8px}.rsub{font-size:19px;color:var(--ink2);margin:0 0 48px}
 .st{margin:0 0 64px}.sn{display:flex;align-items:center;gap:12px;font-size:13px;font-weight:500;color:var(--muted);margin:0 0 20px}.sn span{width:26px;height:26px;border-radius:50%;background:var(--accent2);color:var(--accent);display:grid;place-items:center;font-size:12.5px;font-weight:600}
-.prose p{font-size:18px;line-height:1.8;color:var(--ink2);margin:0 0 20px}.prose b{color:var(--ink);font-weight:600}.prose h4{font-family:'Instrument Serif',serif;font-weight:400;font-size:30px;margin:40px 0 12px;color:var(--ink)}
+.prose p{font-size:18px;line-height:1.8;color:var(--ink2);margin:0 0 20px}.prose b{color:var(--ink);font-weight:600}.prose h4{font-family:'Inter Tight',Inter,sans-serif;font-weight:400;font-size:30px;margin:40px 0 12px;color:var(--ink)}
 .callout{margin:28px 0;padding:22px 26px;border-radius:18px;background:var(--accent2);font-size:16.5px;line-height:1.7;color:var(--ink2)}.callout b{color:var(--accent)}
 .ex{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:24px 0}.ex>div{padding:20px;border-radius:18px;background:var(--surface);box-shadow:var(--shadow)}.ex small{display:block;font-size:13px;color:var(--muted)}.ex b{display:block;font-size:15px;margin:8px 0;font-weight:500;font-variant-numeric:tabular-nums}.ex span{font-size:13.5px;color:var(--ink2)}
 .trio3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:24px 0}.trio3>div{padding:20px;border-radius:18px;background:var(--surface);box-shadow:var(--shadow)}.trio3 b{color:var(--accent);font-weight:600}.trio3 p{font-size:14.5px!important;line-height:1.6!important;margin:6px 0 0!important}
@@ -119,14 +119,49 @@ body.reading #hero,body.reading main,body.reading #dossier{display:none}
 .qq{padding:22px 0;border-bottom:1px solid var(--line)}.qq>b{font-size:17px;font-weight:600}.qo{display:grid;gap:8px;margin-top:14px}.qo button{text-align:left;padding:14px 18px;border-radius:14px;background:var(--surface);box-shadow:inset 0 0 0 1px var(--line);font-size:15.5px;color:var(--ink2)}
 .qo button:hover:not([disabled]){box-shadow:inset 0 0 0 1px var(--accent);color:var(--ink)}.qo button.ok{box-shadow:inset 0 0 0 1.5px var(--up);background:#f1f7f3;color:var(--ink)}.qo button.bad{box-shadow:inset 0 0 0 1.5px var(--dn);background:#fbf2f1}.qo button[disabled]{cursor:default}
 .qe{margin:12px 0 0;padding:14px 16px;border-radius:14px;background:#fbf2f1;font-size:15px;color:var(--ink2)}.qe.good{background:#f1f7f3}.qres{margin-top:20px;padding:18px 20px;border-radius:16px;background:var(--raise);font-size:15px}.qres button{color:var(--accent);text-decoration:underline;margin-left:6px}
-.leve{font-family:'Instrument Serif',serif;font-size:32px;line-height:1.3;color:var(--ink)}
+.leve{font-family:'Inter Tight',Inter,sans-serif;font-size:32px;line-height:1.3;color:var(--ink)}
 .pn{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:10px}.pn a{padding:20px 22px;border-radius:20px;background:var(--surface);box-shadow:var(--shadow);text-decoration:none;color:var(--ink)}.pn a:hover{color:var(--accent)}.pn a.nx{text-align:right}.pn small{display:block;font-size:13px;color:var(--muted)}.pn b{font-size:17px;font-weight:600}
 
 .updl{display:flex;align-items:center;gap:8px;font-size:12.5px!important;color:var(--muted)!important;line-height:1.5!important}.dl{width:6px;height:6px;border-radius:50%;background:#8fbfa3;flex:none;animation:breathe 3.2s ease-in-out infinite}.dl.off{background:var(--line2);animation:none}@keyframes breathe{50%{opacity:.35}}
-.pg{display:none}.cred{padding:30px 0 26px;border-top:1px solid var(--line);margin-bottom:6px}.credh{display:grid;grid-template-columns:200px 1fr;gap:30px;margin-bottom:22px}.credh b{font-family:'Instrument Serif',serif;font-weight:400;font-size:26px;color:var(--ink)}.credh p{margin:0;font-size:14px;color:var(--ink2);max-width:640px}
+.pg{display:none}
+h1,h2,h3{font-weight:500;letter-spacing:-.025em}
+.pg>.shead:first-child,.pg-investimentos>.shead:first-child{margin-top:40px}.bcopy h2{font-size:clamp(32px,3.4vw,46px)!important}.stx h1{font-weight:500}
+.util{display:flex;justify-content:space-between;align-items:center;padding:7px clamp(20px,4vw,56px);font-size:12.5px;color:var(--muted);background:var(--raise);border-bottom:1px solid var(--line)}.util div{display:flex;gap:22px}.util button{font-size:12.5px;color:var(--ink2)}.util button:hover{color:var(--accent)}
+nav.top{position:sticky!important;top:0;background:#fff!important;box-shadow:0 1px 0 var(--line)!important;padding-top:18px!important;padding-bottom:18px}
+.logo{font-family:'Inter Tight',Inter,sans-serif!important;font-size:15px!important;font-weight:700;letter-spacing:.16em;color:var(--accent)!important;gap:10px}.logo .lm{width:12px;height:12px;border:2px solid var(--accent);border-radius:50%;display:inline-block}
+nav.top a.l{font-size:15px;color:var(--ink);font-weight:500}nav.top a.l:hover,nav.top a.l.on{color:var(--accent)}nav.top a.l.on{box-shadow:inset 0 -2px 0 var(--accent);padding-bottom:4px}
+.ncta{background:transparent!important;color:var(--accent)!important;box-shadow:inset 0 0 0 1.5px var(--accent);border-radius:999px;font-weight:600}.ncta:hover{background:var(--accent)!important;color:#fff!important}
+#hero.pg-home{display:block!important;padding:0!important;max-width:none!important;min-height:0!important}
+.car{position:relative;height:min(78vh,720px);min-height:520px;overflow:hidden;background:#1d1a17}
+.sl{position:absolute;inset:0;opacity:0;transition:opacity .9s;background:linear-gradient(120deg,#2b241d,#4a3b2c)}.sl.on{opacity:1;z-index:1}.sl.dark{background:#000}
+.sbg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.04);transition:transform 8s ease-out}.sl.on .sbg{transform:scale(1)}
+.sbg.glb{object-fit:contain;object-position:85% 50%;width:100%;padding:3% 4% 3% 40%}
+.sov{position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,9,8,.78) 0%,rgba(10,9,8,.5) 42%,rgba(10,9,8,0) 72%)}
+.stx{position:absolute;left:clamp(20px,6vw,96px);top:50%;transform:translateY(-58%);max-width:560px;color:#fff}.stx small{display:block;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#e6d3b8;margin-bottom:16px}
+.stx h1{font-size:clamp(38px,4.6vw,62px);line-height:1.05;margin:0 0 18px;color:#fff}.stx p{font-size:18px;line-height:1.55;color:rgba(255,255,255,.88);margin:0 0 30px;max-width:480px}
+.btn.pri{background:var(--accent)!important;color:#fff!important}.btn.pri:hover{background:#6f5437!important}.btn.light{background:#fff;color:var(--ink)}
+.cnav{position:absolute;z-index:3;left:clamp(20px,6vw,96px);right:clamp(20px,6vw,96px);bottom:26px;display:flex;gap:28px;border-top:1px solid rgba(255,255,255,.25);padding-top:14px}
+.cnav button{display:flex;flex-direction:column;gap:8px;align-items:flex-start;color:rgba(255,255,255,.6);font-size:13.5px}.cnav button i{display:block;width:60px;height:2px;background:rgba(255,255,255,.3);position:relative;overflow:hidden}.cnav button.on{color:#fff}.cnav button.on i::after{content:"";position:absolute;inset:0;background:#fff;animation:fill 7s linear forwards}@keyframes fill{from{transform:translateX(-100%)}to{transform:none}}
+.hupd{position:absolute;z-index:3;right:clamp(20px,6vw,96px);bottom:30px;color:rgba(255,255,255,.75)!important}.hupd .dl{background:#9be0b9}
+.stmt{display:grid!important;grid-template-columns:1.05fr 1fr;gap:64px;align-items:center;margin:96px 0}.simg{aspect-ratio:4/3;overflow:hidden;background:linear-gradient(135deg,#e9e2d8,#d3c6b4)}.simg img{width:100%;height:100%;object-fit:cover;display:block}
+.stxt h2{font-size:clamp(30px,3.2vw,42px);line-height:1.15;margin:0 0 18px}.stxt p{font-size:17px;color:var(--ink2);margin:0 0 22px}
+.hk{font-size:12.5px!important;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)!important;font-weight:600!important}
+.sol{display:block}.sol h2{font-size:clamp(30px,3.2vw,42px);margin:0 0 30px}.solg{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.solg a{display:block;padding:30px 28px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink);transition:background .2s}.solg a:hover{background:var(--raise)}
+.solg svg.lucide{width:36px;height:36px;stroke-width:1.2;color:var(--accent)}.solg b{display:block;font-family:'Inter Tight',Inter,sans-serif;font-size:21px;font-weight:600;margin:18px 0 8px}.solg p{margin:0 0 16px;color:var(--ink2);font-size:15px}.solg span{font-size:14px;font-weight:600;color:var(--accent)}
+body[data-page="home"] .sol{display:block}
+.today{background:var(--raise)!important;box-shadow:none!important;border-radius:0!important;margin:96px 0!important}
+.ins{display:block}.insh{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:26px}.insh h2{font-size:clamp(30px,3.2vw,42px);margin:0}
+.insg{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.icard{display:block;text-decoration:none;color:var(--ink)}.icard .iv{aspect-ratio:16/10;display:grid;place-items:center;background:var(--raise);margin-bottom:16px;transition:background .2s}.icard:hover .iv{background:var(--accent2)}.icard .iv svg.lucide{width:54px;height:54px;stroke-width:1;color:var(--accent)}
+.icard small{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:600}.icard b{display:block;font-family:'Inter Tight',Inter,sans-serif;font-size:22px;font-weight:600;margin:8px 0 6px}.icard p{margin:0 0 10px;font-size:15px;color:var(--ink2)}.icard span{font-size:13px;color:var(--muted)}
+.ctab{display:flex!important;justify-content:space-between;align-items:center;gap:30px;margin:96px 0;padding:56px clamp(24px,5vw,64px);background:#1c1915;color:#fff}.ctab h2{font-size:clamp(28px,3vw,38px);margin:0 0 8px;color:#fff}.ctab p{margin:0;color:rgba(255,255,255,.75);font-size:16px}
+body:not([data-page="home"]) .stmt,body:not([data-page="home"]) .sol,body:not([data-page="home"]) .ins,body:not([data-page="home"]) .ctab{display:none!important}
+.panel,.mod,.invmapbox,.invcard,.fprev,.how li,.ex1,.ex>div,.trio3>div,.who>div,.pn a,.tools a,.ncg>div{border-radius:4px!important}.btn,.ncta,.tabs button{border-radius:2px!important}
+footer .fcols b{text-transform:uppercase;letter-spacing:.1em;font-size:12.5px!important}
+.cred{padding:30px 0 26px;border-top:1px solid var(--line);margin-bottom:6px}.credh{display:grid;grid-template-columns:200px 1fr;gap:30px;margin-bottom:22px}.credh b{font-family:'Inter Tight',Inter,sans-serif;font-weight:400;font-size:26px;color:var(--ink)}.credh p{margin:0;font-size:14px;color:var(--ink2);max-width:640px}
 .credg{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}.credg small{display:block;font-size:12.5px;color:var(--muted);font-weight:500;margin-bottom:10px;text-transform:uppercase;letter-spacing:.04em}.credg a,.credg span{display:block;font-size:14px;color:var(--ink2);text-decoration:none;margin-bottom:8px;line-height:1.5}.credg a:hover{color:var(--accent)}
 .ex1{margin:22px 0;padding:18px 22px;border-radius:18px;background:var(--surface);box-shadow:var(--shadow)}.ex1 small{display:block;font-size:12.5px;color:var(--accent);font-weight:600;margin-bottom:4px}.ex1 p{margin:0!important;font-size:16px!important}
-.nc{margin:26px 0;padding:22px;border-radius:22px;background:var(--warn)}.nch{display:flex;align-items:baseline;gap:12px;margin-bottom:14px}.nch b{font-family:'Instrument Serif',serif;font-weight:400;font-size:26px}.nch span{font-size:13px;color:var(--muted)}
+.nc{margin:26px 0;padding:22px;border-radius:22px;background:var(--warn)}.nch{display:flex;align-items:baseline;gap:12px;margin-bottom:14px}.nch b{font-family:'Inter Tight',Inter,sans-serif;font-weight:400;font-size:26px}.nch span{font-size:13px;color:var(--muted)}
 .ncg{display:grid;grid-template-columns:1fr 1fr;gap:10px}.ncg>div{padding:16px;border-radius:16px;background:var(--surface)}.ncg b{font-size:16px;font-weight:600}.ncg small{display:inline-block;margin-left:8px;font-size:11.5px;color:var(--accent);background:var(--accent2);padding:1px 8px;border-radius:999px}.ncg p{margin:8px 0 0!important;font-size:14.5px!important;line-height:1.6!important}
 .fts ul{list-style:none;margin:0 0 10px;padding:0;display:grid;gap:6px}.fts a{display:inline-flex;align-items:center;gap:6px;font-size:15px;text-decoration:none;color:var(--ink2)}.fts a:hover{color:var(--accent)}.fts svg.lucide{width:14px;height:14px}
 
@@ -171,12 +206,12 @@ body:not([data-page="home"]) #hero{display:none!important}body[data-page="home"]
 body:not([data-page="home"]) main{padding-top:70px}
 nav.top a.l.on{color:var(--ink);font-weight:500}
 .paths{grid-template-columns:repeat(3,1fr);gap:16px;margin:10px 0 40px}.paths a{display:block;padding:28px;border-radius:24px;background:var(--surface);box-shadow:var(--shadow);text-decoration:none;color:var(--ink);transition:transform .2s}.paths a:hover{transform:translateY(-3px)}
-.pn1{font-size:13px;color:var(--muted)}.paths b{display:block;font-family:'Instrument Serif',serif;font-weight:400;font-size:34px;margin:10px 0 6px}.paths p{margin:0 0 22px;color:var(--ink2);font-size:15.5px}.go{display:inline-flex;gap:8px;align-items:center;font-size:14px;color:var(--accent);font-weight:500}
+.pn1{font-size:13px;color:var(--muted)}.paths b{display:block;font-family:'Inter Tight',Inter,sans-serif;font-weight:400;font-size:34px;margin:10px 0 6px}.paths p{margin:0 0 22px;color:var(--ink2);font-size:15.5px}.go{display:inline-flex;gap:8px;align-items:center;font-size:14px;color:var(--accent);font-weight:500}
 .tabs{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 22px}.tabs button{padding:10px 18px;border-radius:999px;font-size:14px;color:var(--ink2);background:transparent;box-shadow:inset 0 0 0 1px var(--line2)}.tabs button:hover{color:var(--ink)}.tabs button[aria-selected="true"]{background:var(--ink);color:#fff;box-shadow:none}
 .tool{display:none}.tool.on{display:block}.tlead{color:var(--ink2);margin:0 0 16px;font-size:16px}
 .stats.big{display:grid;grid-template-columns:repeat(4,auto);justify-content:start;gap:48px;margin:0}.stats.big b{font-size:26px}
 @media (max-width:980px){.paths{grid-template-columns:1fr}.stats.big{grid-template-columns:repeat(2,1fr);gap:20px}.tabs{flex-wrap:nowrap;overflow:auto;padding-bottom:4px}.tabs button{white-space:nowrap}}
-@media (max-width:980px){.credh,.credg{grid-template-columns:1fr;gap:16px}.ncg{grid-template-columns:1fr}nav.top{flex-wrap:wrap;row-gap:10px;padding-bottom:10px}nav.top.solid{box-shadow:0 1px 0 var(--line)}nav.top .logo{margin-right:auto}nav.top .nl{order:3;flex:0 0 100%;gap:6px}nav.top a.l{flex:1;text-align:center;font-size:13.5px;padding:7px 0;border-radius:999px}nav.top a.l.on{background:var(--ink);color:#fff}nav.top:not(.solid){background:rgba(250,248,244,.94);backdrop-filter:blur(12px)}#hero{padding-top:150px!important}main,#learn{padding-top:130px!important}html{scroll-padding-top:130px}#hero{grid-template-columns:1fr}.hmap{order:2}.invwrap,.bhero{grid-template-columns:1fr}.bhero{min-height:0}.bhero .gwrap{order:-1}.invcard{position:static}.trl{grid-template-columns:1fr}.stk{grid-template-columns:1fr auto}.rng{grid-column:1/-1;grid-row:2}.ncta{display:none}.how ol,.feat,.fcols{grid-template-columns:1fr}.feat{gap:28px;margin:70px 0}.feat.rev .ftxt{order:0}.today{padding:28px 22px}.trust{justify-content:flex-start;gap:12px 20px}nav.top{gap:12px;padding-left:14px;padding-right:14px}.logo{white-space:nowrap;font-size:18px!important;gap:7px}nav.top a.l{font-size:13px}.logo{font-size:20px}nav.top .nb span{display:none}#hero{grid-template-columns:1fr;padding-top:96px;min-height:0}.gwrap{order:-1;justify-self:center;max-width:420px}.hint{grid-column:1}.hcopy h1{font-size:44px}.stats{grid-template-columns:repeat(2,1fr);gap:18px;margin-top:34px}
+@media (max-width:980px){.util{display:none}.car{height:auto;min-height:560px}.sbg.glb{padding:4% 4% 40% 4%;object-position:50% 0}.sov{background:linear-gradient(0deg,rgba(10,9,8,.85) 0%,rgba(10,9,8,.55) 55%,rgba(10,9,8,.15) 100%)}.stx{top:auto;bottom:110px;transform:none;right:20px}.stx h1{font-size:34px}.stx p{font-size:16px}.cnav{gap:14px}.cnav button i{width:40px}.hupd{display:none}.stmt{grid-template-columns:1fr;gap:26px;margin:60px 0}.solg,.insg{grid-template-columns:1fr}.ctab{flex-direction:column;align-items:flex-start}.credh,.credg{grid-template-columns:1fr;gap:16px}.ncg{grid-template-columns:1fr}nav.top{flex-wrap:wrap;row-gap:10px;padding-bottom:10px}nav.top.solid{box-shadow:0 1px 0 var(--line)}nav.top .logo{margin-right:auto}nav.top .nl{order:3;flex:0 0 100%;gap:6px}nav.top a.l{flex:1;text-align:center;font-size:13.5px;padding:7px 0;border-radius:999px}nav.top a.l.on{background:var(--ink);color:#fff}nav.top:not(.solid){background:rgba(250,248,244,.94);backdrop-filter:blur(12px)}#hero{padding-top:150px!important}main,#learn{padding-top:130px!important}html{scroll-padding-top:130px}#hero{grid-template-columns:1fr}.hmap{order:2}.invwrap,.bhero{grid-template-columns:1fr}.bhero{min-height:0}.bhero .gwrap{order:-1}.invcard{position:static}.trl{grid-template-columns:1fr}.stk{grid-template-columns:1fr auto}.rng{grid-column:1/-1;grid-row:2}.ncta{display:none}.how ol,.feat,.fcols{grid-template-columns:1fr}.feat{gap:28px;margin:70px 0}.feat.rev .ftxt{order:0}.today{padding:28px 22px}.trust{justify-content:flex-start;gap:12px 20px}nav.top{gap:12px;padding-left:14px;padding-right:14px}.logo{white-space:nowrap;font-size:18px!important;gap:7px}nav.top a.l{font-size:13px}.logo{font-size:20px}nav.top .nb span{display:none}#hero{grid-template-columns:1fr;padding-top:96px;min-height:0}.gwrap{order:-1;justify-self:center;max-width:420px}.hint{grid-column:1}.hcopy h1{font-size:44px}.stats{grid-template-columns:repeat(2,1fr);gap:18px;margin-top:34px}
  .shead{margin-top:70px}.form4{grid-template-columns:1fr 1fr}.form3,.cols,.hero2{grid-template-columns:1fr}.rr{grid-template-columns:12px 1fr auto 76px}.rr small:last-child{display:none}
  #dossier{top:auto;left:10px;right:10px;bottom:10px;width:auto;max-height:84vh;transform:translateY(calc(100% + 30px))}#dossier.open{transform:none}
  .rd{grid-template-columns:1fr;gap:24px}.rnav{position:static;grid-auto-flow:column;grid-auto-columns:max-content;gap:18px;overflow:auto;padding-bottom:6px}.rnav .back{margin:0}.tools{grid-template-columns:1fr 1fr}#trList{grid-template-columns:1fr}
@@ -185,25 +220,30 @@ nav.top a.l.on{color:var(--ink);font-weight:500}
 </style>
 </head>
 <body>
-<nav class="top" id="nav"><a class="logo" href="#/"><i>.</i>Primeiro Passo</a><div class="nl"><a class="l" data-nav="investimentos" href="#/investimentos">Investimentos</a><a class="l" data-nav="bolsa" href="#/bolsa">Bolsa</a><a class="l" data-nav="simuladores" href="#/simuladores">Simuladores</a></div><button class="nb" id="glossBtn" type="button" aria-label="Glossário"><i data-lucide="book-open"></i><span>Glossário</span></button><a class="ncta" href="#/investimentos">Começar</a></nav>
-<header id="hero" class="pg pg-home">
- <div class="hcopy"><span class="live"><i></i>Dados oficiais, atualizados sozinhos</span>
-  <h1>Aprenda a investir, <em>sem complicação.</em></h1>
-  <p>Entenda cada investimento, veja como a bolsa funciona e faça as suas contas com os números oficiais de hoje.</p>
-  <div class="cta"><a class="btn pri" href="#/investimentos">Começar pelos investimentos<i data-lucide="arrow-right"></i></a></div>
-  <p class="updl" id="upd" style="margin:26px 0 0">Carregando…</p><div class="stats" id="strip" hidden></div></div>
- <figure class="hmap"><div id="prevInv"></div><figcaption>O mapa dos investimentos: do mais seguro ao de maior risco. <a href="#/investimentos">Explorar</a></figcaption></figure>
-</header>
+<div class="util"><span>Educação financeira com dados oficiais</span><div><button type="button" id="glossBtn">Glossário</button><button type="button" id="aboutTop">Fontes e créditos</button></div></div>
+<nav class="top" id="nav"><a class="logo" href="#/"><span class="lm"></span>PRIMEIRO PASSO</a><div class="nl"><a class="l" data-nav="investimentos" href="#/investimentos">Investimentos</a><a class="l" data-nav="bolsa" href="#/bolsa">Bolsa</a><a class="l" data-nav="simuladores" href="#/simuladores">Simuladores</a></div><a class="ncta" href="#/investimentos">Começar</a></nav>
+<header id="hero" class="pg pg-home"><div class="car" id="car">
+ <div class="sl on" data-k="0"><img class="sbg" alt="" src="https://unsplash.com/photos/UzN-d1g4moY/download?w=2000" onerror="this.remove()"><div class="sov"></div><div class="stx"><small>Comece aqui</small><h1>Investir começa com o primeiro passo.</h1><p>Uma trilha curta e gratuita, do zero ao primeiro investimento, com os números oficiais de hoje.</p><a class="btn pri" href="#/investimentos">Começar a trilha</a></div></div>
+ <div class="sl dark" data-k="1"><img class="sbg glb" alt="" src="img/globo.jpg"><div class="sov"></div><div class="stx"><small>Bolsa</small><h1>As bolsas do mundo, abertas agora.</h1><p>Veja onde já é dia, quais bolsas estão funcionando e como cada índice se comportou no último ano.</p><a class="btn pri" href="#/bolsa">Explorar o globo</a></div></div>
+ <div class="sl" data-k="2"><img class="sbg" alt="" src="https://unsplash.com/photos/vgYyAFeaAg0/download?w=2000" onerror="this.remove()"><div class="sov"></div><div class="stx"><small>Simuladores</small><h1>Onde o seu dinheiro rende mais hoje?</h1><p>Poupança, Tesouro, CDB e LCI lado a lado, com o imposto já descontado e as taxas do dia.</p><a class="btn pri" href="#/simuladores/comparar">Fazer a minha conta</a></div></div>
+ <div class="cnav"><button type="button" data-go="0" class="on"><i></i>Comece aqui</button><button type="button" data-go="1"><i></i>Bolsa</button><button type="button" data-go="2"><i></i>Simuladores</button></div>
+ <p class="updl hupd" id="upd">Carregando…</p><div class="stats" id="strip" hidden></div></div></header>
 <div id="learn" hidden></div>
 <aside id="dossier" aria-live="polite" aria-label="Ficha da bolsa"></aside>
 <main>
  <div id="pending" hidden>Os dados ainda não chegaram: o robô de atualização ainda não rodou. As calculadoras aparecem assim que as taxas do dia forem carregadas.</div>
-<section class="pg pg-home trust"><span><i data-lucide="landmark"></i>Dados oficiais do Banco Central</span><span><i data-lucide="refresh-cw"></i>Atualizado automaticamente</span><span><i data-lucide="heart-handshake"></i>Gratuito e sem cadastro</span><span><i data-lucide="shield-check"></i>Educativo, sem vender produtos</span></section>
- <section class="pg pg-home how"><div class="hk">Como funciona</div><h2>Três caminhos, cada um com a sua trilha</h2>
-  <ol><li><span>1</span><b>Investimentos</b><p>O mapa de todos os investimentos e uma trilha do zero à renda fixa.</p><a class="lnk" href="#/investimentos">Abrir<i data-lucide="arrow-right"></i></a></li><li><span>2</span><b>Bolsa</b><p>O globo com as bolsas do mundo e uma trilha para entender ações e índices.</p><a class="lnk" href="#/bolsa">Abrir<i data-lucide="arrow-right"></i></a></li><li><span>3</span><b>Simuladores</b><p>Reserva, onde rende mais, objetivos e quanto teria rendido.</p><a class="lnk" href="#/simuladores">Abrir<i data-lucide="arrow-right"></i></a></li></ol></section>
- <section class="pg pg-home feat rev"><div class="ftxt"><div class="hk">Simuladores</div><h2>Saiba onde o seu dinheiro rende mais hoje</h2><p>Poupança, Tesouro, CDB e LCI/LCA lado a lado, com imposto e taxas já descontados, usando as taxas oficiais do dia.</p><a class="lnk" href="#/simuladores/comparar">Fazer a minha conta<i data-lucide="arrow-right"></i></a></div><div class="fprev" id="prevCalc"></div></section>
+<section class="pg pg-home stmt"><div class="simg"><img alt="Avenida Paulista, em São Paulo" src="https://unsplash.com/photos/o3jiiES00cI/download?w=2000" onerror="this.parentNode.classList.add('noimg');this.remove()"></div><div class="stxt"><div class="hk">Quem somos</div><h2>Educação financeira com a seriedade de uma instituição e a simplicidade de uma conversa.</h2><p>Explicamos cada investimento em linguagem clara, com exemplos reais e números atualizados automaticamente a partir de fontes oficiais. Não vendemos produtos nem fazemos recomendações: ensinamos a decidir.</p><button class="lnk" type="button" id="aboutStmt">Conheça as nossas fontes<i data-lucide="arrow-right"></i></button></div></section>
+ <section class="pg pg-home sol"><h2>Por onde você quer começar?</h2>
+  <div class="solg"><a href="#/m/3"><i data-lucide="shield"></i><b>Reserva de emergência</b><p>O primeiro investimento de todos: quanto guardar e onde deixar.</p><span>Saiba mais</span></a>
+  <a href="#/m/4"><i data-lucide="landmark"></i><b>Renda fixa</b><p>Selic, CDI, Tesouro Direto, CDB e LCI/LCA, sem confusão.</p><span>Saiba mais</span></a>
+  <a href="#/investimentos"><i data-lucide="map"></i><b>Mapa dos investimentos</b><p>Todos os investimentos por risco, retorno e facilidade de resgate.</p><span>Saiba mais</span></a>
+  <a href="#/m/21"><i data-lucide="building-2"></i><b>Bolsa de valores</b><p>O que é uma ação, como o preço se forma e o que é o Ibovespa.</p><span>Saiba mais</span></a>
+  <a href="#/m/2"><i data-lucide="trending-up"></i><b>Juros compostos</b><p>Por que o tempo é o maior aliado de quem investe.</p><span>Saiba mais</span></a>
+  <a href="#/simuladores"><i data-lucide="calculator"></i><b>Simuladores</b><p>Reserva, objetivos e quanto cada caminho teria rendido.</p><span>Saiba mais</span></a></div></section>
  <section class="pg pg-home today"><div class="hk">Hoje no mercado</div><div class="stats big" id="strip3"></div><p class="updl" id="upd3" style="margin:18px 0 0"></p></section>
- <section class="pg pg-home feat"><div class="ftxt"><div class="hk">Bolsa</div><h2>As bolsas do mundo, abertas ou fechadas agora</h2><p>Um globo com o dia e a noite reais, as principais bolsas e como cada índice se comportou no último ano.</p><a class="lnk" href="#/bolsa">Ver a bolsa<i data-lucide="arrow-right"></i></a></div><div class="fprev" id="prevMkt"></div></section>
+ <section class="pg pg-home ins"><div class="insh"><h2>Aprenda com a trilha</h2><a class="lnk" href="#/investimentos">Ver todos os módulos<i data-lucide="arrow-right"></i></a></div>
+  <div class="insg" id="insCards"></div></section>
+ <section class="pg pg-home ctab"><div><h2>Comece pela sua reserva de emergência.</h2><p>Descubra em dois minutos quanto guardar e onde deixar esse dinheiro em segurança.</p></div><a class="btn light" href="#/simuladores/reserva">Calcular minha reserva</a></section>
  <section class="pg pg-home faq"><div class="hk">Perguntas frequentes</div><h2>Dúvidas comuns</h2>
   <details><summary>Qual a diferença entre investimentos e bolsa?</summary><p>Investimentos é o universo todo: poupança, Tesouro Direto, CDB, fundos, ações, dólar. A bolsa é um lugar onde parte deles é negociada, principalmente ações, fundos imobiliários e ETFs. A maior parte da renda fixa acontece fora dela.</p></details>
   <details><summary>O site é gratuito? Preciso me cadastrar?</summary><p>É gratuito e não pede cadastro. Seu progresso na trilha fica salvo apenas neste navegador.</p></details>
@@ -231,14 +271,14 @@ nav.top a.l.on{color:var(--ink);font-weight:500}
   <div class="tool" data-tool="objetivo"><p class="tlead"><b>O que você aprende:</b> como os juros e a inflação mudam o valor que você precisa guardar por mês.</p><div class="panel" id="metaBody"></div></div>
   <div class="tool" data-tool="historico"><p class="tlead"><b>O que você aprende:</b> o que aconteceu de verdade com cada caminho no passado, inclusive contra a inflação.</p><div class="panel" id="simBody"></div></div></section>
 </main>
-<footer><div class="fcols"><div class="fbrand"><a class="logo" href="#/"><i>.</i>Primeiro Passo</a><p>Educação financeira para quem está começando a investir, com dados oficiais atualizados automaticamente.</p></div>
+<footer><div class="fcols"><div class="fbrand"><a class="logo" href="#/"><span class="lm"></span>PRIMEIRO PASSO</a><p>Educação financeira para quem está começando a investir, com dados oficiais atualizados automaticamente.</p></div>
  <div><b>Investimentos</b><a href="#/investimentos">Mapa dos investimentos</a><a href="#/m/1">Por que investir</a><a href="#/m/2">Juros compostos</a><a href="#/m/4">Renda fixa</a></div>
  <div><b>Simuladores</b><a href="#/simuladores/reserva">Reserva de emergência</a><a href="#/simuladores/comparar">Onde rende mais</a><a href="#/simuladores/objetivo">Objetivos</a><a href="#/simuladores/historico">Quanto teria rendido</a></div>
  <div><b>Bolsa</b><a href="#/bolsa">Bolsas do mundo</a><a href="#/m/21">O que é a bolsa</a><button type="button" id="about">Fontes, regras e créditos</button><button type="button" id="glossBtn2">Glossário</button></div></div>
  <div class="cred"><div class="credh"><b>Fontes e créditos</b><p>Todos os textos deste site foram escritos especialmente para ele, em linguagem própria. Nenhum trecho foi copiado: as instituições abaixo são as referências usadas para conferir regras, conceitos e números.</p></div>
  <div class="credg"><div><small>Regras e conceitos</small><a href="https://comoinvestir.anbima.com.br" target="_blank" rel="noopener">ANBIMA, portal Como Investir</a><a href="https://www.bcb.gov.br" target="_blank" rel="noopener">Banco Central do Brasil</a><a href="https://www.tesourodireto.com.br" target="_blank" rel="noopener">Tesouro Direto (Tesouro Nacional)</a><a href="https://www.b3.com.br" target="_blank" rel="noopener">B3, a bolsa do Brasil</a><a href="https://www.fgc.org.br" target="_blank" rel="noopener">FGC, Fundo Garantidor de Créditos</a><a href="https://www.gov.br/investidor" target="_blank" rel="noopener">CVM, Portal do Investidor</a><a href="https://www.ibge.gov.br" target="_blank" rel="noopener">IBGE (IPCA)</a></div>
   <div><small>Dados atualizados automaticamente</small><span>Banco Central do Brasil, Sistema Gerenciador de Séries Temporais: Selic, CDI, IPCA, poupança e dólar oficial</span><span>Yahoo Finance: bolsas, ações, moedas e commodities, com atraso de cerca de 15 minutos</span></div>
-  <div><small>Imagens</small><span>Terra: NASA, Blue Marble e Black Marble, via o projeto three-globe</span><span>Fotos das bolsas: Wikimedia Commons, com o crédito de cada foto na ficha da bolsa</span><small style="margin-top:14px">Regras conferidas em</small><span>Outubro de 2026</span></div></div></div>
+  <div><small>Imagens</small><span>Terra: NASA, Blue Marble e Black Marble, via o projeto three-globe</span><span>Fotos das bolsas: Wikimedia Commons, com o crédito de cada foto na ficha da bolsa</span><span>Fotos da Avenida Paulista: Bianca Monteiro, Yuri Catalano e Vitor Mendes Stafusa, via Unsplash (Licença Unsplash)</span><small style="margin-top:14px">Regras conferidas em</small><span>Outubro de 2026</span></div></div></div>
  <p class="legal">Conteúdo educativo. Não é recomendação de investimento e não substitui a orientação de um profissional certificado. Simulações supõem taxas constantes; rentabilidade passada não garante rentabilidade futura. Dados: Banco Central do Brasil (SGS) e Yahoo Finance.</p></footer>
 <div id="pop" hidden></div>
 <aside id="gloss" aria-label="Glossário"><button class="x" id="glossClose" type="button" aria-label="Fechar"><i data-lucide="x"></i></button><h2>Glossário</h2><div id="glossList"></div></aside>
@@ -351,8 +391,15 @@ if($('glossBtn2'))$('glossBtn2').onclick=()=>$('glossBtn').click();
 $('glossBtn').onclick=()=>{$('glossList').innerHTML=Object.entries(GLOSS).map(([k,[n,d]])=>'<div class="gi"><b>'+n+'</b><p>'+d+'</p></div>').join('');$('gloss').classList.add('open');};
 $('glossClose').onclick=()=>$('gloss').classList.remove('open');
 
+/* ---------- carrossel da abertura ---------- */
+function carousel(){const C=$('car');if(!C)return;let k=0,tm=null;const n=C.querySelectorAll('.sl').length;
+ const restart=()=>{clearTimeout(tm);if(!REDUCED)tm=setTimeout(()=>go(k+1),7000);};
+ const go=i=>{k=(i+n)%n;C.querySelectorAll('.sl').forEach(s=>s.classList.toggle('on',+s.dataset.k===k));C.querySelectorAll('.cnav button').forEach(b=>{b.classList.remove('on');void b.offsetWidth;b.classList.toggle('on',+b.dataset.go===k);});restart();};
+ C.querySelectorAll('.cnav button').forEach(b=>b.onclick=()=>go(+b.dataset.go));C.onmouseenter=()=>clearTimeout(tm);C.onmouseleave=restart;restart();}
+function insCards(){const box=$('insCards');if(!box)return;const pick=[[1,'flame'],[4,'landmark'],[21,'building-2']];
+ box.innerHTML=pick.map(([n,ic])=>{const m=MODS.find(x=>x.n===n);if(!m)return '';return '<a class="icard" href="#/m/'+n+'"><div class="iv"><i data-lucide="'+ic+'"></i></div><small>'+AREA[m.area].nome+'</small><b>'+m.t+'</b><p>'+m.sub+'</p><span>'+m.min+' min de leitura'+(PROG[n]?' · concluído':'')+'</span></a>';}).join('');icons();}
 /* ---------- prévias do Início ---------- */
-function homePrev(){invMap($('prevInv'),true);
+function homePrev(){insCards();invMap($('prevInv'),true);
  const pc=$('prevCalc');if(pc){if(T.cdi==null)pc.innerHTML='<p class="pv-h">A comparação aparece quando as taxas do dia forem carregadas.</p>';else{const r=CALC.comparar(5000,12,T,{});const it=r.itens.filter(i=>!i.bloqueado).slice(0,3);const mx=it[0].liquido,mn=Math.min(...it.map(i=>i.liquido));
   pc.innerHTML='<p class="pv-h">R$ 5.000 por 1 ano, com as taxas de hoje</p>'+it.map((i,k)=>'<div class="pv-bar'+(k?'':' best')+'"><div><span>'+i.nome+'</span><b class="num">'+brl(i.liquido)+'</b></div><i style="width:'+(mx>mn?40+(i.liquido-mn)/(mx-mn)*60:100)+'%"></i></div>').join('')+'<p class="pv-h" style="margin:12px 0 0">Valores líquidos, já com imposto e taxas.</p>';}}
  const pm=$('prevMkt');if(pm){const ok=D&&D.status==='ok';pm.innerHTML='<p class="pv-h">Agora</p>'+['b3','nyse','lse','tse','hkex'].map(id=>{const b=MK[id],d=ok&&D.bolsas[id],o=isOpen(b);return '<div class="pv-row"><span class="dl'+(o?'':' off')+'" style="animation:none"></span><b>'+b.nome+'</b><small class="num '+cls(d&&d.var_dia)+'">'+(d?pct(d.var_dia):'–')+'</small><small>'+(o?'aberta':'fechada')+' · '+localTime(b)+'</small></div>';}).join('');}}
@@ -810,7 +857,7 @@ function lineChart(c,series,o){if(!c)return;const dpr=Math.min(2,devicePixelRati
 
 /* ---------- navegação ---------- */
 document.querySelectorAll('[data-go]').forEach(a=>a.onclick=e=>{e.preventDefault();const t=$(a.dataset.go);if(t)t.scrollIntoView({behavior:REDUCED?'auto':'smooth'});});
-$('about').onclick=()=>$('aboutDlg').classList.add('open');$('aboutClose').onclick=()=>$('aboutDlg').classList.remove('open');
+$('about').onclick=()=>$('aboutDlg').classList.add('open');['aboutTop','aboutStmt'].forEach(id=>{if($(id))$(id).onclick=()=>$('aboutDlg').classList.add('open');});carousel();$('aboutClose').onclick=()=>$('aboutDlg').classList.remove('open');
 let rz=null;addEventListener('resize',()=>{clearTimeout(rz);rz=setTimeout(()=>{bolsa();sim();bindGloss();icons();},250);});
 try{globe=initGlobe();}catch(e){globe=null;console.error(e);}
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeMarket();$('gloss').classList.remove('open');}});
