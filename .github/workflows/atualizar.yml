@@ -28,8 +28,8 @@ jobs:
         run: python scripts/atualizar.py
       - name: Salvar no repositório
         run: |
-          git config user.name "robo-globo-financeiro"
-          git config user.email "robo@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/mercado.json
           git diff --cached --quiet && exit 0
           git commit -m "Atualização automática dos dados"
