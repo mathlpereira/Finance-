@@ -84,8 +84,8 @@ input:focus,select:focus{border-color:var(--accent);outline:none;background:#fff
 .drops{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:12px 0}.drops div{padding:16px 18px;border-radius:16px;background:var(--raise)}.drops b{display:block;font-size:26px;font-weight:500}.drops span{display:block;font-size:14px;color:var(--ink2)}.drops small{font-size:12.5px;color:var(--muted)}
 .res{display:grid;margin-top:12px}.rr{display:grid;grid-template-columns:12px 1fr auto 90px 120px;gap:12px;align-items:center;padding:12px 4px;border-bottom:1px solid var(--line);font-size:14.5px}.rr i{width:10px;height:10px;border-radius:50%}.rr small{text-align:right;font-size:13px}
 #mList{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:2px 24px}
-.mk{display:flex;align-items:center;gap:12px;padding:14px 4px;border-bottom:1px solid var(--line);text-align:left}.mk:hover b{color:var(--accent)}
-.mk .st{width:7px;height:7px;border-radius:50%;background:var(--line2);flex:none}.mk .st.on{background:var(--up)}.mk .nm{flex:1;min-width:0}.mk b{display:block;font-size:15px;font-weight:500}.mk small{color:var(--muted);font-size:12.5px}.mk .vl{text-align:right}.mk .vl b{font-size:14px}.mk .vl small{display:block}
+.mk{display:flex;align-items:center;width:100%;gap:12px;padding:14px 4px;border-bottom:1px solid var(--line);text-align:left}.mk:hover b{color:var(--accent)}
+.mk .st{margin:0;width:7px;height:7px;border-radius:50%;background:var(--line2);flex:none}.mk .st.on{background:var(--up)}.mk .nm{flex:1;min-width:0}.mk b{display:block;font-size:15px;font-weight:500}.mk small{color:var(--muted);font-size:12.5px}.mk .vl{text-align:right}.mk .vl b{font-size:14px}.mk .vl small{display:block}
 #pending{margin:0 0 10px;padding:16px 20px;border-radius:16px;background:var(--warn);font-size:14.5px}
 #pop{position:absolute;z-index:40;width:320px;padding:16px 18px;border-radius:18px;background:#fff;box-shadow:0 20px 50px -18px rgba(40,35,25,.35),0 0 0 1px var(--line);font-size:14.5px}#pop p{margin:5px 0 0;color:var(--ink2)}
 #gloss{position:fixed;top:0;right:0;bottom:0;width:min(460px,100%);z-index:50;background:var(--surface);box-shadow:-30px 0 60px -30px rgba(40,35,25,.3);transform:translateX(100%);transition:transform .35s;overflow:auto;padding:36px;padding-top:calc(36px + env(safe-area-inset-top,0px))}#gloss.open{transform:none}
@@ -121,7 +121,62 @@ body.reading #hero,body.reading main,body.reading #dossier{display:none}
 .qe{margin:12px 0 0;padding:14px 16px;border-radius:14px;background:#fbf2f1;font-size:15px;color:var(--ink2)}.qe.good{background:#f1f7f3}.qres{margin-top:20px;padding:18px 20px;border-radius:16px;background:var(--raise);font-size:15px}.qres button{color:var(--accent);text-decoration:underline;margin-left:6px}
 .leve{font-family:'Instrument Serif',serif;font-size:32px;line-height:1.3;color:var(--ink)}
 .pn{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:10px}.pn a{padding:20px 22px;border-radius:20px;background:var(--surface);box-shadow:var(--shadow);text-decoration:none;color:var(--ink)}.pn a:hover{color:var(--accent)}.pn a.nx{text-align:right}.pn small{display:block;font-size:13px;color:var(--muted)}.pn b{font-size:17px;font-weight:600}
-@media (max-width:980px){nav.top a.l{display:none}#hero{grid-template-columns:1fr;padding-top:96px;min-height:0}.gwrap{order:-1;justify-self:center;max-width:420px}.hint{grid-column:1}.hcopy h1{font-size:44px}.stats{grid-template-columns:repeat(2,1fr);gap:18px;margin-top:34px}
+
+.updl{display:flex;align-items:center;gap:8px;font-size:12.5px!important;color:var(--muted)!important;line-height:1.5!important}.dl{width:6px;height:6px;border-radius:50%;background:#8fbfa3;flex:none;animation:breathe 3.2s ease-in-out infinite}.dl.off{background:var(--line2);animation:none}@keyframes breathe{50%{opacity:.35}}
+.pg{display:none}.cred{padding:30px 0 26px;border-top:1px solid var(--line);margin-bottom:6px}.credh{display:grid;grid-template-columns:200px 1fr;gap:30px;margin-bottom:22px}.credh b{font-family:'Instrument Serif',serif;font-weight:400;font-size:26px;color:var(--ink)}.credh p{margin:0;font-size:14px;color:var(--ink2);max-width:640px}
+.credg{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}.credg small{display:block;font-size:12.5px;color:var(--muted);font-weight:500;margin-bottom:10px;text-transform:uppercase;letter-spacing:.04em}.credg a,.credg span{display:block;font-size:14px;color:var(--ink2);text-decoration:none;margin-bottom:8px;line-height:1.5}.credg a:hover{color:var(--accent)}
+.ex1{margin:22px 0;padding:18px 22px;border-radius:18px;background:var(--surface);box-shadow:var(--shadow)}.ex1 small{display:block;font-size:12.5px;color:var(--accent);font-weight:600;margin-bottom:4px}.ex1 p{margin:0!important;font-size:16px!important}
+.nc{margin:26px 0;padding:22px;border-radius:22px;background:var(--warn)}.nch{display:flex;align-items:baseline;gap:12px;margin-bottom:14px}.nch b{font-family:'Instrument Serif',serif;font-weight:400;font-size:26px}.nch span{font-size:13px;color:var(--muted)}
+.ncg{display:grid;grid-template-columns:1fr 1fr;gap:10px}.ncg>div{padding:16px;border-radius:16px;background:var(--surface)}.ncg b{font-size:16px;font-weight:600}.ncg small{display:inline-block;margin-left:8px;font-size:11.5px;color:var(--accent);background:var(--accent2);padding:1px 8px;border-radius:999px}.ncg p{margin:8px 0 0!important;font-size:14.5px!important;line-height:1.6!important}
+.fts ul{list-style:none;margin:0 0 10px;padding:0;display:grid;gap:6px}.fts a{display:inline-flex;align-items:center;gap:6px;font-size:15px;text-decoration:none;color:var(--ink2)}.fts a:hover{color:var(--accent)}.fts svg.lucide{width:14px;height:14px}
+
+body[data-page="investimentos"] .pg-investimentos,body[data-page="bolsa"] .pg-bolsa,body[data-page="simuladores"] .pg-simuladores{display:block}
+#hero{grid-template-columns:minmax(0,1fr) minmax(0,1.1fr)}.hmap{margin:0;padding:22px;border-radius:28px;background:var(--surface);box-shadow:0 1px 2px rgba(40,35,25,.04),0 24px 60px -24px rgba(40,35,25,.22)}.hmap #prevInv{cursor:pointer}.hmap figcaption{font-size:13px;color:var(--muted);padding:8px 6px 0}.hmap figcaption a{text-decoration:none;font-weight:500}
+.imap{width:100%;height:auto;display:block}.imap .zt{font-size:13px;fill:#a8a39b;font-style:italic;font-family:Inter,sans-serif}.imap .ax{stroke:#d9d2c6;stroke-width:1.2}.imap .axt{font-size:13px;fill:#8a8d94;font-family:Inter,sans-serif}
+.imap .il{font-size:15px;fill:#3a3d44;font-family:Inter,sans-serif;font-weight:500;pointer-events:none}
+.imap .ib{cursor:pointer;opacity:0;animation:pop .6s cubic-bezier(.2,.8,.2,1) forwards}.imap .ib circle:first-child{transition:fill-opacity .2s,stroke-width .2s}.imap .ib:hover circle:first-child,.imap .ib.on circle:first-child{fill-opacity:.32;stroke-width:2}.imap .ib.on .il{font-weight:600;fill:#22242a}.imap .ib:focus{outline:none}.imap .ib:focus-visible circle:first-child{stroke-width:3}
+@keyframes pop{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.invwrap{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:22px;align-items:start}
+.invmapbox{padding:18px;border-radius:28px;background:var(--surface);box-shadow:var(--shadow)}.ileg{display:flex;flex-wrap:wrap;gap:8px 20px;padding:6px 10px 2px;font-size:13px;color:var(--ink2)}.ileg i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:7px}.ileg .sz{color:var(--muted)}.ileg .sz i{width:7px;height:7px;border:1px solid #b9b2a6;background:none;margin-right:3px}.ileg .sz i.b{width:13px;height:13px;margin-right:8px;vertical-align:-2px}
+.invcard{position:sticky;top:100px;padding:28px;border-radius:28px;background:var(--surface);box-shadow:var(--shadow)}.invcard h3{font-size:36px;margin:12px 0 8px}.ic-o{font-size:15.5px;color:var(--ink2);margin:0 0 18px}
+.ic-top{display:flex;gap:8px;flex-wrap:wrap}.ic-cat{font-size:12.5px;color:var(--c);background:color-mix(in srgb,var(--c) 12%,white);padding:3px 10px;border-radius:999px;font-weight:500}.ic-tag{font-size:12.5px;color:var(--ink2);background:var(--raise);padding:3px 10px;border-radius:999px}
+.ic-lv{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:0 0 16px}.ic-lv>div{padding:10px 12px;border-radius:14px;background:var(--raise)}.ic-lv small{display:block;font-size:11.5px;color:var(--muted);margin-bottom:6px}
+.lvl{display:flex;gap:3px}.lvl i{width:100%;height:5px;border-radius:3px;background:#e2ddd4}.lvl i.f{background:var(--ink2)}
+.ic-hoje{padding:14px 16px;border-radius:16px;background:var(--accent2);margin:0 0 14px}.ic-hoje small{display:block;font-size:12.5px;color:var(--ink2)}.ic-hoje b{font-size:26px;font-weight:500}.ic-hoje span{display:block;font-size:12.5px;color:var(--muted)}
+.invcard dl{margin:0 0 16px}.invcard dt{font-size:12.5px;color:var(--muted);margin-top:12px}.invcard dd{margin:2px 0 0;font-size:14.5px;color:var(--ink2)}
+.bhero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:30px;align-items:center;min-height:calc(100svh - 160px)}.bcopy h2{font-size:clamp(40px,4.6vw,62px);margin:10px 0 18px}.bcopy p{font-size:17.5px;color:var(--ink2);margin:0 0 22px;max-width:480px}.k2{font-size:13px;color:var(--accent);font-weight:500}
+.trp{flex:1;min-width:240px;display:flex;align-items:center;gap:14px;font-size:14px;color:var(--muted)}.trl{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:12px}
+.stk{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1.4fr) auto;gap:18px;align-items:center;padding:14px 4px;border-bottom:1px solid var(--line)}.stk:last-of-type{border:0}.sn1 b{display:block;font-weight:500}.sn1 small{color:var(--muted);font-size:12.5px}
+.rng{display:flex;align-items:center;gap:10px;font-size:12px;color:var(--muted)}.rb{position:relative;flex:1;height:4px;border-radius:4px;background:#e6e0d6}.rb i{position:absolute;top:50%;width:11px;height:11px;margin:-5.5px 0 0 -5.5px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 3px #fff}
+.sv{text-align:right}.sv b{display:block;font-weight:500}.sv small{font-size:12.5px}
+.how li .lnk{margin-top:14px;font-size:14px}
+
+.nl{display:flex;gap:28px}.ncta{padding:9px 18px;border-radius:999px;background:var(--ink);color:#fff;text-decoration:none;font-size:14px;font-weight:500}.ncta:hover{background:var(--accent)}
+body[data-page="home"] .trust,body[data-page="home"] .how,body[data-page="home"] .today,body[data-page="home"] .faq{display:block}body[data-page="home"] section.feat{display:grid}body[data-page="home"] section.trust{display:flex}
+.hk{font-size:13px;color:var(--accent);font-weight:500;margin-bottom:12px}
+.trust{justify-content:center;flex-wrap:wrap;gap:12px 36px;padding:22px 0;margin:0 0 40px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:14px;color:var(--ink2)}.trust span{display:inline-flex;gap:9px;align-items:center}.trust svg.lucide{color:var(--accent)}
+.how{margin:90px 0}.how h2,.feat h2,.faq h2{font-size:clamp(34px,3.8vw,48px);margin:0 0 36px;max-width:640px}.how ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.how li{padding:28px;border-radius:24px;background:var(--surface);box-shadow:var(--shadow)}.how li span{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--accent2);color:var(--accent);font-weight:600;font-size:14px}.how li b{display:block;margin:18px 0 6px;font-size:18px;font-weight:600}.how li p{margin:0;color:var(--ink2);font-size:15px}
+.feat{grid-template-columns:1fr 1fr;gap:64px;align-items:center;margin:110px 0}.feat.rev .ftxt{order:2}.ftxt h2{margin-bottom:16px}.ftxt p{font-size:17px;color:var(--ink2);margin:0 0 22px;max-width:460px}
+.lnk{display:inline-flex;align-items:center;gap:8px;font-weight:500;text-decoration:none;color:var(--accent)}.lnk:hover{gap:12px}
+.fprev{padding:26px;border-radius:28px;background:var(--surface);box-shadow:0 1px 2px rgba(40,35,25,.04),0 24px 60px -24px rgba(40,35,25,.22)}
+.pv-row{display:flex;align-items:center;gap:14px;padding:14px 4px;border-bottom:1px solid var(--line)}.pv-row:last-child{border:0}.pv-row .n{font-size:12.5px;color:var(--muted);width:22px}.pv-row b{flex:1;font-weight:500}.pv-row small{color:var(--muted);font-size:13px}.pv-row .ok{color:var(--up)}
+.pv-h{font-size:13px;color:var(--muted);margin:0 0 10px}.pv-bar{margin:10px 0;padding:14px 16px;border-radius:16px;background:var(--raise)}.pv-bar.best{background:var(--accent2)}.pv-bar div{display:flex;justify-content:space-between;font-size:15px}.pv-bar div b{font-weight:500}.pv-bar i{display:block;height:4px;border-radius:4px;background:var(--line2);margin-top:10px}.pv-bar.best i{background:var(--accent)}
+.today{margin:110px 0;padding:46px 48px;border-radius:28px;background:var(--surface);box-shadow:var(--shadow)}
+.faq{margin:110px 0 40px;max-width:820px}.faq details{border-bottom:1px solid var(--line);padding:4px 0}.faq summary{cursor:pointer;list-style:none;padding:20px 40px 20px 0;font-size:17px;font-weight:500;position:relative}.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:6px;top:16px;font-size:24px;font-weight:300;color:var(--muted);transition:transform .2s}.faq details[open] summary::after{transform:rotate(45deg)}.faq details p{margin:0 0 22px;color:var(--ink2);font-size:15.5px;max-width:700px}
+footer{display:block!important}.fcols{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:30px;margin-bottom:34px}.fcols b{display:block;font-size:13.5px;color:var(--ink);font-weight:600;margin-bottom:12px}.fcols a,.fcols button{display:block;color:var(--ink2);text-decoration:none;font-size:14px;margin:0 0 9px;text-align:left}.fcols a:hover,.fcols button:hover{color:var(--accent)}
+.fbrand p{font-size:14px;color:var(--muted);max-width:300px;margin:12px 0 0}.legal{font-size:12.5px;color:var(--muted);line-height:1.65;max-width:none!important;padding-top:24px;border-top:1px solid var(--line)}
+body:not([data-page="home"]) #hero{display:none!important}body[data-page="home"] .pg-home,body[data-page="aprender"] .pg-aprender,body[data-page="calc"] .pg-calc,body[data-page="mercados"] .pg-mercados{display:block}body[data-page="home"] #hero.pg-home{display:grid}
+body:not([data-page="home"]) main{padding-top:70px}
+nav.top a.l.on{color:var(--ink);font-weight:500}
+.paths{grid-template-columns:repeat(3,1fr);gap:16px;margin:10px 0 40px}.paths a{display:block;padding:28px;border-radius:24px;background:var(--surface);box-shadow:var(--shadow);text-decoration:none;color:var(--ink);transition:transform .2s}.paths a:hover{transform:translateY(-3px)}
+.pn1{font-size:13px;color:var(--muted)}.paths b{display:block;font-family:'Instrument Serif',serif;font-weight:400;font-size:34px;margin:10px 0 6px}.paths p{margin:0 0 22px;color:var(--ink2);font-size:15.5px}.go{display:inline-flex;gap:8px;align-items:center;font-size:14px;color:var(--accent);font-weight:500}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 22px}.tabs button{padding:10px 18px;border-radius:999px;font-size:14px;color:var(--ink2);background:transparent;box-shadow:inset 0 0 0 1px var(--line2)}.tabs button:hover{color:var(--ink)}.tabs button[aria-selected="true"]{background:var(--ink);color:#fff;box-shadow:none}
+.tool{display:none}.tool.on{display:block}.tlead{color:var(--ink2);margin:0 0 16px;font-size:16px}
+.stats.big{display:grid;grid-template-columns:repeat(4,auto);justify-content:start;gap:48px;margin:0}.stats.big b{font-size:26px}
+@media (max-width:980px){.paths{grid-template-columns:1fr}.stats.big{grid-template-columns:repeat(2,1fr);gap:20px}.tabs{flex-wrap:nowrap;overflow:auto;padding-bottom:4px}.tabs button{white-space:nowrap}}
+@media (max-width:980px){.credh,.credg{grid-template-columns:1fr;gap:16px}.ncg{grid-template-columns:1fr}nav.top{flex-wrap:wrap;row-gap:10px;padding-bottom:10px}nav.top.solid{box-shadow:0 1px 0 var(--line)}nav.top .logo{margin-right:auto}nav.top .nl{order:3;flex:0 0 100%;gap:6px}nav.top a.l{flex:1;text-align:center;font-size:13.5px;padding:7px 0;border-radius:999px}nav.top a.l.on{background:var(--ink);color:#fff}nav.top:not(.solid){background:rgba(250,248,244,.94);backdrop-filter:blur(12px)}#hero{padding-top:150px!important}main,#learn{padding-top:130px!important}html{scroll-padding-top:130px}#hero{grid-template-columns:1fr}.hmap{order:2}.invwrap,.bhero{grid-template-columns:1fr}.bhero{min-height:0}.bhero .gwrap{order:-1}.invcard{position:static}.trl{grid-template-columns:1fr}.stk{grid-template-columns:1fr auto}.rng{grid-column:1/-1;grid-row:2}.ncta{display:none}.how ol,.feat,.fcols{grid-template-columns:1fr}.feat{gap:28px;margin:70px 0}.feat.rev .ftxt{order:0}.today{padding:28px 22px}.trust{justify-content:flex-start;gap:12px 20px}nav.top{gap:12px;padding-left:14px;padding-right:14px}.logo{white-space:nowrap;font-size:18px!important;gap:7px}nav.top a.l{font-size:13px}.logo{font-size:20px}nav.top .nb span{display:none}#hero{grid-template-columns:1fr;padding-top:96px;min-height:0}.gwrap{order:-1;justify-self:center;max-width:420px}.hint{grid-column:1}.hcopy h1{font-size:44px}.stats{grid-template-columns:repeat(2,1fr);gap:18px;margin-top:34px}
  .shead{margin-top:70px}.form4{grid-template-columns:1fr 1fr}.form3,.cols,.hero2{grid-template-columns:1fr}.rr{grid-template-columns:12px 1fr auto 76px}.rr small:last-child{display:none}
  #dossier{top:auto;left:10px;right:10px;bottom:10px;width:auto;max-height:84vh;transform:translateY(calc(100% + 30px))}#dossier.open{transform:none}
  .rd{grid-template-columns:1fr;gap:24px}.rnav{position:static;grid-auto-flow:column;grid-auto-columns:max-content;gap:18px;overflow:auto;padding-bottom:6px}.rnav .back{margin:0}.tools{grid-template-columns:1fr 1fr}#trList{grid-template-columns:1fr}
@@ -130,40 +185,69 @@ body.reading #hero,body.reading main,body.reading #dossier{display:none}
 </style>
 </head>
 <body>
-<nav class="top" id="nav"><a class="logo" href="#hero"><i>.</i>Primeiro Passo</a><a class="l" href="#trilha">Trilha</a><a class="l" href="#mercados">Mercados</a><a class="l" href="#reserva">Reserva</a><a class="l" href="#comparar">Onde rende mais</a><button class="nb" id="glossBtn" type="button"><i data-lucide="book-open"></i>Glossário</button></nav>
-<header id="hero">
- <div class="hcopy"><span class="live"><i></i><span id="openNow">Mercados agora</span></span>
+<nav class="top" id="nav"><a class="logo" href="#/"><i>.</i>Primeiro Passo</a><div class="nl"><a class="l" data-nav="investimentos" href="#/investimentos">Investimentos</a><a class="l" data-nav="bolsa" href="#/bolsa">Bolsa</a><a class="l" data-nav="simuladores" href="#/simuladores">Simuladores</a></div><button class="nb" id="glossBtn" type="button" aria-label="Glossário"><i data-lucide="book-open"></i><span>Glossário</span></button><a class="ncta" href="#/investimentos">Começar</a></nav>
+<header id="hero" class="pg pg-home">
+ <div class="hcopy"><span class="live"><i></i>Dados oficiais, atualizados sozinhos</span>
   <h1>Aprenda a investir, <em>sem complicação.</em></h1>
-  <p>Uma trilha curta, do zero ao primeiro investimento, com exemplos simples e os números oficiais de hoje.</p>
-  <div class="cta"><a class="btn pri" href="#trilha">Começar a aprender<i data-lucide="arrow-right"></i></a><button class="btn sec" type="button" id="exploreBtn">Explorar as bolsas do mundo</button></div>
-  <div class="stats" id="strip"></div><p class="note" id="upd" style="margin:14px 0 0">Carregando…</p></div>
- <div class="gwrap"><canvas id="gCanvas" aria-label="Globo com as bolsas de valores do mundo"></canvas><div id="gLabels"></div></div>
- <div class="hint"><i data-lucide="mouse-pointer-click"></i>Toque numa bolsa para conhecê-la</div>
- <div id="ticker" hidden></div>
+  <p>Entenda cada investimento, veja como a bolsa funciona e faça as suas contas com os números oficiais de hoje.</p>
+  <div class="cta"><a class="btn pri" href="#/investimentos">Começar pelos investimentos<i data-lucide="arrow-right"></i></a></div>
+  <p class="updl" id="upd" style="margin:26px 0 0">Carregando…</p><div class="stats" id="strip" hidden></div></div>
+ <figure class="hmap"><div id="prevInv"></div><figcaption>O mapa dos investimentos: do mais seguro ao de maior risco. <a href="#/investimentos">Explorar</a></figcaption></figure>
 </header>
 <div id="learn" hidden></div>
 <aside id="dossier" aria-live="polite" aria-label="Ficha da bolsa"></aside>
 <main>
  <div id="pending" hidden>Os dados ainda não chegaram: o robô de atualização ainda não rodou. As calculadoras aparecem assim que as taxas do dia forem carregadas.</div>
- <section id="trilha"><div class="shead"><div class="k">Aprender</div><div><h2>A trilha para começar a investir</h2><p>Módulos curtos, um conceito por vez. Cada um tem a explicação, um simulador com dados reais e um teste rápido. Seu progresso fica salvo neste navegador.</p></div></div>
-  <div class="trtop"><div id="trProg"></div><div id="trCta"></div></div><div id="trList"></div></section>
- <section id="ferramentas"><div class="shead"><div class="k">Ferramentas</div><div><h2>Calculadoras para usar quando quiser</h2><p>As mesmas ferramentas da trilha, para fazer suas contas direto.</p></div></div>
-  <div class="tools"><a href="#reserva"><i data-lucide="shield"></i><b>Reserva de emergência</b><small>Quanto guardar e onde</small></a><a href="#comparar"><i data-lucide="scale"></i><b>Onde rende mais hoje</b><small>Com imposto descontado</small></a><a href="#objetivo"><i data-lucide="target"></i><b>Objetivos</b><small>Quanto guardar por mês</small></a><a href="#historico"><i data-lucide="history"></i><b>Quanto teria rendido</b><small>Com dados do passado</small></a></div></section>
- <section id="mercados"><div class="shead"><div class="k">Mercados</div><div><h2>As bolsas do mundo, agora</h2><p>Cada bolsa abre e fecha no horário local. Clique em uma para ver a foto, o índice e como ele se comportou no último ano.</p></div></div><div id="mList"></div></section>
- <section id="reserva"><div class="shead"><div class="k">Passo 01</div><div><h2>Antes de investir, a reserva de emergência</h2><p>É o dinheiro que segura as pontas num imprevisto. Sem ela, qualquer emergência obriga você a resgatar investimentos na pior hora.</p></div></div><div class="panel" id="resBody"></div></section>
- <section id="comparar"><div class="shead"><div class="k">Passo 02</div><div><h2>Onde seu dinheiro rende mais hoje</h2><p>Lado a lado, com imposto, IOF e taxas já descontados. Mude o valor e o prazo e veja o resultado mudar na hora.</p></div></div><div class="panel" id="cmpBody"></div></section>
- <section id="objetivo"><div class="shead"><div class="k">Passo 03</div><div><h2>Quanto guardar por mês para um objetivo</h2><p>Viagem, carro, entrada de um imóvel: o objetivo vira um valor mensal, já com a inflação e os juros a seu favor.</p></div></div><div class="panel" id="metaBody"></div></section>
- <section id="bolsa"><div class="shead"><div class="k">Passo 04</div><div><h2>E a bolsa de valores?</h2><p>O que esperar antes de entrar, com as quedas reais do Ibovespa e quanto tempo cada uma levou para passar.</p></div></div><div class="panel" id="bolsaBody"></div></section>
- <section id="historico"><div class="shead"><div class="k">Para comparar</div><div><h2>Quanto teria rendido no passado</h2><p>O mesmo dinheiro em cada caminho, desde o ano que você escolher, inclusive contra a inflação.</p></div></div><div class="panel" id="simBody"></div></section>
+<section class="pg pg-home trust"><span><i data-lucide="landmark"></i>Dados oficiais do Banco Central</span><span><i data-lucide="refresh-cw"></i>Atualizado automaticamente</span><span><i data-lucide="heart-handshake"></i>Gratuito e sem cadastro</span><span><i data-lucide="shield-check"></i>Educativo, sem vender produtos</span></section>
+ <section class="pg pg-home how"><div class="hk">Como funciona</div><h2>Três caminhos, cada um com a sua trilha</h2>
+  <ol><li><span>1</span><b>Investimentos</b><p>O mapa de todos os investimentos e uma trilha do zero à renda fixa.</p><a class="lnk" href="#/investimentos">Abrir<i data-lucide="arrow-right"></i></a></li><li><span>2</span><b>Bolsa</b><p>O globo com as bolsas do mundo e uma trilha para entender ações e índices.</p><a class="lnk" href="#/bolsa">Abrir<i data-lucide="arrow-right"></i></a></li><li><span>3</span><b>Simuladores</b><p>Reserva, onde rende mais, objetivos e quanto teria rendido.</p><a class="lnk" href="#/simuladores">Abrir<i data-lucide="arrow-right"></i></a></li></ol></section>
+ <section class="pg pg-home feat rev"><div class="ftxt"><div class="hk">Simuladores</div><h2>Saiba onde o seu dinheiro rende mais hoje</h2><p>Poupança, Tesouro, CDB e LCI/LCA lado a lado, com imposto e taxas já descontados, usando as taxas oficiais do dia.</p><a class="lnk" href="#/simuladores/comparar">Fazer a minha conta<i data-lucide="arrow-right"></i></a></div><div class="fprev" id="prevCalc"></div></section>
+ <section class="pg pg-home today"><div class="hk">Hoje no mercado</div><div class="stats big" id="strip3"></div><p class="updl" id="upd3" style="margin:18px 0 0"></p></section>
+ <section class="pg pg-home feat"><div class="ftxt"><div class="hk">Bolsa</div><h2>As bolsas do mundo, abertas ou fechadas agora</h2><p>Um globo com o dia e a noite reais, as principais bolsas e como cada índice se comportou no último ano.</p><a class="lnk" href="#/bolsa">Ver a bolsa<i data-lucide="arrow-right"></i></a></div><div class="fprev" id="prevMkt"></div></section>
+ <section class="pg pg-home faq"><div class="hk">Perguntas frequentes</div><h2>Dúvidas comuns</h2>
+  <details><summary>Qual a diferença entre investimentos e bolsa?</summary><p>Investimentos é o universo todo: poupança, Tesouro Direto, CDB, fundos, ações, dólar. A bolsa é um lugar onde parte deles é negociada, principalmente ações, fundos imobiliários e ETFs. A maior parte da renda fixa acontece fora dela.</p></details>
+  <details><summary>O site é gratuito? Preciso me cadastrar?</summary><p>É gratuito e não pede cadastro. Seu progresso na trilha fica salvo apenas neste navegador.</p></details>
+  <details><summary>De onde vêm os números?</summary><p>Juros, inflação, poupança e dólar oficial vêm do Banco Central do Brasil. As bolsas e as cotações vêm do Yahoo Finance, com atraso de cerca de 15 minutos. Tudo é atualizado automaticamente a cada 30 minutos nos dias úteis.</p></details>
+  <details><summary>O site recomenda investimentos?</summary><p>Não. O conteúdo é educativo: explica como cada investimento funciona e faz simulações. A escolha depende do seu perfil, dos seus objetivos e, se quiser, da orientação de um profissional certificado.</p></details>
+  <details><summary>Com quanto dinheiro dá para começar?</summary><p>Com pouco. Muitos investimentos de renda fixa aceitam valores de algumas dezenas de reais. Mais importante que o valor é começar pela reserva de emergência e manter a constância.</p></details>
+  <details><summary>Onde eu invisto de verdade?</summary><p>Em bancos e corretoras autorizados a funcionar pelo Banco Central e pela CVM. Este site não vende nem indica produtos ou instituições.</p></details>
+  <details><summary>As simulações garantem esse resultado?</summary><p>Não. Elas supõem que as taxas de hoje fiquem iguais no período, o que raramente acontece. Servem para comparar caminhos e entender a lógica, não como promessa de rentabilidade.</p></details></section>
+ <section class="pg pg-investimentos" id="investimentos"><div class="shead"><div class="k">Investimentos</div><div><h2>O mapa dos investimentos</h2><p>Cada círculo é um tipo de investimento, posicionado pelo risco e pelo potencial de retorno. Toque em um para entender como ele funciona.</p></div></div>
+  <div class="invwrap"><div class="invmapbox"><div id="invMap"></div><div class="ileg" id="invLegend"></div></div><aside class="invcard" id="invCard"></aside></div>
+  <div class="shead"><div class="k">Trilha de investimentos</div><div><h2>Do zero ao primeiro investimento</h2><p>Um conceito por vez, com exemplos reais e um teste rápido no fim de cada módulo.</p></div></div>
+  <div class="trtop"><div id="trProg-inv" class="trp"></div><div id="trCta-inv"></div></div><div id="trList-inv" class="trl"></div></section>
+ <section class="pg pg-bolsa" id="bolsa-pg">
+  <div class="bhero"><div class="bcopy"><div class="k2">Bolsa de valores</div><h2>O mercado onde se compram e vendem ações</h2><p>A bolsa é uma parte do mundo dos investimentos: um lugar organizado onde empresas e investidores se encontram. Gire o globo e toque numa bolsa para conhecê-la.</p><span class="live"><i></i><span id="openNow">Mercados agora</span></span></div>
+   <div class="gwrap"><canvas id="gCanvas" aria-label="Globo com as bolsas de valores do mundo"></canvas><div id="gLabels"></div></div></div>
+  <div class="stats big" id="strip2" style="margin-top:20px"></div><p class="updl" id="upd2" style="margin:16px 0 40px"></p>
+  <div class="shead"><div class="k">Agora</div><div><h2>As bolsas do mundo</h2><p>Cada bolsa abre e fecha no horário local.</p></div></div><div id="mList"></div>
+  <div class="shead"><div class="k">Antes de entrar</div><div><h2>O que esperar da bolsa</h2><p>As maiores quedas do Ibovespa e quanto tempo cada uma levou para passar.</p></div></div><div class="panel" id="bolsaBody"></div>
+  <div class="shead"><div class="k">Trilha da bolsa</div><div><h2>Entenda a bolsa, passo a passo</h2><p>Do que é uma ação até como as outras bolsas do mundo mexem com a nossa.</p></div></div>
+  <div class="trtop"><div id="trProg-bolsa" class="trp"></div><div id="trCta-bolsa"></div></div><div id="trList-bolsa" class="trl"></div></section>
+ <section class="pg pg-simuladores" id="calc"><div class="shead"><div class="k">Simuladores</div><div><h2>Faça as suas contas e aprenda com elas</h2><p>Escolha um simulador. Todos usam as taxas oficiais de hoje.</p></div></div>
+  <div class="tabs" role="tablist"><button type="button" data-tool="reserva">Reserva de emergência</button><button type="button" data-tool="comparar">Onde rende mais</button><button type="button" data-tool="objetivo">Objetivos</button><button type="button" data-tool="historico">Quanto teria rendido</button></div>
+  <div class="tool" data-tool="reserva"><p class="tlead"><b>O que você aprende:</b> quanto guardar para imprevistos e por que esse dinheiro precisa estar seguro e disponível.</p><div class="panel" id="resBody"></div></div>
+  <div class="tool" data-tool="comparar"><p class="tlead"><b>O que você aprende:</b> como imposto, prazo e garantia mudam o resultado de cada investimento de renda fixa.</p><div class="panel" id="cmpBody"></div></div>
+  <div class="tool" data-tool="objetivo"><p class="tlead"><b>O que você aprende:</b> como os juros e a inflação mudam o valor que você precisa guardar por mês.</p><div class="panel" id="metaBody"></div></div>
+  <div class="tool" data-tool="historico"><p class="tlead"><b>O que você aprende:</b> o que aconteceu de verdade com cada caminho no passado, inclusive contra a inflação.</p><div class="panel" id="simBody"></div></div></section>
 </main>
-<footer><p>Conteúdo educativo. Não é recomendação de investimento e não substitui a orientação de um profissional certificado. Simulações supõem taxas constantes; rentabilidade passada não garante rentabilidade futura.</p><button type="button" id="about">Fontes, regras e créditos</button></footer>
+<footer><div class="fcols"><div class="fbrand"><a class="logo" href="#/"><i>.</i>Primeiro Passo</a><p>Educação financeira para quem está começando a investir, com dados oficiais atualizados automaticamente.</p></div>
+ <div><b>Investimentos</b><a href="#/investimentos">Mapa dos investimentos</a><a href="#/m/1">Por que investir</a><a href="#/m/2">Juros compostos</a><a href="#/m/4">Renda fixa</a></div>
+ <div><b>Simuladores</b><a href="#/simuladores/reserva">Reserva de emergência</a><a href="#/simuladores/comparar">Onde rende mais</a><a href="#/simuladores/objetivo">Objetivos</a><a href="#/simuladores/historico">Quanto teria rendido</a></div>
+ <div><b>Bolsa</b><a href="#/bolsa">Bolsas do mundo</a><a href="#/m/21">O que é a bolsa</a><button type="button" id="about">Fontes, regras e créditos</button><button type="button" id="glossBtn2">Glossário</button></div></div>
+ <div class="cred"><div class="credh"><b>Fontes e créditos</b><p>Todos os textos deste site foram escritos especialmente para ele, em linguagem própria. Nenhum trecho foi copiado: as instituições abaixo são as referências usadas para conferir regras, conceitos e números.</p></div>
+ <div class="credg"><div><small>Regras e conceitos</small><a href="https://comoinvestir.anbima.com.br" target="_blank" rel="noopener">ANBIMA, portal Como Investir</a><a href="https://www.bcb.gov.br" target="_blank" rel="noopener">Banco Central do Brasil</a><a href="https://www.tesourodireto.com.br" target="_blank" rel="noopener">Tesouro Direto (Tesouro Nacional)</a><a href="https://www.b3.com.br" target="_blank" rel="noopener">B3, a bolsa do Brasil</a><a href="https://www.fgc.org.br" target="_blank" rel="noopener">FGC, Fundo Garantidor de Créditos</a><a href="https://www.gov.br/investidor" target="_blank" rel="noopener">CVM, Portal do Investidor</a><a href="https://www.ibge.gov.br" target="_blank" rel="noopener">IBGE (IPCA)</a></div>
+  <div><small>Dados atualizados automaticamente</small><span>Banco Central do Brasil, Sistema Gerenciador de Séries Temporais: Selic, CDI, IPCA, poupança e dólar oficial</span><span>Yahoo Finance: bolsas, ações, moedas e commodities, com atraso de cerca de 15 minutos</span></div>
+  <div><small>Imagens</small><span>Terra: NASA, Blue Marble e Black Marble, via o projeto three-globe</span><span>Fotos das bolsas: Wikimedia Commons, com o crédito de cada foto na ficha da bolsa</span><small style="margin-top:14px">Regras conferidas em</small><span>Outubro de 2026</span></div></div></div>
+ <p class="legal">Conteúdo educativo. Não é recomendação de investimento e não substitui a orientação de um profissional certificado. Simulações supõem taxas constantes; rentabilidade passada não garante rentabilidade futura. Dados: Banco Central do Brasil (SGS) e Yahoo Finance.</p></footer>
 <div id="pop" hidden></div>
 <aside id="gloss" aria-label="Glossário"><button class="x" id="glossClose" type="button" aria-label="Fechar"><i data-lucide="x"></i></button><h2>Glossário</h2><div id="glossList"></div></aside>
 <div id="aboutDlg" role="dialog" aria-modal="true"><div><button class="x" id="aboutClose" type="button" aria-label="Fechar" style="top:18px"><i data-lucide="x"></i></button><h2>Fontes, regras e créditos</h2>
  <p><b>Taxas:</b> Banco Central do Brasil (SGS): meta Selic, CDI, IPCA, poupança e dólar PTAX. Bolsas, ações e câmbio comercial: Yahoo Finance, com atraso de cerca de 15 minutos. Um robô atualiza os dados a cada 30 minutos nos dias úteis.</p>
  <p><b>Regras usadas nos cálculos (2026):</b> Imposto de Renda regressivo na renda fixa (22,5% até 180 dias, 20% até 360, 17,5% até 720 e 15% acima). IOF regressivo para resgates com menos de 30 dias. LCI e LCA isentas de IR para pessoa física, com prazo mínimo de 6 meses. Taxa de custódia de 0,20% ao ano no Tesouro Direto, isenta até R$ 10 mil no Tesouro Selic. Garantia do FGC de até R$ 250 mil por CPF e instituição.</p>
  <p><b>Simplificações:</b> o Tesouro Selic é calculado pela Selic menos 0,10 ponto; os prazos usam 365 dias por ano; as taxas são supostas constantes.</p>
- <p><b>Imagens:</b> Terra: NASA (Blue Marble e Black Marble), via three-globe. Fotos das bolsas: imagem principal do artigo de cada bolsa na Wikipédia, hospedada no Wikimedia Commons, com o link para a página de origem na própria ficha.</p></div></div>
+ <p><b>Imagens:</b> Terra: NASA (Blue Marble e Black Marble), via three-globe. Fotos das bolsas: imagem principal do artigo de cada bolsa na Wikipédia, hospedada no Wikimedia Commons, com o link para a página de origem na própria ficha.</p>
+ <p><b>Textos:</b> escritos especialmente para este site, em linguagem própria, conferidos com as regras divulgadas pela ANBIMA, Banco Central, Tesouro Direto, B3, FGC, CVM e IBGE. Nenhum trecho foi copiado dessas fontes.</p></div></div>
 <script src="https://cdn.jsdelivr.net/npm/three@0.147.0/build/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.147.0/examples/js/controls/OrbitControls.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/lucide@0.454.0/dist/umd/lucide.min.js"></script>
@@ -244,9 +328,9 @@ let D=null,T={};
 /* ---------- glossário ---------- */
 const GLOSS={
  selic:['Selic','A taxa básica de juros do Brasil, definida pelo Banco Central a cada 45 dias. Ela puxa para cima ou para baixo quase todos os rendimentos da renda fixa.'],
- cdi:['CDI','Taxa que os bancos usam para emprestar dinheiro entre si, sempre muito próxima da Selic. Quando um investimento paga "100% do CDI", ele rende essa taxa.'],
+ cdi:['CDI','Taxa dos empréstimos entre bancos, sempre muito próxima da Selic. Não é um investimento: é a régua usada para medir vários deles. Quando um CDB paga "100% do CDI", ele rende essa taxa.'],
  ipca:['IPCA','A inflação oficial do Brasil, medida pelo IBGE. Se seu dinheiro rende menos que o IPCA, ele perde poder de compra.'],
- fgc:['FGC','Fundo Garantidor de Créditos. Se um banco quebrar, ele devolve até R$ 250 mil por CPF e por instituição em produtos como poupança, CDB, LCI e LCA (com teto total de R$ 1 milhão a cada 4 anos).'],
+ fgc:['FGC','Fundo Garantidor de Créditos. Se um banco quebrar, ele devolve até R$ 250 mil por CPF e por instituição (ou conglomerado), somando poupança, CDB, LCI, LCA e outros produtos cobertos, com teto total de R$ 1 milhão a cada 4 anos.'],
  liquidez:['Liquidez','A rapidez com que você consegue tirar o dinheiro. Liquidez diária significa que dá para resgatar em qualquer dia útil.'],
  carencia:['Carência','Período em que o dinheiro fica travado e não pode ser resgatado. LCI e LCA têm carência mínima de 6 meses.'],
  ir:['IR regressivo','O imposto sobre o rendimento da renda fixa diminui com o tempo: 22,5% até 180 dias, 20% até 360 dias, 17,5% até 720 dias e 15% depois disso. É descontado automaticamente no resgate.'],
@@ -263,17 +347,33 @@ function g(k,t){return '<button type="button" class="gl" data-g="'+k+'">'+(t||GL
 function bindGloss(root){(root||document).querySelectorAll('[data-g]').forEach(b=>b.onclick=e=>{e.stopPropagation();const [n,d]=GLOSS[b.dataset.g];const p=$('pop');p.innerHTML='<b>'+n+'</b><p>'+d+'</p>';p.hidden=false;
  const r=b.getBoundingClientRect();p.style.left=Math.max(12,Math.min(innerWidth-332,r.left))+'px';p.style.top=(r.bottom+8+scrollY)+'px';});}
 document.addEventListener('click',()=>{$('pop').hidden=true;});
+if($('glossBtn2'))$('glossBtn2').onclick=()=>$('glossBtn').click();
 $('glossBtn').onclick=()=>{$('glossList').innerHTML=Object.entries(GLOSS).map(([k,[n,d]])=>'<div class="gi"><b>'+n+'</b><p>'+d+'</p></div>').join('');$('gloss').classList.add('open');};
 $('glossClose').onclick=()=>$('gloss').classList.remove('open');
 
+/* ---------- prévias do Início ---------- */
+function homePrev(){invMap($('prevInv'),true);
+ const pc=$('prevCalc');if(pc){if(T.cdi==null)pc.innerHTML='<p class="pv-h">A comparação aparece quando as taxas do dia forem carregadas.</p>';else{const r=CALC.comparar(5000,12,T,{});const it=r.itens.filter(i=>!i.bloqueado).slice(0,3);const mx=it[0].liquido,mn=Math.min(...it.map(i=>i.liquido));
+  pc.innerHTML='<p class="pv-h">R$ 5.000 por 1 ano, com as taxas de hoje</p>'+it.map((i,k)=>'<div class="pv-bar'+(k?'':' best')+'"><div><span>'+i.nome+'</span><b class="num">'+brl(i.liquido)+'</b></div><i style="width:'+(mx>mn?40+(i.liquido-mn)/(mx-mn)*60:100)+'%"></i></div>').join('')+'<p class="pv-h" style="margin:12px 0 0">Valores líquidos, já com imposto e taxas.</p>';}}
+ const pm=$('prevMkt');if(pm){const ok=D&&D.status==='ok';pm.innerHTML='<p class="pv-h">Agora</p>'+['b3','nyse','lse','tse','hkex'].map(id=>{const b=MK[id],d=ok&&D.bolsas[id],o=isOpen(b);return '<div class="pv-row"><span class="dl'+(o?'':' off')+'" style="animation:none"></span><b>'+b.nome+'</b><small class="num '+cls(d&&d.var_dia)+'">'+(d?pct(d.var_dia):'–')+'</small><small>'+(o?'aberta':'fechada')+' · '+localTime(b)+'</small></div>';}).join('');}}
+/* ---------- aviso de atualização automática ---------- */
+function quando(iso){const d=new Date(iso),min=Math.round((Date.now()-d)/60000),hoje=new Date().toDateString()===d.toDateString();
+ const hora=d.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'});const dia=hoje?'hoje às '+hora:d.toLocaleDateString('pt-BR',{day:'2-digit',month:'2-digit'})+' às '+hora;
+ const rel=min<1?'agora mesmo':min<60?'há '+min+' min':min<1440?'há '+Math.round(min/60)+' h':'há '+Math.round(min/1440)+' dia'+(Math.round(min/1440)>1?'s':'');return {dia,rel};}
+function updNote(){const ok=D&&D.status==='ok';let html,tip;
+ if(ok){const q=quando(D.gerado_em);html='<span class="dl"></span>Atualizado '+q.rel+' · atualiza sozinho a cada 30 minutos';tip='Última atualização: '+q.dia+'. Dados do Banco Central e das bolsas, atualizados automaticamente nos dias úteis.';}
+ else{html='<span class="dl off"></span>Atualiza sozinho a cada 30 minutos · aguardando os primeiros dados';tip='';}
+ ['upd','upd2','upd3'].forEach(id=>{const e=$(id);if(e){e.innerHTML=html;e.title=tip;}});}
+setInterval(()=>{if(D)updNote();},60000);
 /* ---------- dados ---------- */
 async function load(){try{const r=await fetch('data/mercado.json?t='+Date.now(),{cache:'no-store'});D=await r.json();}catch(e){D=null;}T=CALC.taxas(D&&D.status==='ok'?D:null);render();}
 function render(){const ok=D&&D.status==='ok';
- $('upd').textContent=ok?'Taxas de '+new Date(D.gerado_em).toLocaleString('pt-BR',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'}):'Aguardando a primeira atualização dos dados';
+ updNote();
  $('pending').hidden=ok;
  const usd=ok&&D.moedas.find(m=>m.codigo==='USD');
  $('strip').innerHTML=[[g('selic','Selic'),T.selic!=null?nf(T.selic)+'%':'–','ao ano'],[g('cdi','CDI'),T.cdi!=null?nf(T.cdi)+'%':'–','ao ano'],[g('ipca','Inflação'),T.ipca12!=null?nf(T.ipca12)+'%':'–','em 12 meses'],
   ['Dólar',usd?'R$ '+nf(usd.ultimo,2):'–',usd?'<span class="'+cls(usd.var_dia)+'">'+pct(usd.var_dia)+' hoje</span>':'']].map(([a,b,c])=>'<div class="sx"><small>'+a+'</small><b class="num">'+b+'</b><span>'+c+'</span></div>').join('');
+ if($('strip2')){$('strip2').innerHTML=$('strip').innerHTML;}if($('strip3'))$('strip3').innerHTML=$('strip').innerHTML;homePrev();
  reserva();comparador();meta();bolsa();sim();mundo();trilha();bindGloss();icons();}
 
 /* ---------- formulários: montados uma vez, resultados atualizam ao digitar ---------- */
@@ -425,7 +525,7 @@ function initGlobe(){if(!window.THREE||!THREE.OrbitControls)return null;const wr
    const dy={nasdaq:22,tsx:-22,lse:-22,euronext:22,sse:-22,hkex:18}[o.b.id]||0;o.el.style.transform='translate('+((p.x+1)/2*w+10)+'px,'+((1-p.y)/2*h-12+dy)+'px)';o.el.classList.toggle('sel',selId===o.b.id);});
   renderer.render(scene,camera);}
  requestAnimationFrame(loop);
- return {update(bolsas){Object.values(mk).forEach(o=>{const d=bolsas[o.b.id];const v=d?d.var_dia:null;const col=v==null?0xffffff:v>=0?0x5fbf8c:0xe0766c;o.m.color.setHex(col);o.ring.material.color.setHex(col);
+ return {resize(){size();},update(bolsas){Object.values(mk).forEach(o=>{const d=bolsas[o.b.id];const v=d?d.var_dia:null;const col=v==null?0xffffff:v>=0?0x5fbf8c:0xe0766c;o.m.color.setHex(col);o.ring.material.color.setHex(col);
    o.beam.scale.z=d?0.05+Math.min(0.26,Math.abs(v)*0.09):0.05;o.el.querySelector('span').textContent=d?pct(v):'–';o.el.className='pin '+cls(v)+(isOpen(o.b)?' open':'');});},
   focus(id){const b=MK[id];controls.autoRotate=false;const t=ll(b.lat,b.lon,1).normalize().multiplyScalar(camera.position.length());const a0=new THREE.Spherical().setFromVector3(camera.position),a1=new THREE.Spherical().setFromVector3(t);
    a1.phi=Math.min(Math.max(a1.phi,0.35),2.8);let dt=a1.theta-a0.theta;if(dt>Math.PI)dt-=2*Math.PI;if(dt<-Math.PI)dt+=2*Math.PI;const st=performance.now(),dur=REDUCED?1:1300;
@@ -448,7 +548,7 @@ function closeMarket(){selId=null;$('dossier').classList.remove('open');document
 
 function mundo(){const ok=D&&D.status==='ok';if(globe)globe.update(ok?D.bolsas:{});
  $('mList').innerHTML=GLOBE_MARKETS.map(b=>{const d=ok&&D.bolsas[b.id];const o=isOpen(b);return '<button type="button" class="mk" data-m="'+b.id+'"><span class="st'+(o?' on':'')+'"></span><span class="nm"><b>'+b.nome+'</b><small>'+b.indice+' · '+localTime(b)+'</small></span><span class="vl"><b class="num">'+(d?nf(d.ultimo,0):'–')+'</b><small class="num '+cls(d&&d.var_dia)+'">'+(d?pct(d.var_dia):'–')+'</small></span></button>';}).join('');
- document.querySelectorAll('#mList [data-m]').forEach(x=>x.onclick=()=>{$('hero').scrollIntoView({behavior:REDUCED?'auto':'smooth'});openMarket(x.dataset.m);});
+ document.querySelectorAll('#mList [data-m]').forEach(x=>x.onclick=()=>openMarket(x.dataset.m));
  const openN=GLOBE_MARKETS.filter(isOpen).length;$('openNow').textContent=openN?openN+' de '+GLOBE_MARKETS.length+' bolsas do mundo abertas agora':'As bolsas do mundo estão fechadas agora';
  /* faixa de cotações */
  if(ok){const it=[];const b=D.bolsas;const add=(n,v,c,f)=>{if(v!=null)it.push('<span class="ti"><em>'+n+'</em><b class="num">'+v+'</b>'+(c!=null?'<i class="num '+cls(c)+'">'+pct(c)+'</i>':'')+'</span>');};
@@ -465,12 +565,14 @@ const MODS=[
   ideia:`<p>Imagine que um pão custava R$ 0,50 alguns anos atrás e hoje custa bem mais. O pão não melhorou: o que mudou foi o valor do dinheiro. Esse aumento geral dos preços ao longo do tempo tem nome: <b>inflação</b>.</p>
    <p>No Brasil, a inflação oficial é medida pelo ${'{IPCA}'}, calculado pelo IBGE todos os meses. Quando dizemos que a inflação foi de 5% em um ano, quer dizer que, na média, a mesma cesta de compras ficou 5% mais cara.</p>
    <div class="callout"><b>A consequência prática:</b> dinheiro parado na gaveta ou na conta corrente não "fica igual". Ele perde poder de compra todos os meses, mesmo que o número no extrato não mude.</div>
+   <div class="ex1"><small>Exemplo</small><p>Com inflação de 5% em um ano, R$ 1.000 guardados na gaveta compram, no ano seguinte, o equivalente a cerca de <b>R$ 952</b> de hoje. O valor na nota é o mesmo; o que ela compra, não.</p></div>
    <p>Investir, antes de ser uma forma de ficar rico, é uma forma de <b>proteger</b> o que você já tem. O primeiro objetivo de qualquer investimento é render pelo menos a inflação. O que passa disso é o ${'{real|ganho real}'}.</p>`,
   pratica:'inflacao',
   quiz:[{q:'O que é inflação?',o:['O aumento geral dos preços ao longo do tempo','Quando a bolsa de valores sobe','Um imposto cobrado sobre as compras'],ok:0,e:'Inflação é a alta generalizada dos preços. Com ela, o mesmo dinheiro compra menos coisas.'},
    {q:'Seu dinheiro rendeu 3% em um ano e a inflação foi de 5%. O que aconteceu?',o:['Você ganhou 3%','Você perdeu poder de compra','Ficou tudo igual'],ok:1,e:'O saldo cresceu 3%, mas os preços subiram 5%. Na prática, você consegue comprar cerca de 2% menos do que antes.'},
    {q:'Qual índice mede a inflação oficial do Brasil?',o:['Selic','IPCA','CDI'],ok:1,e:'O IPCA, do IBGE. A Selic e o CDI são taxas de juros, não medidas de inflação.'}],
-  leve:'Dinheiro parado perde valor. Investir começa com proteger o seu poder de compra da inflação.'},
+  leve:'Dinheiro parado perde valor. Investir começa com proteger o seu poder de compra da inflação.',
+  fontes:[['IBGE: IPCA, a inflação oficial','https://www.ibge.gov.br'],['Banco Central do Brasil: metas para a inflação','https://www.bcb.gov.br'],['ANBIMA: portal Como Investir','https://comoinvestir.anbima.com.br']]},
  {n:2,slug:'juros-compostos',t:'Juros compostos',sub:'O tempo trabalhando a seu favor',min:7,ic:'trending-up',
   ideia:`<p>Quando você investe, recebe <b>juros</b>: um pagamento pelo tempo em que seu dinheiro fica emprestado a alguém (um banco, o governo, uma empresa).</p>
    <p>Nos <b>juros simples</b>, você ganha sempre sobre o valor inicial. Nos <b>juros compostos</b>, que é como quase todo investimento funciona, os juros de cada mês passam a render juros também. É o famoso "juros sobre juros".</p>
@@ -482,29 +584,39 @@ const MODS=[
   quiz:[{q:'O que são juros compostos?',o:['Juros calculados só sobre o valor inicial','Juros sobre juros: o rendimento passa a render também','Juros que só existem em dívidas'],ok:1,e:'Nos juros compostos, cada rendimento é somado ao saldo e passa a render no período seguinte.'},
    {q:'Ana investe R$ 200 por mês dos 25 aos 60 anos. Bruno investe os mesmos R$ 200, à mesma taxa, dos 35 aos 60. Quem termina com mais?',o:['Bruno, porque investe mais concentrado','Ana, por causa dos 10 anos a mais de juros compostos','Os dois terminam iguais'],ok:1,e:'Ana coloca só R$ 24 mil a mais, mas os juros compostos agem por mais tempo sobre todo o dinheiro dela. A diferença no final costuma ser muito maior que esses R$ 24 mil.'},
    {q:'Pela regra dos 72, a 12% ao ano o dinheiro dobra em cerca de:',o:['3 anos','6 anos','12 anos'],ok:1,e:'72 ÷ 12 = 6. É uma aproximação, mas funciona bem para taxas comuns.'}],
-  leve:'Nos juros compostos, o tempo é o principal aliado. Começar cedo, mesmo com pouco, faz muita diferença.'},
+  leve:'Nos juros compostos, o tempo é o principal aliado. Começar cedo, mesmo com pouco, faz muita diferença.',
+  fontes:[['ANBIMA: portal Como Investir','https://comoinvestir.anbima.com.br'],['CVM: Portal do Investidor','https://www.gov.br/investidor'],['Banco Central do Brasil: Calculadora do Cidadão','https://www.bcb.gov.br']]},
  {n:3,slug:'reserva-de-emergencia',t:'Reserva de emergência',sub:'O primeiro investimento de todos',min:5,ic:'shield',
   ideia:`<p>Antes de pensar em bolsa, viagem ou aposentadoria, todo mundo precisa de uma ${'{reserva|reserva de emergência}'}: um dinheiro guardado só para imprevistos, como perder o emprego, um problema de saúde ou o carro quebrar.</p>
    <p>Ela existe para que um imprevisto não vire uma dívida cara nem obrigue você a vender um investimento na pior hora, por exemplo com a bolsa em queda.</p>
-   <div class="trio3"><div><b>Quanto</b><p>Uma referência comum é de 3 a 12 meses dos seus gastos, conforme a estabilidade da sua renda.</p></div><div><b>Onde</b><p>Em algo muito seguro e com ${'{liquidez|liquidez diária}'}: dá para sacar em qualquer dia útil, sem perder dinheiro.</p></div><div><b>Para quê</b><p>Só para emergências. Não é para a viagem nem para a promoção da loja.</p></div></div>
-   <p>Os candidatos mais comuns são o ${'{tesouro}'} e os ${'{cdb|CDBs}'} de liquidez diária que pagam pelo menos 100% do ${'{cdi}'}, em instituições sólidas. A poupança também serve, mas costuma render menos.</p>`,
+   <div class="trio3"><div><b>Quanto</b><p>A referência usada pela ANBIMA é de 3 a 12 meses do seu custo de vida, conforme a segurança do seu trabalho.</p></div><div><b>Onde</b><p>Em algo muito seguro e com ${'{liquidez|liquidez diária}'}: dá para sacar em qualquer dia útil, sem perder dinheiro.</p></div><div><b>Para quê</b><p>Só para emergências. Não é para a viagem nem para a promoção da loja.</p></div></div>
+   <p>Os candidatos mais comuns são o ${'{tesouro}'}, os ${'{cdb|CDBs}'} de liquidez diária que pagam pelo menos 100% do ${'{cdi}'} e os fundos DI conservadores. A ANBIMA resume bem: na reserva, o que importa é <b>segurança, não rentabilidade</b>. A poupança também serve, mas costuma render menos.</p>
+   <div class="ex1"><small>Novidade</small><p>O <b>Tesouro Reserva</b> é uma versão do Tesouro Direto pensada para isso: rende 100% da Selic e permite sacar a qualquer momento. Por enquanto, é oferecido em parceria com o Banco do Brasil.</p></div>
+   <div class="ex1"><small>Exemplo</small><p>Quem gasta R$ 3.000 por mês e tem carteira assinada pode mirar em 6 meses: <b>R$ 18.000</b>. Guardando R$ 500 por mês, chega lá em cerca de 2 anos e meio, já contando os rendimentos; sem investir, levaria 3 anos.</p></div>`,
   pratica:'reserva',
   quiz:[{q:'Para que serve a reserva de emergência?',o:['Para aproveitar oportunidades na bolsa','Para cobrir imprevistos sem precisar se endividar','Para pagar as férias'],ok:1,e:'Ela é o colchão de segurança. Sem ela, um imprevisto vira dívida ou obriga a vender investimentos na hora errada.'},
    {q:'Qual é o melhor lugar para a reserva?',o:['Ações de empresas grandes','Uma aplicação segura com liquidez diária, como o Tesouro Selic','Uma LCI com carência de 2 anos'],ok:1,e:'A reserva precisa estar disponível a qualquer momento e sem risco de perda. Ações oscilam, e a LCI fica travada pela carência.'},
    {q:'Quem tem renda variável, como um autônomo, deve ter uma reserva:',o:['Menor, porque ganha mais em alguns meses','Maior, porque a renda é menos previsível','Igual a de qualquer pessoa'],ok:1,e:'Quanto menos previsível a renda, maior o fôlego necessário. Para autônomos, é comum mirar perto de 12 meses de gastos.'}],
-  leve:'Primeiro a reserva, depois o resto. Segurança e liquidez diária valem mais que rentabilidade aqui.'},
+  leve:'Primeiro a reserva, depois o resto. Segurança e liquidez diária valem mais que rentabilidade aqui.',
+  fontes:[['ANBIMA: Reserva de emergência, como criar','https://comoinvestir.anbima.com.br/noticia/reserva-de-emergencia-como-criar-e-passar-por-crises-sem-aperto/'],['ANBIMA: Onde deixar a reserva de emergência','https://comoinvestir.anbima.com.br/noticia/como-saber-onde-deixar-a-reserva-de-emergencia/'],['Tesouro Direto: Tesouro Reserva','https://www.tesourodireto.com.br/en/tesouro-reserva']]},
  {n:4,slug:'renda-fixa',t:'Renda fixa',sub:'Selic, CDI, Tesouro, CDB e LCI/LCA',min:9,ic:'landmark',
   ideia:`<p>Na <b>renda fixa</b>, você empresta dinheiro a alguém e recebe juros por isso, com regras definidas no momento da aplicação. É o ponto de partida natural de quem está começando.</p>
    <h4>As duas taxas que movem tudo</h4>
    <p>A ${'{selic}'} é a taxa básica de juros do país. Ela é definida pelo Copom, um comitê do Banco Central que se reúne 8 vezes por ano, e é a principal ferramenta para controlar a inflação: juros mais altos encarecem o crédito e esfriam os preços.</p>
    <p>O ${'{cdi}'} anda sempre colado na Selic. Quando um investimento promete "100% do CDI", ele vai render praticamente a Selic do período.</p>
+   <div class="nc"><div class="nch"><b>Não confunda</b><span>Siglas parecidas, coisas diferentes</span></div>
+    <div class="ncg"><div><b>Selic</b><small>É uma taxa</small><p>A taxa básica de juros do país, definida pelo Banco Central. Você não investe "na Selic"; você investe em algo que rende a Selic.</p></div>
+    <div><b>CDI</b><small>É uma taxa</small><p>A taxa dos empréstimos entre bancos, quase igual à Selic. Serve de régua: "100% do CDI". Não é um investimento.</p></div>
+    <div><b>Tesouro Direto</b><small>É o programa</small><p>O programa do governo para pessoas físicas comprarem títulos públicos pela internet. Dentro dele estão o Tesouro Selic, o Prefixado e o IPCA+.</p></div>
+    <div><b>CDB</b><small>É um investimento</small><p>Um empréstimo que você faz a um banco. Costuma render uma porcentagem do CDI, como 100% ou 110%.</p></div></div></div>
    <h4>Para quem você empresta</h4>
    <div class="who"><div><b>${'{poupanca|Poupança}'}</b><span>Para o banco. Simples e isenta de IR, mas só rende no aniversário mensal e costuma perder para as alternativas.</span></div>
     <div><b>${'{tesouro}'}</b><span>Para o governo federal. Considerado o investimento mais seguro do país, com liquidez diária.</span></div>
     <div><b>${'{cdb|CDB}'}</b><span>Para um banco. Paga uma porcentagem do CDI; quanto menor e menos conhecido o banco, mais ele costuma pagar.</span></div>
     <div><b>${'{lci|LCI e LCA}'}</b><span>Para um banco, que usa o dinheiro no setor imobiliário ou no agronegócio. Isentas de Imposto de Renda, mas com carência mínima de 6 meses.</span></div></div>
+   <div class="ex1"><small>Exemplo com números</small><p>Suponha o CDI em 14% ao ano e R$ 1.000 aplicados por 1 ano. Num <b>CDB a 100% do CDI</b>, o rendimento bruto é de R$ 140; com o imposto de 17,5% desse prazo, sobram cerca de <b>R$ 115,50</b>. Numa <b>LCI a 90% do CDI</b>, o rendimento é de R$ 126, sem imposto. Neste caso, a LCI rende mais, mesmo pagando uma porcentagem menor.</p></div>
    <h4>E se o banco quebrar?</h4>
-   <p>Poupança, CDB, LCI e LCA têm a garantia do ${'{fgc}'}: até R$ 250 mil por CPF em cada instituição, com teto de R$ 1 milhão a cada 4 anos. O Tesouro Direto não depende do FGC, porque quem paga é o próprio governo.</p>
+   <p>Poupança, CDB, LCI e LCA têm a garantia do ${'{fgc}'}: até R$ 250 mil por CPF em cada instituição (ou conglomerado financeiro), somando todos os produtos cobertos nela, com teto de R$ 1 milhão a cada 4 anos. O Tesouro Direto não depende do FGC, porque quem paga é o próprio governo.</p>
    <h4>Três jeitos de render</h4>
    <div class="trio3"><div><b>Pós-fixado</b><p>Segue uma taxa que muda com o tempo, como o CDI. Se a Selic sobe, ele rende mais.</p></div><div><b>Prefixado</b><p>A taxa é combinada no início, por exemplo 13% ao ano, e não muda até o vencimento.</p></div><div><b>Atrelado à inflação</b><p>Rende a inflação mais uma taxa fixa, como no Tesouro IPCA+. Protege o poder de compra no longo prazo.</p></div></div>`,
   pratica:'comparar',
@@ -512,39 +624,69 @@ const MODS=[
    {q:'No Tesouro Selic, para quem você está emprestando dinheiro?',o:['Para o governo federal','Para a B3','Para o seu banco'],ok:0,e:'Os títulos do Tesouro Direto são empréstimos ao governo federal. Por isso são considerados os mais seguros do país.'},
    {q:'Por que uma LCI a 90% do CDI pode render mais que um CDB a 100%?',o:['Porque a LCI tem garantia maior','Porque a LCI é isenta de Imposto de Renda','Porque a LCI tem liquidez diária'],ok:1,e:'O CDB paga IR de 15% a 22,5% sobre o rendimento. A LCI não paga, e isso pode compensar a porcentagem menor.'},
    {q:'O FGC garante quanto por CPF em cada instituição?',o:['R$ 100 mil','R$ 250 mil','Todo o valor investido'],ok:1,e:'Até R$ 250 mil por CPF e por instituição, com teto total de R$ 1 milhão a cada 4 anos.'}],
-  leve:'Renda fixa é emprestar com regras claras. Compare sempre o rendimento líquido, a garantia e quando você pode resgatar.'},
+  leve:'Renda fixa é emprestar com regras claras. Compare sempre o rendimento líquido, a garantia e quando você pode resgatar.',
+  fontes:[['Banco Central do Brasil: Copom e taxa Selic','https://www.bcb.gov.br'],['Tesouro Direto: títulos e regras','https://www.tesourodireto.com.br'],['B3: tarifas do Tesouro Direto (custódia)','https://www.b3.com.br/pt_br/produtos-e-servicos/tarifas/tarifas-de-tesouro-direto/'],['FGC: Fundo Garantidor de Créditos','https://www.fgc.org.br'],['ANBIMA: portal Como Investir','https://comoinvestir.anbima.com.br']]},
+ {n:21,area:'bolsa',slug:'o-que-e-a-bolsa',t:'O que é a bolsa',sub:'Onde empresas e investidores se encontram',min:6,ic:'building-2',
+  ideia:`<p>A <b>bolsa de valores</b> é um mercado organizado onde se compram e vendem ações e outros investimentos, como fundos imobiliários e ETFs. No Brasil, a principal é a B3, em São Paulo.</p>
+   <h4>Por que ela existe</h4>
+   <p>Empresas precisam de dinheiro para crescer: abrir fábricas, lojas, contratar. Uma das formas de conseguir esse dinheiro é <b>abrir o capital</b>: dividir a empresa em milhões de pedacinhos, as <b>ações</b>, e vendê-los para investidores. Quem compra uma ação vira sócio daquela empresa, numa fatia pequena.</p>
+   <div class="trio3"><div><b>A empresa</b><p>Recebe dinheiro para investir no negócio.</p></div><div><b>O investidor</b><p>Pode ganhar com a valorização da ação e com parte do lucro, os dividendos.</p></div><div><b>A bolsa</b><p>Organiza o encontro entre quem quer comprar e quem quer vender, com regras e segurança.</p></div></div>
+   <h4>Como o preço muda</h4>
+   <p>O preço de uma ação não é definido pela empresa nem pelo governo. Ele sai de cada negócio fechado entre quem compra e quem vende: se muita gente quer comprar, o preço sobe; se muita gente quer vender, ele cai. É a <b>oferta e a procura</b> funcionando ao vivo durante o pregão.</p>
+   <p>Para comprar, a pessoa usa uma corretora ou um banco, que leva a ordem até a bolsa. E para saber se "a bolsa subiu", olha-se o ${'{IBOV|Ibovespa}'}, o índice que reúne as ações mais negociadas.</p>
+   <div class="callout"><b>O ponto mais importante:</b> na bolsa ninguém garante retorno. O preço pode cair bastante, às vezes por anos. Por isso ela é indicada para dinheiro de longo prazo, depois de montar a reserva de emergência.</div>`,
+  pratica:'acoes',
+  quiz:[{q:'O que você compra quando compra uma ação?',o:['Um pedaço da empresa','Um empréstimo para a empresa','Um título do governo'],ok:0,e:'A ação é uma fração do capital da empresa. Quem compra vira sócio, com direito a participar dos resultados.'},
+   {q:'O que define o preço de uma ação a cada momento?',o:['O Banco Central','A oferta e a procura entre investidores','A própria empresa'],ok:1,e:'O preço sai dos negócios fechados entre compradores e vendedores. Por isso ele muda tanto ao longo do dia.'},
+   {q:'O que o Ibovespa mostra?',o:['O desempenho médio das ações mais negociadas da bolsa brasileira','A taxa de juros do país','A inflação do mês'],ok:0,e:'O Ibovespa é o principal índice da B3, uma espécie de termômetro do mercado de ações brasileiro.'}],
+  leve:'Na bolsa você vira sócio de empresas: pode ganhar mais no longo prazo, mas precisa aceitar que o preço oscile no caminho.',
+  fontes:[['B3: a bolsa do Brasil','https://www.b3.com.br'],['CVM: Portal do Investidor','https://www.gov.br/investidor'],['ANBIMA: portal Como Investir','https://comoinvestir.anbima.com.br']]},
+ {n:22,area:'bolsa',t:'Ações e dividendos',sub:'Como se ganha sendo sócio',ic:'coins'},{n:23,area:'bolsa',t:'Índices',sub:'O termômetro do mercado',ic:'activity'},
+ {n:24,area:'bolsa',t:'ETFs e fundos imobiliários',sub:'Diversificar pela bolsa',ic:'layers'},{n:9,area:'bolsa',t:'O mundo e o dólar',sub:'Como as outras bolsas mexem com a nossa',ic:'globe-2'},
  {n:5,t:'Impostos e custos',sub:'IR regressivo, IOF e taxas',ic:'receipt'},{n:6,t:'Risco, retorno e liquidez',sub:'Por que não existe investimento perfeito',ic:'triangle'},
- {n:7,t:'Bolsa de valores',sub:'Ações, pregão e índices',ic:'candlestick-chart'},{n:8,t:'Fundos e ETFs',sub:'Diversificar sem complicar',ic:'layers'},
- {n:9,t:'O mundo e o dólar',sub:'Juros, câmbio e outras bolsas',ic:'globe-2'},{n:10,t:'Golpes e armadilhas',sub:'Como reconhecer promessas falsas',ic:'shield-alert'},
+ {n:8,t:'Fundos de investimento',sub:'Deixar um gestor cuidar do dinheiro',ic:'briefcase'},{n:10,t:'Golpes e armadilhas',sub:'Como reconhecer promessas falsas',ic:'shield-alert'},
  {n:11,t:'Monte seu plano',sub:'Objetivos, prazos e escolhas',ic:'map'}];
-
+MODS.forEach(m=>{if(!m.area)m.area='inv';});
+const AREA={inv:{tab:'investimentos',nome:'Investimentos'},bolsa:{tab:'bolsa',nome:'Bolsa'}};
 let PROG={};try{PROG=JSON.parse(localStorage.getItem('pp_trilha')||'{}');}catch(e){}
 function saveProg(){try{localStorage.setItem('pp_trilha',JSON.stringify(PROG));}catch(e){}}
 function txt(s){return s.replace(/\{(\w+)(?:\|([^}]+))?\}/g,(m,k,t)=>GLOSS[k.toLowerCase()]?g(k.toLowerCase(),t||(k===k.toUpperCase()?k:undefined)):m);}
 
-function trilha(){const done=MODS.filter(m=>PROG[m.n]).length,avail=MODS.filter(m=>m.ideia).length;
- $('trProg').innerHTML='<div class="tbar"><i style="width:'+(done/avail*100)+'%"></i></div><span>'+done+' de '+avail+' módulos concluídos</span>';
- const next=MODS.find(m=>m.ideia&&!PROG[m.n]);$('trCta').innerHTML=next?'<a class="btn pri" href="#/m/'+next.n+'">'+(done?'Continuar: ':'Começar: ')+next.t+'<i data-lucide="arrow-right"></i></a>':'<span class="note">Você concluiu todos os módulos disponíveis. Os próximos chegam em breve.</span>';
- $('trList').innerHTML=MODS.map(m=>{const ok=!!m.ideia;return (ok?'<a class="mod" href="#/m/'+m.n+'">':'<div class="mod soon">')+'<span class="mn num">'+String(m.n).padStart(2,'0')+'</span><span class="mi"><i data-lucide="'+m.ic+'"></i></span><span class="mt"><b>'+m.t+'</b><small>'+m.sub+'</small></span>'+
-  (ok?(PROG[m.n]?'<span class="ms done"><i data-lucide="check"></i>Concluído</span>':'<span class="ms">'+m.min+' min</span>'):'<span class="ms">Em breve</span>')+(ok?'</a>':'</div>');}).join('');icons();}
-
+function trilha(){['inv','bolsa'].forEach(ar=>{const L=$('trList-'+ar);if(!L)return;const mods=MODS.filter(m=>m.area===ar);const avail=mods.filter(m=>m.ideia),done=avail.filter(m=>PROG[m.n]).length;
+ $('trProg-'+ar).innerHTML='<div class="tbar"><i style="width:'+(avail.length?done/avail.length*100:0)+'%"></i></div><span>'+done+' de '+avail.length+' '+(avail.length===1?'módulo concluído':'módulos concluídos')+'</span>';
+ const next=avail.find(m=>!PROG[m.n]);$('trCta-'+ar).innerHTML=next?'<a class="btn pri" href="#/m/'+next.n+'">'+(done?'Continuar: ':'Começar: ')+next.t+'<i data-lucide="arrow-right"></i></a>':(avail.length?'<span class="note">Você concluiu os módulos disponíveis. Os próximos chegam em breve.</span>':'');
+ L.innerHTML=mods.map((m,k)=>{const ok=!!m.ideia;return (ok?'<a class="mod" href="#/m/'+m.n+'">':'<div class="mod soon">')+'<span class="mn num">'+String(k+1).padStart(2,'0')+'</span><span class="mt"><b>'+m.t+'</b><small>'+m.sub+'</small></span>'+
+  (ok?(PROG[m.n]?'<span class="ms done"><i data-lucide="check"></i>Concluído</span>':'<span class="ms">'+m.min+' min</span>'):'<span class="ms">Em breve</span>')+(ok?'</a>':'</div>');}).join('');});icons();}
 /* ---------- página do módulo ---------- */
 let borrowed=[];
 function borrow(id,ph){const el=$(id);if(!el||!ph)return;borrowed.push({el,parent:el.parentNode,next:el.nextSibling});ph.appendChild(el);}
 function giveBack(){borrowed.reverse().forEach(b=>b.parent.insertBefore(b.el,b.next));borrowed=[];}
-function route(){const m=location.hash.match(/^#\/m\/(\d+)/);giveBack();
- if(m){const mod=MODS.find(x=>x.n===+m[1]&&x.ideia);if(mod){openModule(mod);return;}}
- const was=document.body.classList.contains('reading');document.body.classList.remove('reading');$('learn').hidden=true;$('learn').innerHTML='';trilha();
- const id=location.hash.slice(1);if(id&&id[0]!=='/'){const el=$(id);if(el)requestAnimationFrame(()=>el.scrollIntoView());}else if(was)window.scrollTo(0,0);}
+const OLD={'#trilha':'#/investimentos','#/aprender':'#/investimentos','#reserva':'#/simuladores/reserva','#comparar':'#/simuladores/comparar','#objetivo':'#/simuladores/objetivo','#historico':'#/simuladores/historico','#bolsa':'#/bolsa','#mercados':'#/bolsa','#/mercados':'#/bolsa','#hero':'#/'};
+function route(){giveBack();let h=location.hash||'#/';if(OLD[h]){history.replaceState(null,'',OLD[h]);h=OLD[h];}
+ const cm=h.match(/^#\/calculadoras(?:\/(\w+))?/);if(cm){h='#/simuladores'+(cm[1]?'/'+cm[1]:'');history.replaceState(null,'',h);}
+ const m=h.match(/^#\/m\/(\d+)/);
+ if(m){const mod=MODS.find(x=>x.n===+m[1]&&x.ideia);if(mod){setNav(AREA[mod.area].tab);openModule(mod);return;}}
+ document.body.classList.remove('reading');$('learn').hidden=true;$('learn').innerHTML='';
+ let page='home',tool=null;
+ if(/^#\/investimentos/.test(h))page='investimentos';else if(/^#\/bolsa/.test(h))page='bolsa';else{const c=h.match(/^#\/simuladores(?:\/(\w+))?/);if(c){page='simuladores';tool=c[1]||'reserva';}}
+ document.body.dataset.page=page;setNav(page);if(page!=='bolsa')closeMarket();
+ trilha();if(page==='simuladores')showTool(tool);if(page==='investimentos')invPage();if(page==='bolsa'){mundo();bolsa();if(globe)globe.resize();}if(page==='home')homePrev();
+ window.scrollTo(0,0);bindGloss();icons();}
+function setNav(p){document.querySelectorAll('[data-nav]').forEach(a=>a.classList.toggle('on',a.dataset.nav===p));}
+function showTool(x){if(!document.querySelector('.tool[data-tool="'+x+'"]'))x='reserva';
+ document.querySelectorAll('.tool').forEach(t=>t.classList.toggle('on',t.dataset.tool===x));document.querySelectorAll('.tabs [data-tool]').forEach(b=>b.setAttribute('aria-selected',b.dataset.tool===x));
+ ({reserva,comparar:comparador,objetivo:meta,historico:sim})[x]();bindGloss();icons();}
+document.querySelectorAll('.tabs [data-tool]').forEach(b=>b.onclick=()=>{location.hash='#/simuladores/'+b.dataset.tool;});
 function openModule(mod){document.body.classList.add('reading');closeMarket&&closeMarket();const L=$('learn');L.hidden=false;
- const avail=MODS.filter(x=>x.ideia),i=avail.indexOf(mod),prev=avail[i-1],next=avail[i+1];
- L.innerHTML='<div class="rd"><aside class="rnav"><a class="back" href="#trilha"><i data-lucide="arrow-left"></i>Trilha</a>'+MODS.map(x=>x.ideia?'<a href="#/m/'+x.n+'" class="'+(x===mod?'on':'')+(PROG[x.n]?' ok':'')+'"><span class="num">'+String(x.n).padStart(2,'0')+'</span>'+x.t+(PROG[x.n]?'<i data-lucide="check"></i>':'')+'</a>':'<span class="soon"><span class="num">'+String(x.n).padStart(2,'0')+'</span>'+x.t+'</span>').join('')+'</aside>'+
-  '<article class="rbody"><div class="rk">Módulo '+String(mod.n).padStart(2,'0')+' · '+mod.min+' min de leitura</div><h1>'+mod.t+'</h1><p class="rsub">'+mod.sub+'</p>'+
+ const AM=MODS.filter(x=>x.area===mod.area),avail=AM.filter(x=>x.ideia),i=avail.indexOf(mod),prev=avail[i-1],next=avail[i+1],tab='#/'+AREA[mod.area].tab,num=x=>String(AM.indexOf(x)+1).padStart(2,'0');
+ L.innerHTML='<div class="rd"><aside class="rnav"><a class="back" href="'+tab+'"><i data-lucide="arrow-left"></i>'+AREA[mod.area].nome+'</a>'+AM.map(x=>x.ideia?'<a href="#/m/'+x.n+'" class="'+(x===mod?'on':'')+(PROG[x.n]?' ok':'')+'"><span class="num">'+num(x)+'</span>'+x.t+(PROG[x.n]?'<i data-lucide="check"></i>':'')+'</a>':'<span class="soon"><span class="num">'+num(x)+'</span>'+x.t+'</span>').join('')+'</aside>'+
+  '<article class="rbody"><div class="rk">'+AREA[mod.area].nome+' · módulo '+num(mod)+' · '+mod.min+' min de leitura</div><h1>'+mod.t+'</h1><p class="rsub">'+mod.sub+'</p>'+
   '<section class="st"><div class="sn"><span>1</span>A ideia</div><div class="prose">'+txt(mod.ideia)+'</div></section>'+
   '<section class="st"><div class="sn"><span>2</span>Na prática, com dados de hoje</div><div id="prat"></div></section>'+
   '<section class="st"><div class="sn"><span>3</span>Teste rápido</div><div id="quiz"></div></section>'+
   '<section class="st"><div class="sn"><span>4</span>O que levar daqui</div><div class="leve">'+mod.leve+'</div></section>'+
-  '<nav class="pn">'+(prev?'<a href="#/m/'+prev.n+'"><small>Anterior</small><b>'+prev.t+'</b></a>':'<span></span>')+(next?'<a class="nx" href="#/m/'+next.n+'"><small>Próximo módulo</small><b>'+next.t+'</b></a>':'<a class="nx" href="#trilha"><small>Fim dos módulos disponíveis</small><b>Voltar à trilha</b></a>')+'</nav></article></div>';
+  (mod.fontes?'<section class="st fts"><div class="sn"><span>5</span>Fontes oficiais para conferir</div><ul>'+mod.fontes.map(f=>'<li><a href="'+f[1]+'" target="_blank" rel="noopener">'+f[0]+'<i data-lucide="arrow-up-right"></i></a></li>').join('')+'</ul><p class="note">Regras conferidas em outubro de 2026. Elas podem mudar: na dúvida, vale a fonte oficial.</p></section>':'')+
+  '<nav class="pn">'+(prev?'<a href="#/m/'+prev.n+'"><small>Anterior</small><b>'+prev.t+'</b></a>':'<span></span>')+(next?'<a class="nx" href="#/m/'+next.n+'"><small>Próximo módulo</small><b>'+next.t+'</b></a>':'<a class="nx" href="'+tab+'"><small>Fim dos módulos disponíveis</small><b>Voltar para '+AREA[mod.area].nome+'</b></a>')+'</nav></article></div>';
  window.scrollTo(0,0);pratica(mod);quiz(mod);bindGloss(L);icons();}
 
 /* ---------- prática: ferramentas interativas de cada módulo ---------- */
@@ -552,7 +694,10 @@ function pratica(mod){const ph=$('prat');
  if(mod.pratica==='reserva'){ph.innerHTML='<p class="lead2">Coloque os seus números e veja quanto guardar, e onde.</p>';borrow('resBody',ph);reserva();return;}
  if(mod.pratica==='comparar'){ph.innerHTML='<p class="lead2">Agora compare as opções de verdade, com as taxas de hoje e o imposto já descontado. Mude o prazo para 3 meses e veja o que acontece com a LCI.</p>';borrow('cmpBody',ph);comparador();return;}
  if(mod.pratica==='inflacao')return inflacao(ph);
- if(mod.pratica==='juros')return juros(ph);}
+ if(mod.pratica==='juros')return juros(ph);
+ if(mod.pratica==='acoes')return acoesPrat(ph);}
+function acoesPrat(ph){const ok=D&&D.status==='ok'&&D.acoes&&D.acoes.length;if(!ok){ph.innerHTML='<p class="note">As cotações aparecem assim que os dados forem carregados.</p>';return;}
+ ph.innerHTML='<p class="lead2">Veja como algumas das ações mais conhecidas da B3 se comportaram. A barra mostra o menor e o maior preço do último ano, e o ponto, onde a ação está hoje.</p><div class="panel">'+D.acoes.map(a=>{const f=a.historico.fech,mn=Math.min(...f),mx=Math.max(...f),pos=(a.ultimo-mn)/((mx-mn)||1)*100;return '<div class="stk"><div class="sn1"><b>'+a.nome+'</b><small>'+a.ticker+' · '+a.setor+'</small></div><div class="rng"><span class="num">'+nf(mn)+'</span><div class="rb"><i style="left:'+pos+'%"></i></div><span class="num">'+nf(mx)+'</span></div><div class="sv"><b class="num">R$ '+nf(a.ultimo)+'</b><small class="num '+cls(a.var_dia)+'">'+pct(a.var_dia)+' hoje</small></div></div>';}).join('')+'<p class="note" style="margin:14px 0 0">A distância entre o menor e o maior preço mostra quanto cada ação oscilou em 12 meses. Preços com atraso de cerca de 15 minutos, sem ajuste por dividendos.</p></div>';}
 
 function inflacao(ph){const ok=D&&D.status==='ok'&&D.bcb&&D.bcb.ipca_mensal;if(!ok){ph.innerHTML='<p class="note">Esta parte usa a inflação oficial e aparece assim que os dados forem carregados.</p>';return;}
  const ip=D.bcb.ipca_mensal,ks=Object.keys(ip).sort(),anos=[...new Set(ks.map(k=>k.slice(0,4)))].filter(a=>ks.includes(a+'-01'));let ano=anos[Math.max(0,anos.length-11)];
@@ -601,6 +746,53 @@ function quiz(mod){const box=$('quiz');const ans={};
  draw();}
 addEventListener('hashchange',route);
 
+/* ====================== MAPA DOS INVESTIMENTOS ======================
+   Posições qualitativas e didáticas: risco (x) e potencial de retorno (y) de 1 a 5; liquidez de 1 (baixa) a 3 (alta). */
+const CATS={rf:['Renda fixa','#4f7a64'],fu:['Fundos','#6f8fbf'],rv:['Bolsa','#c4864a'],mo:['Moedas e cripto','#9a7fb8']};
+const INV=[
+ {id:'poupanca',n:'Poupança',c:'rf',r:1.0,y:1.1,side:'r',l:3,bolsa:false,o:'A aplicação mais conhecida do Brasil. Você empresta para o banco e recebe um rendimento definido por lei.',como:'Com a Selic acima de 8,5% ao ano, rende 0,5% ao mês mais a TR; abaixo disso, 70% da Selic mais a TR. Só rende no "aniversário" mensal do depósito.',risco:'Muito baixo.',liq:'Diária, mas quem tira antes do aniversário perde o rendimento do mês.',ir:'Isenta de Imposto de Renda.',gar:'FGC, até R$ 250 mil por CPF e instituição.',mod:4,hoje:'poup'},
+ {id:'tesouro_selic',n:'Tesouro Selic',c:'rf',r:1.15,y:1.75,side:'r',l:3,bolsa:false,o:'Um título em que você empresta dinheiro para o governo federal. Considerado o investimento mais seguro do país.',como:'Acompanha a taxa Selic. É pós-fixado: se a Selic sobe, ele passa a render mais.',risco:'Muito baixo. Oscilações pequenas no curtíssimo prazo.',liq:'Diária: o dinheiro cai na conta no dia útil seguinte ao pedido.',ir:'IR regressivo, de 22,5% a 15%, conforme o prazo. Taxa de custódia de 0,20% ao ano só sobre o que passar de R$ 10 mil.',gar:'Tesouro Nacional (não depende do FGC).',mod:4,hoje:'tesouro'},
+ {id:'cdb',n:'CDB',c:'rf',r:1.9,y:2.35,side:'r',l:2.6,bolsa:false,o:'Um empréstimo para um banco. É o investimento de renda fixa mais comum oferecido pelos bancos e corretoras.',como:'Geralmente paga uma porcentagem do CDI, como 100% ou 110%. Também existe versão prefixada e atrelada à inflação.',risco:'Baixo, ligado à saúde do banco emissor. Bancos menores costumam pagar mais.',liq:'Depende do título: há CDBs com liquidez diária e outros só no vencimento.',ir:'IR regressivo, de 22,5% a 15%.',gar:'FGC, até R$ 250 mil por CPF e instituição.',mod:4,hoje:'cdb'},
+ {id:'lci',n:'LCI e LCA',c:'rf',r:1.4,y:2.85,side:'r',l:1.3,bolsa:false,o:'Letras de crédito com que o banco financia o setor imobiliário (LCI) ou o agronegócio (LCA).',como:'Normalmente pagam uma porcentagem do CDI, um pouco menor que a do CDB, porque são isentas de imposto.',risco:'Baixo, ligado à saúde do banco emissor.',liq:'Baixa: carência mínima de 6 meses, e muitas só no vencimento.',ir:'Isentas de Imposto de Renda para pessoa física.',gar:'FGC, até R$ 250 mil por CPF e instituição.',mod:4,hoje:'lci'},
+ {id:'fundo_rf',n:'Fundos de renda fixa',c:'fu',r:2.45,y:1.9,side:'r',l:2.4,bolsa:false,o:'Um "condomínio" de investidores. Um gestor profissional aplica o dinheiro de todos em títulos de renda fixa.',como:'Rende conforme os títulos da carteira, descontada a taxa de administração.',risco:'Baixo a moderado, conforme a carteira.',liq:'Geralmente de 0 a 30 dias para o dinheiro cair na conta.',ir:'IR regressivo, com antecipação semestral chamada come-cotas.',gar:'Não tem FGC.',mod:null},
+ {id:'prefixado',n:'Tesouro Prefixado',c:'rf',r:2.55,y:2.75,side:'r',l:2.4,bolsa:false,o:'Um título do governo com a taxa combinada no dia da compra, por exemplo 13% ao ano até o vencimento.',como:'Quem leva até o vencimento recebe exatamente a taxa combinada.',risco:'Moderado se você vender antes: o preço oscila com os juros do mercado (marcação a mercado).',liq:'Diária, mas pelo preço do dia, que pode ser maior ou menor que o da compra.',ir:'IR regressivo, de 22,5% a 15%.',gar:'Tesouro Nacional.',mod:null},
+ {id:'ipca',n:'Tesouro IPCA+',c:'rf',r:2.95,y:3.2,side:'r',l:2.3,bolsa:false,o:'Um título do governo que paga a inflação mais uma taxa fixa. Protege o poder de compra no longo prazo.',como:'Rende o IPCA do período mais uma taxa definida na compra, por exemplo IPCA + 7% ao ano.',risco:'Moderado se vendido antes do vencimento, pela marcação a mercado. Feito para o longo prazo.',liq:'Diária, pelo preço do dia.',ir:'IR regressivo, de 22,5% a 15%.',gar:'Tesouro Nacional.',mod:null},
+ {id:'debentures',n:'Debêntures, CRI e CRA',c:'rf',r:3.2,y:3.6,side:'l',l:1.4,bolsa:false,o:'Empréstimos para empresas (debêntures) ou para os setores imobiliário (CRI) e do agronegócio (CRA).',como:'Pagam juros prefixados, pós-fixados ou atrelados à inflação, geralmente acima dos títulos públicos.',risco:'Moderado a alto: depende da saúde financeira da empresa.',liq:'Baixa: costuma ser preciso esperar o vencimento ou vender no mercado secundário.',ir:'Debêntures incentivadas, CRI e CRA são isentos para pessoa física; as demais pagam IR regressivo.',gar:'Não tem FGC.',mod:null},
+ {id:'dolar',n:'Dólar e exterior',c:'mo',r:3.55,y:2.45,side:'r',l:2.6,bolsa:false,o:'Investimentos em outra moeda, como dólar, ou em ativos de outros países.',como:'Ganha quando a moeda estrangeira se valoriza frente ao real, além do rendimento do próprio ativo.',risco:'Moderado: o câmbio oscila bastante. Muitas pessoas usam como proteção, não para ganhar rápido.',liq:'Geralmente alta.',ir:'Depende do produto; ganhos com câmbio podem ser tributados.',gar:'Sem FGC.',mod:null},
+ {id:'multimercado',n:'Fundos multimercado',c:'fu',r:3.7,y:3.75,side:'r',l:2.0,bolsa:false,o:'Fundos que podem investir em vários mercados ao mesmo tempo: juros, ações, câmbio, commodities.',como:'O resultado depende das decisões do gestor. Cobram taxa de administração e, muitas vezes, de performance.',risco:'Moderado a alto, conforme a estratégia.',liq:'Geralmente de 1 a 60 dias para resgatar.',ir:'IR regressivo com come-cotas, na maioria dos casos.',gar:'Não tem FGC.',mod:null},
+ {id:'fii',n:'Fundos imobiliários',c:'rv',r:4.05,y:4.15,side:'l',l:2.5,bolsa:true,o:'Fundos que investem em imóveis, como shoppings, galpões e escritórios, ou em títulos do setor. As cotas são negociadas na bolsa.',como:'Pagam rendimentos, em geral mensais, vindos de aluguéis e juros. A cota também sobe e desce de preço.',risco:'Moderado a alto: o preço da cota varia todo dia.',liq:'Alta: compra e venda na bolsa, nos dias de pregão.',ir:'Rendimentos isentos para pessoa física quando o fundo cumpre as condições da lei; o lucro na venda das cotas paga 20%.',gar:'Não tem FGC.',mod:null},
+ {id:'etf',n:'ETFs',c:'rv',r:4.35,y:3.5,side:'r',l:2.8,bolsa:true,o:'Fundos que copiam um índice, como o Ibovespa ou o S&P 500, e são negociados na bolsa como uma ação.',como:'Acompanham o índice: se o Ibovespa sobe 10%, um ETF de Ibovespa sobe perto disso, menos uma pequena taxa.',risco:'Alto, mas diversificado: uma única compra dá acesso a dezenas de empresas.',liq:'Alta: compra e venda na bolsa.',ir:'Lucro na venda tributado em 15% (ETFs de ações).',gar:'Não tem FGC.',mod:null},
+ {id:'acoes',n:'Ações',c:'rv',r:4.6,y:4.5,side:'l',l:2.8,bolsa:true,o:'Pequenas partes de uma empresa. Quem compra uma ação vira sócio daquela empresa.',como:'Ganha se a empresa cresce e a ação se valoriza, e recebe parte do lucro em dividendos.',risco:'Alto: o preço pode cair muito, inclusive por longos períodos.',liq:'Alta: compra e venda na bolsa, nos dias de pregão.',ir:'Lucro na venda tributado em 15%, com isenção para vendas de até R$ 20 mil por mês em ações. Regras específicas para dividendos.',gar:'Não tem FGC.',mod:21},
+ {id:'cripto',n:'Criptomoedas',c:'mo',r:4.95,y:4.9,side:'l',l:2.7,bolsa:false,o:'Moedas digitais, como o bitcoin, que não são emitidas por nenhum governo.',como:'O preço depende apenas da oferta e da procura, sem lucro ou juros por trás.',risco:'Muito alto: quedas de mais de 50% já aconteceram várias vezes.',liq:'Alta, mas o preço muda a todo momento, inclusive de madrugada e nos fins de semana.',ir:'Ganhos tributados conforme as regras da Receita.',gar:'Nenhuma garantia.',mod:null}];
+
+let invSel=null;
+function invRate(p){if(T.cdi==null)return null;const r=CALC.comparar(10000,12,T,{}).itens;const f=id=>r.find(i=>i.id===id);
+ const m={poup:f('poupanca'),tesouro:f('tesouro'),cdb:f('cdb'),lci:f('lci')}[p.hoje];return m?{bruto:(m.bruto/10000-1)*100,liq:m.pct,nome:m.nome}:null;}
+function invMap(box,mini){if(!box)return;const narrow=box.clientWidth>0&&box.clientWidth<560;const W=narrow?500:(mini?720:780),H=narrow?640:(mini?520:600),P={l:52,r:24,t:24,b:52};const X=v=>P.l+(v-0.6)/(5.35-0.6)*(W-P.l-P.r),Y=v=>H-P.b-(v-0.75)/(5.2-0.75)*(H-P.t-P.b);
+ let s='<svg viewBox="0 0 '+W+' '+H+'" class="imap" role="img" aria-label="Mapa dos investimentos por risco e potencial de retorno"><defs><linearGradient id="ig" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#4f7a64" stop-opacity=".09"/><stop offset=".55" stop-color="#e9e4dc" stop-opacity=".25"/><stop offset="1" stop-color="#c4864a" stop-opacity=".12"/></linearGradient></defs>'+
+  '<rect x="'+P.l+'" y="'+P.t+'" width="'+(W-P.l-P.r)+'" height="'+(H-P.t-P.b)+'" rx="22" fill="url(#ig)"/>';
+ if(!mini){s+='<text x="'+(W-P.r-18)+'" y="'+(H-P.b-18)+'" class="zt" text-anchor="end">↙ mais seguro, rende menos</text><text x="'+(P.l+18)+'" y="'+(P.t+28)+'" class="zt">mais risco, pode render mais ↗</text>';}
+ s+='<line x1="'+P.l+'" y1="'+(H-P.b+18)+'" x2="'+(W-P.r)+'" y2="'+(H-P.b+18)+'" class="ax" marker-end="url(#ar)"/><text x="'+((W)/2)+'" y="'+(H-14)+'" class="axt" text-anchor="middle">Risco →</text>'+
+  '<text x="24" y="'+(H/2)+'" class="axt" text-anchor="middle" transform="rotate(-90 24 '+(H/2)+')">Potencial de retorno →</text>';
+ INV.forEach((p,i)=>{const cx=X(p.r),cy=Y(p.y),rad=(mini?9:10)+p.l*(mini?4:5);const col=CATS[p.c][1];const left=p.side==='l';
+  s+='<g class="ib'+(invSel===p.id?' on':'')+'" data-inv="'+p.id+'" tabindex="0" role="button" aria-label="'+p.n+'" style="animation-delay:'+(i*45)+'ms"><circle cx="'+cx+'" cy="'+cy+'" r="'+rad+'" fill="'+col+'" fill-opacity=".16" stroke="'+col+'" stroke-opacity=".55"/><circle cx="'+cx+'" cy="'+cy+'" r="4.5" fill="'+col+'"/>'+
+   '<text x="'+(left?cx-rad-8:cx+rad+8)+'" y="'+(cy+5)+'" text-anchor="'+(left?'end':'start')+'" class="il">'+p.n+'</text></g>';});
+ s+='</svg>';box.innerHTML=s;
+ if(!mini)box.querySelectorAll('[data-inv]').forEach(g=>{const go=()=>invCard(g.dataset.inv);g.onclick=go;g.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();go();}};});
+ else box.onclick=()=>{location.hash='#/investimentos';};}
+function invCard(id){invSel=id;const p=INV.find(x=>x.id===id);const box=$('invCard');const hj=p.hoje?invRate(p):null;const cat=CATS[p.c];
+ document.querySelectorAll('.imap .ib').forEach(g=>g.classList.toggle('on',g.dataset.inv===id));
+ const lv=v=>'<span class="lvl">'+[1,2,3,4,5].map(k=>'<i class="'+(k<=Math.round(v)?'f':'')+'"></i>').join('')+'</span>';
+ box.innerHTML='<div class="ic-top"><span class="ic-cat" style="--c:'+cat[1]+'">'+cat[0]+'</span>'+(p.bolsa?'<span class="ic-tag">Negociado na bolsa</span>':'')+'</div><h3>'+p.n+'</h3><p class="ic-o">'+p.o+'</p>'+
+  '<div class="ic-lv"><div><small>Risco</small>'+lv(p.r)+'</div><div><small>Potencial de retorno</small>'+lv(p.y)+'</div><div><small>Facilidade de resgate</small>'+lv(p.l*5/3)+'</div></div>'+
+  (hj?'<div class="ic-hoje"><small>Rendendo hoje, em 1 ano</small><b class="num">'+nf(hj.liq)+'%</b><span>líquido de imposto, com as taxas do dia'+(p.id==='cdb'?' (CDB a 100% do CDI)':p.id==='lci'?' (LCI a 90% do CDI)':'')+'</span></div>':'')+
+  '<dl><dt>Como rende</dt><dd>'+p.como+'</dd><dt>Riscos</dt><dd>'+p.risco+'</dd><dt>Resgate</dt><dd>'+p.liq+'</dd><dt>Imposto</dt><dd>'+p.ir+'</dd><dt>Garantia</dt><dd>'+p.gar+'</dd></dl>'+
+  (p.mod?'<a class="lnk" href="#/m/'+(typeof p.mod==='number'?p.mod:p.mod)+'">Aprender mais na trilha<i data-lucide="arrow-right"></i></a>':'')+
+  '<p class="note" style="margin-top:14px">Posições aproximadas, para comparação. Cada produto específico tem suas próprias regras.</p>';
+ box.classList.add('has');icons();if(matchMedia('(max-width: 980px)').matches)box.scrollIntoView({behavior:'smooth',block:'start'});}
+function invPage(){invMap($('invMap'),false);if(invSel)invCard(invSel);else invCard('tesouro_selic');
+ $('invLegend').innerHTML=Object.values(CATS).map(c=>'<span><i style="background:'+c[1]+'"></i>'+c[0]+'</span>').join('')+'<span class="sz"><i></i><i class="b"></i>Quanto maior o círculo, mais fácil resgatar</span>';}
+
 /* ---------- gráfico de linhas ---------- */
 function getVar(n){return getComputedStyle(document.documentElement).getPropertyValue(n).trim()||'#1f6f5c';}
 function lineChart(c,series,o){if(!c)return;const dpr=Math.min(2,devicePixelRatio||1);const W=c.clientWidth||600,H=+c.getAttribute('height');c.width=W*dpr;c.height=H*dpr;c.style.height=H+'px';const x=c.getContext('2d');if(!x)return;x.scale(dpr,dpr);
@@ -622,7 +814,7 @@ $('about').onclick=()=>$('aboutDlg').classList.add('open');$('aboutClose').oncli
 let rz=null;addEventListener('resize',()=>{clearTimeout(rz);rz=setTimeout(()=>{bolsa();sim();bindGloss();icons();},250);});
 try{globe=initGlobe();}catch(e){globe=null;console.error(e);}
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeMarket();$('gloss').classList.remove('open');}});
-$('exploreBtn').onclick=()=>openMarket('b3');
+
 await load();route();setInterval(load,15*60*1000);
 window.__app={openMarket,closeMarket,load,get D(){return D;},get T(){return T;},C,R,M,S,comparador,reserva,meta,sim,bolsa};
 })().catch(e=>{console.error(e);const p=document.getElementById('pending');if(p){p.hidden=false;p.textContent='Erro ao montar a página: '+e.message;}});
